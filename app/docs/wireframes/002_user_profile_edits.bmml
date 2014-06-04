@@ -1,0 +1,185 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1076" measuredH="669" mockupW="1038" mockupH="634">
+  <controls>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="38" y="35" w="650" h="600" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//USER%20HOME%28edit%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::LinkBar" x="231" y="171" w="-1" h="-1" measuredW="227" measuredH="19" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Home%2C%20About%20Me%2C%20About%20Us%2C%20Help</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::RoundButton" x="56" y="171" w="130" h="116" measuredW="32" measuredH="32" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>upload%20profile%20photo</text>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::TextArea" x="239" y="204" w="210" h="117" measuredW="200" measuredH="140" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>other%20connected%20user%20activity%20%28always%20private%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::TextArea" x="239" y="335" w="210" h="105" measuredW="200" measuredH="140" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>My%20News/Info</text>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::List" x="62" y="287" w="139" h="316" measuredW="100" measuredH="126" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>My%20Details</text>
+      </controlProperties>
+    </control>
+    <control controlID="20" controlTypeID="com.balsamiq.mockups::TextArea" x="239" y="458" w="210" h="145" measuredW="200" measuredH="140" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>local%20community</text>
+      </controlProperties>
+    </control>
+    <control controlID="21" controlTypeID="com.balsamiq.mockups::RoundButton" x="250" y="253" w="53" h="45" measuredW="32" measuredH="32" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>U</text>
+      </controlProperties>
+    </control>
+    <control controlID="22" controlTypeID="com.balsamiq.mockups::RoundButton" x="318" y="253" w="53" h="45" measuredW="32" measuredH="32" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>U</text>
+      </controlProperties>
+    </control>
+    <control controlID="23" controlTypeID="com.balsamiq.mockups::RoundButton" x="386" y="253" w="53" h="45" measuredW="32" measuredH="32" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>U</text>
+      </controlProperties>
+    </control>
+    <control controlID="24" controlTypeID="com.balsamiq.mockups::TextArea" x="464" y="204" w="217" h="329" measuredW="200" measuredH="140" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>My%20Journal</text>
+      </controlProperties>
+    </control>
+    <control controlID="25" controlTypeID="com.balsamiq.mockups::Canvas" x="62" y="115" w="603" h="54" measuredW="100" measuredH="70" zOrder="11" locked="false" isInGroup="-1"/>
+    <control controlID="26" controlTypeID="com.balsamiq.mockups::SubTitle" x="443" y="129" w="-1" h="-1" measuredW="159" measuredH="27" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>My%20Health%20App</text>
+      </controlProperties>
+    </control>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::Icon" x="602" y="118" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="13" locked="false" isInGroup="-1"/>
+    <control controlID="28" controlTypeID="com.balsamiq.mockups::Label" x="71" y="129" w="247" h="-1" measuredW="238" measuredH="21" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Edit%20your%20profile%20below.%20%20Then%2C%20click%20Save%21</text>
+      </controlProperties>
+    </control>
+    <control controlID="31" controlTypeID="com.balsamiq.mockups::ComboBox" x="262" y="362" w="-1" h="-1" measuredW="164" measuredH="93" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Select%20Info%20Preference%0Aall%0Aclean%20eating%0Awellness%20lifestyles%0Aholistic%20medicine</text>
+      </controlProperties>
+    </control>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::ComboBox" x="262" y="482" w="-1" h="-1" measuredW="162" measuredH="187" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Select%20Local%20Interests%0A-all%0A-yoga%0A-spiritual%0A-weight%20training%0A-meditation%0A-food%0A-music%0A-arts%0Alifestyle%0A%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::TextInput" x="124" y="311" w="-1" h="-1" measuredW="62" measuredH="27" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Name%09</text>
+      </controlProperties>
+    </control>
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::TextInput" x="124" y="342" w="-1" h="-1" measuredW="62" measuredH="27" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Birthday</text>
+      </controlProperties>
+    </control>
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::TextInput" x="71" y="402" w="115" h="-1" measuredW="55" measuredH="27" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Mantra</text>
+      </controlProperties>
+    </control>
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::ComboBox" x="71" y="462" w="117" h="-1" measuredW="149" measuredH="93" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Other%20User%20Contact%0A%20%0Aallow%20anyone%20to%20contact%20me%20and%20see%20my%20public%20profile%0Aallow%20only%20my%20connections%20to%20see%20me%20and%20my%20public%20profile%0Ano%20contact%20from%20anyone</text>
+      </controlProperties>
+    </control>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::TextInput" x="513" y="548" w="-1" h="-1" measuredW="101" measuredH="27" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Save%20Changes</text>
+      </controlProperties>
+    </control>
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::Label" x="71" y="314" w="-1" h="-1" measuredW="35" measuredH="21" zOrder="22" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Name</text>
+      </controlProperties>
+    </control>
+    <control controlID="48" controlTypeID="com.balsamiq.mockups::Label" x="71" y="345" w="-1" h="-1" measuredW="50" measuredH="21" zOrder="23" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>BIrthday</text>
+      </controlProperties>
+    </control>
+    <control controlID="49" controlTypeID="com.balsamiq.mockups::Label" x="71" y="440" w="-1" h="-1" measuredW="98" measuredH="21" zOrder="24" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Privacy%20Settings</text>
+      </controlProperties>
+    </control>
+    <control controlID="50" controlTypeID="com.balsamiq.mockups::Label" x="71" y="377" w="-1" h="-1" measuredW="96" measuredH="21" zOrder="25" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Personal%20Mantra</text>
+      </controlProperties>
+    </control>
+    <control controlID="53" controlTypeID="com.balsamiq.mockups::Label" x="480" y="247" w="-1" h="-1" measuredW="62" measuredH="21" zOrder="26" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>some%20post</text>
+      </controlProperties>
+    </control>
+    <control controlID="54" controlTypeID="com.balsamiq.mockups::Link" x="566" y="249" w="-1" h="-1" measuredW="63" measuredH="19" zOrder="27" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>trash%20%7C%20edit</text>
+      </controlProperties>
+    </control>
+    <control controlID="55" controlTypeID="com.balsamiq.mockups::ModalScreen" x="756" y="35" w="-1" h="-1" measuredW="320" measuredH="240" zOrder="28" locked="false" isInGroup="-1"/>
+    <control controlID="57" controlTypeID="com.balsamiq.mockups::Icon" x="996" y="102" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="29" locked="false" isInGroup="-1"/>
+    <control controlID="58" controlTypeID="com.balsamiq.mockups::Label" x="776" y="50" w="-1" h="-1" measuredW="164" measuredH="26" zOrder="30" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>Edit%20Journal%20%28Modal%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="59" controlTypeID="com.balsamiq.mockups::Button" x="898" y="226" w="-1" h="-1" measuredW="65" measuredH="27" zOrder="31" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Update</text>
+      </controlProperties>
+    </control>
+    <control controlID="60" controlTypeID="com.balsamiq.mockups::Button" x="985" y="226" w="-1" h="-1" measuredW="70" measuredH="27" zOrder="32" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Remove</text>
+      </controlProperties>
+    </control>
+    <control controlID="61" controlTypeID="com.balsamiq.mockups::TextArea" x="770" y="75" w="-1" h="-1" measuredW="200" measuredH="140" zOrder="33" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>journal%20post%20content</text>
+      </controlProperties>
+    </control>
+    <control controlID="68" controlTypeID="com.balsamiq.mockups::Link" x="71" y="575" w="-1" h="-1" measuredW="63" measuredH="19" zOrder="34" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Edit%20image</text>
+      </controlProperties>
+    </control>
+    <control controlID="69" controlTypeID="com.balsamiq.mockups::iPadPopover" x="812" y="362" w="-1" h="-1" measuredW="222" measuredH="187" zOrder="35" locked="false" isInGroup="-1">
+      <controlProperties>
+        <popoverArrowSide>bottom</popoverArrowSide>
+        <text>Edit%20Image</text>
+      </controlProperties>
+    </control>
+    <control controlID="70" controlTypeID="com.balsamiq.mockups::TextInput" x="828" y="397" w="177" h="-1" measuredW="66" measuredH="27" zOrder="36" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>img%20URL</text>
+      </controlProperties>
+    </control>
+    <control controlID="71" controlTypeID="com.balsamiq.mockups::Button" x="865" y="442" w="-1" h="-1" measuredW="65" measuredH="27" zOrder="37" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Update</text>
+      </controlProperties>
+    </control>
+    <control controlID="72" controlTypeID="com.balsamiq.mockups::Button" x="940" y="442" w="-1" h="-1" measuredW="70" measuredH="27" zOrder="38" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Remove</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
