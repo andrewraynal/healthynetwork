@@ -1,0 +1,29 @@
+
+.container {
+	min-width: 100%;
+}
+ul li {
+	list-style-type: none;
+}
+.navbar{
+	margin-top: 20px;
+}
+.header {
+	color: #FFF;
+	border-radius: 5px;
+}
+.col-xs-6, .col-sm-4{
+	border: solid black;
+}
+.signupform-wrapper {
+	margin: 0;
+	vertical-align: middle;
+	border-radius: 10px;
+	box-shadow: 3px 3px 3px 3px #888888;
+	display: block;
+	text-align: center;
+}
+.otheruseractivity ul li{
+	display: inline;
+	text-align: left;
+}

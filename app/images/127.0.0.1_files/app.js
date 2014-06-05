@@ -23,16 +23,8 @@ angular
         controller: 'LoginController'
       })
       .when('/newuser', {
-        templateUrl: 'views/new-user.html',
+        templateUrl: 'views/newuser.html',
         controller: 'UserCtrl'
-      })
-      .when('/userhome', {
-        templateUrl: 'views/user-home.html',
-        controller: 'UserCtrl'
-      })
-       .when('/useredit', {
-        templateUrl: 'views/user-edit.html',
-        controller: 'UsersCtrl'
       })
       .otherwise({
         redirectTo: '/'

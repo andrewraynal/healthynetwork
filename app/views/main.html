@@ -1,21 +1,88 @@
-<div class="header">
-  <ul class="nav nav-pills pull-right">
-    <li class="active"><a ng-href="#">Home</a></li>
-    <li><a ng-href="#">About</a></li>
-    <li><a ng-href="#">Contact</a></li>
-    <li ng-cloak ng-show-auth="login" ng-controller="LoginController"><a href="#" ng-click="logout()">Log Out</a></li>
-    <li ng-cloak ng-show-auth="['logout','error']"><a href="#/login">Log In</a></li>
-  </ul>
-  <h3 class="text-muted">healthynetwork</h3>
+<div class="wrapper">
+  <div class="header">
+    <nav role="navigation" class="navbar navbar-inverse">
+    <div class="navbar-header">
+        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a href="#" class="navbar-brand">healthnetwork</a>
+    </div>
+    <!-- Collection of nav links, forms, and other content for toggling -->
+    <div id="navbarCollapse" class="collapse navbar-collapse" ng-controller="DropdownCtrl">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#/userhome">My Profile</a></li>
+            <li class="btn-group" dropdown is-open="status.isopen">
+                <a class="dropdown-toggle" href="#" ng-disabled="disabled">My Info<span class="caret"></span></a>
+                <ul role="menu" class="dropdown-menu">
+                    <li><a href="#">My News</a></li>
+                    <li><a href="#">My Local News</a></li>
+                    <li><a href="#">Sent Items</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Journal</a></li>
+                </ul>
+            </li>
+        </ul>
+        <form role="search" class="navbar-form navbar-left">
+            <div class="form-group">
+                <input type="text" placeholder="Search" class="form-control">
+            </div>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Login</a></li>
+        </ul>
+    </div>
+  </nav>
 </div>
-
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+<div class="row">
+  <div class="col-xs-6 col-sm-4 lft"><h3>Already a member?</h3>
+    <div class="alreadymember">
+      <ul class="alreadymember">
+        <li>
+          <button type="button" class="btn btn-success already">Sign In</button>
+        </li>
+        <li>
+          <a class="forgotPwUn" href="#">Send me my password/username please.</a>
+        </li>
+      </ul>
+    </div> 
+  </div>
+  <div class="col-xs-6 col-sm-4 ctr">  
+      <form class="form-horizontal">
+        <h3>Create Your Account</h3>
+        <div class="form-group has-success">
+          <label class="col-xs-2 control-label" for="inputSuccess">Username</label>
+          <div class="col-xs-10">
+            <input type="text" id="inputSuccess" class="form-control" placeholder="Input with success">
+              <span class="help-block">Username is available</span>
+          </div>
+        </div>
+        <div class="form-group has-warning">
+          <label class="col-xs-2 control-label" for="inputWarning">Password</label>
+          <div class="col-xs-10">
+            <input type="password" id="inputWarning" class="form-control" placeholder="Input with warning">
+              <span class="help-block">Password strength: Weak</span>
+          </div>
+        </div>
+        <div class="form-group has-error">
+          <label class="col-xs-2 control-label" for="inputError">Email</label>
+          <div class="col-xs-10">
+            <input type="email" id="inputError" class="form-control" placeholder="Input with error">
+              <span class="help-block">Please enter a valid email address</span>
+          </div>
+        </div>
+        <div class="formfooter">
+          <button type="button" class="btn btn-success createaccount">Create Account</button>
+          <button type="button" class="btn btn-warning cancel">Cancel</button>
+        </div>
+      </form>
+    </div>
+  <div class="col-xs-6 col-sm-4 right">
+  <img class="logoph" src="images/placeholder_logo.png" />
+  </div>
 </div>
 
 <div class="row marketing">
@@ -23,16 +90,6 @@
   <p>
     HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
   </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
-</div>
-
 <div class="footer">
   <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
 </div>
