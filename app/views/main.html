@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div class="wrapper" ng-controller="LoginController">
   <div class="header">
     <nav role="navigation" class="navbar navbar-inverse">
     <div class="navbar-header">
@@ -8,41 +8,39 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a href="#" class="navbar-brand">healthnetwork</a>
+        <a href="https://onthego.com" class="navbar-brand">healthnetwork</a>
     </div>
     <!-- Collection of nav links, forms, and other content for toggling -->
-    <div id="navbarCollapse" class="collapse navbar-collapse" ng-controller="DropdownCtrl">
+    <div id="navbarCollapse" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#/userhome">My Profile</a></li>
-            <li class="btn-group" dropdown is-open="status.isopen">
-                <a class="dropdown-toggle" href="#" ng-disabled="disabled">My Info<span class="caret"></span></a>
+            <li class="dropdown">
+                <a type="button" data-toggle="dropdown" class="dropdown-toggle" href>My Info<span class="caret"></span></a>
                 <ul role="menu" class="dropdown-menu">
-                    <li><a href="#">My News</a></li>
-                    <li><a href="#">My Local News</a></li>
-                    <li><a href="#">Sent Items</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Journal</a></li>
+                    <li><a href>My Details</a></li>
+                    <li><a href>My News</a></li>
+                    <li><a href>My Journal</a></li>
                 </ul>
             </li>
-        </ul>
+        </ul>  
         <form role="search" class="navbar-form navbar-left">
             <div class="form-group">
                 <input type="text" placeholder="Search" class="form-control">
             </div>
         </form>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Login</a></li>
+            <li><a href="#/login">Login</a></li>
         </ul>
     </div>
   </nav>
 </div>
-<div class="row">
-  <div class="col-xs-6 col-sm-4 lft"><h3>Already a member?</h3>
+<div ng-cloak class="row">
+  <div class="col-xs-6 col-sm-4 lft"><h3>Are you a new user?</h3>
     <div class="alreadymember">
       <ul class="alreadymember">
         <li>
-          <button type="button" class="btn btn-success already">Sign In</button>
+          <button class="btn btn-primary" ng-click="createMode = true" ng-hide="createMode">Create Account</button>
         </li>
         <li>
           <a class="forgotPwUn" href="#">Send me my password/username please.</a>
@@ -50,46 +48,72 @@
       </ul>
     </div> 
   </div>
-  <div class="col-xs-6 col-sm-4 ctr">  
-      <form class="form-horizontal">
-        <h3>Create Your Account</h3>
-        <div class="form-group has-success">
-          <label class="col-xs-2 control-label" for="inputSuccess">Username</label>
-          <div class="col-xs-10">
-            <input type="text" id="inputSuccess" class="form-control" placeholder="Input with success">
-              <span class="help-block">Username is available</span>
-          </div>
-        </div>
-        <div class="form-group has-warning">
-          <label class="col-xs-2 control-label" for="inputWarning">Password</label>
-          <div class="col-xs-10">
-            <input type="password" id="inputWarning" class="form-control" placeholder="Input with warning">
-              <span class="help-block">Password strength: Weak</span>
-          </div>
-        </div>
-        <div class="form-group has-error">
-          <label class="col-xs-2 control-label" for="inputError">Email</label>
-          <div class="col-xs-10">
-            <input type="email" id="inputError" class="form-control" placeholder="Input with error">
-              <span class="help-block">Please enter a valid email address</span>
-          </div>
-        </div>
-        <div class="formfooter">
-          <button type="button" class="btn btn-success createaccount">Create Account</button>
-          <button type="button" class="btn btn-warning cancel">Cancel</button>
-        </div>
-      </form>
+  <!-- wait for auth to resolve (avoid flashing login page before redirect -->
+<div class="col-xs-6 col-sm-4 ctr">
+    <div class="col-md-12">
+
+        <!-- examples for fun and profit -->
+        <!--<div ng-show-auth="login">{{auth.user|json}}</div>-->
+        <!--<div ng-show-auth="error,logout">Logged out</div>-->
+        <!--<div ng-show-auth="error">{{auth.error}}</div>-->
+        <fieldset>
+            <legend>Oauth</legend>
+            <p>
+                <button class="btn btn-lg btn-primary" ng-click="login('twitter')">Twitter</button>
+            </p>
+        </fieldset>
+
+        
+        <p>&nbsp;</p>
+        <form role="form">
+            <fieldset>
+                <legend>Email/Password</legend>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>email</label>
+                            <input class="form-control" type="text" ng-model="email" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>password</label>
+                            <input class="form-control" type="password" ng-model="pass" />
+                        </div>
+
+                        <div class="form-group" ng-show="createMode">
+                            <label>confirm pass</label>
+                            <input class="form-control" type="password" ng-model="confirm" />
+                        </div>
+
+                        <button class="btn btn-primary" ng-click="loginPassword()" ng-hide="createMode">Log In</button>
+                        <button class="btn btn-default" ng-click="createMode = true" ng-hide="createMode">Register</button>
+                        <button class="btn btn-success" ng-show="createMode" ng-click="createAccount()">Create Account</button>
+                        <button class="btn btn-default" ng-show="createMode" ng-click="createMode = false">Cancel</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        
+
+        <br />
+        <div ng-show="err" class="alert alert-danger"><strong>{{err}}</strong></div>
+
     </div>
+</div>
+
   <div class="col-xs-6 col-sm-4 right">
   <img class="logoph" src="images/placeholder_logo.png" />
   </div>
 </div>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-<div class="footer">
-  <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+  <div class="row marketing">
+    <h4>HTML5 Boilerplate</h4>
+    <p>
+      HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
+    </p>
+  </div> 
+  <div class="footer">
+    <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+  </div>
 </div>

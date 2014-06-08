@@ -1,5 +1,5 @@
 <!-- wait for auth to resolve (avoid flashing login page before redirect -->
-<div ng-cloak class="row">
+<div ng-cloak class="row" login-directive>
     <div class="col-md-12">
 
         <!-- examples for fun and profit -->
@@ -15,20 +15,20 @@
 
         
         <p>&nbsp;</p>
-        <form role="form">
-            <fielset>
+        <form role="form" name="login1">
+            <fieldset>
                 <legend>Email/Password</legend>
 
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>email</label>
-                            <input class="form-control" type="text" ng-model="email" />
+                            <input class="form-control" type="text" required ng-model="email" />
                         </div>
 
                         <div class="form-group">
                             <label>password</label>
-                            <input class="form-control" type="password" ng-model="pass" />
+                            <input class="form-control" type="password" required ng-model="pass" />
                         </div>
 
                         <div class="form-group" ng-show="createMode">
@@ -36,7 +36,7 @@
                             <input class="form-control" type="password" ng-model="confirm" />
                         </div>
 
-                        <button class="btn btn-primary" ng-click="loginPassword()" ng-hide="createMode">Log In</button>
+                        <button class="btn btn-primary" ng-click="loginPassword()" ng-hide="createMode" ng-disabled="login1.$invalid">Log In</button>
                         <button class="btn btn-default" ng-click="createMode = true" ng-hide="createMode">Register</button>
                         <button class="btn btn-success" ng-show="createMode" ng-click="createAccount()">Create Account</button>
                         <button class="btn btn-default" ng-show="createMode" ng-click="createMode = false">Cancel</button>

@@ -1,42 +1,3 @@
-<div class="wrapper">
-  <div class="header">
-    <nav role="navigation" class="navbar navbar-inverse">
-    <div class="navbar-header">
-        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a href="#" class="navbar-brand">healthnetwork</a>
-    </div>
-    <!-- Collection of nav links, forms, and other content for toggling -->
-    <div id="navbarCollapse" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="#/userhome">Home</a></li>
-            <li><a href="#">My Profile</a></li>
-            <li class="dropdown">
-                <a data-toggle="dropdown" class="dropdown-toggle" href="#">My Info<b class="caret"></b></a>
-                <ul role="menu" class="dropdown-menu">
-                    <li><a href="#">My News</a></li>
-                    <li><a href="#">My Local News</a></li>
-                    <li><a href="#">Sent Items</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Journal</a></li>
-                </ul>
-            </li>
-        </ul>
-        <form role="search" class="navbar-form navbar-left">
-            <div class="form-group">
-                <input type="text" placeholder="Search" class="form-control">
-            </div>
-        </form>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Login</a></li>
-        </ul>
-    </div>
-  </nav>
-</div>
 
   <div class="row">
     <div class="col-xs-6 col-sm-4">
@@ -71,7 +32,7 @@
             </li>    
         </ul>
         <div class="formFooter">
-          <button ng-click="edit()" type="button" class="btn btn-success">Edit All Details</button>
+          <button ng-click="editInfo()" type="button" class="btn btn-success">Edit All Details</button>
         </div>
       </form>
     </div>
@@ -91,22 +52,53 @@
         </li>
       </ul>
     </div>
-    <div class="my-news">
+    <div class="my-health instagram" ng-controller="HealthCtrl">
       <h4>My Health Info</h4>
-       <ul class="my-newslist">
+      <div class="health-feed">
+        <div class="bar">
+
+    <!-- These two buttons switch the layout varaible,
+       which causes the correct UL to be shown. -->
+
+    <a class="list-icon" ng-class="{active: isLayout('list')}" ng-click="setLayout('list')"></a>
+    <a class="grid-icon" ng-class="{active: isLayout('grid')}" ng-click="setLayout('grid')"></a>
+  </div>
+
+  <!-- We have two layouts. We choose which one to show depending on the "layout" binding -->
+
+  <ul ng-show="isLayout('grid')" class="grid">
+    <!-- A view with big photos and no text -->
+    <li ng-repeat="p in pics">
+      <a href="{{p.link}}" target="_blank"><img ng-src="{{p.images.low_resolution.url}}" /></a>
+    </li>
+  </ul>
+
+  <ul ng-show="isLayout('list')" class="list">
+    <!-- A compact view smaller photos and titles -->
+    <li ng-repeat="p in pics">
+      <a href="{{p.link}}" target="_blank"><img ng-src="{{p.images.thumbnail.url}}" /></a>
+      <p>{{p.caption.text}}</p>
+    </li>
+  </ul>
+</div>
+       <!-- <ul class="my-health choices">
           <li class="dropdown">
             <button type="button" data-toggle="dropdown" class="dropdown-toggle">Choose Your Info<b class="caret"></b></button>
               <ul class="dropdown-menu">
-                <li><a href="#">all</a></li>
-                <li><a href="#">medicine</a></li>
-                <li><a href="#">lifestyles</a></li>
+                <li><a href="#">All Tags</a></li>
+                <li><a href="#">Mind</a></li>
+                <li><a href="#">Body</a></li>
+                <li><a href="#">Spirit</a></li>
               </ul>
           </li>
-        </ul> 
+        </ul>  -->
     </div>
     <div class="my-local">
       <h4>My Local Community</h4>
-        <ul class="my-locallist">
+      <div class="my-local feed">
+
+      </div>
+        <ul class="my-local choices">
           <li class="dropdown">
             <button type="button" data-toggle="dropdown" class="dropdown-toggle">Choose Your Local Activity<b class="caret"></b></button>
               <ul class="dropdown-menu">

@@ -1,7 +1,6 @@
 'use strict';
 
-angular
-  .module('healthynetworkApp', [
+angular.module('healthynetworkApp', [
     'ngCookies',
     'ngResource',
     'ngSanitize',
@@ -15,7 +14,7 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        controller: 'LoginController'
       })
       .when('/login', {
         authRequired: false, // if true, must log in before viewing this page
@@ -33,6 +32,18 @@ angular
        .when('/useredit', {
         templateUrl: 'views/user-edit.html',
         controller: 'UsersCtrl'
+      })
+       .when('/newpost', {
+        templateUrl: 'views/new-post.html',
+        controller: 'PostCtrl'
+      })
+      .when('/posts', {
+        templateUrl: 'views/user-home.html',
+        controller: 'PostCtrl'
+      })
+       .when('/postedit', {
+        templateUrl: 'views/post-edit.html',
+        controller: 'PostsCtrl'
       })
       .otherwise({
         redirectTo: '/'

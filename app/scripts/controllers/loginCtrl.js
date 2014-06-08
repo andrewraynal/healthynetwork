@@ -13,6 +13,7 @@ angular.module('healthynetworkApp')
       simpleLogin.login(service, function(err) {
         $scope.err = err? err + '' : null;
       });
+      console.log("You are logged in.");
     };
 
     $scope.loginPassword = function(cb) {
@@ -34,7 +35,8 @@ angular.module('healthynetworkApp')
     };
 
     $scope.logout = simpleLogin.logout;
-
+    console.log("You are logged out.");
+    
     $scope.createAccount = function() {
       function assertValidLoginAttempt() {
         if( !$scope.email ) {
