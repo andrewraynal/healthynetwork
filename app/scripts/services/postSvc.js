@@ -1,6 +1,6 @@
-angular.module('healthynetworkApp')
+angular.module('ahealthynetworkApp')
 	.factory('PostSvc', function ($resource){
-		return $resource('http://healthynetworkapp.firebaseio.com/:id',
+		return $resource('http://ahealthynetworkapp.firebaseio.com/:id',
 		{
 			id: '@_id'
 		},

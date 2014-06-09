@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('healthynetworkApp')
+angular.module('ahealthynetworkApp')
   .controller('LoginController', function($scope, simpleLogin, $location) {
     $scope.pass = null;
     $scope.err = null;

@@ -1,40 +1,39 @@
 
   <div class="row">
     <div class="col-xs-6 col-sm-4">
-      <h3>{{user.name}}</h3>
+      <h3>{{detail.firstname}}</h3>
+      <a href="#/user-edit">Edit<span class="edit"></span></a>
       <div class="circle-photo">
         <img src="http://placehold.it/140x100">  
         <a href="addImage()">Change My Picture</a>
       </div>   
-    <div class="my-details lft">
-      <form class="my-details">
+    <div class="my-details lft" ng-repeat="detail in details">
         <h3>My Details</h3>
          <ul class="form-group has-success">
             <li class="col-xs-10">
-              <h5>{{user.location}}</h5>
+              <h5>{{detail.location}}</h5>
               <a href="#/user-edit">Edit<span class="edit"></span></a>
             </li>
             <li class="col-xs-10">
-              <h5>{{user.gender}}</h5>
+              <h5>{{detail.gender}}</h5>
               <a href="#/user-edit">Edit<span class="edit"></span></a>
             </li>
             <li class="col-xs-10">
-              <h5>{{user.age}}</h5>
+              <p>{{detail.age}}</p>
               <a href="#/user-edit">Edit<span class="edit"></span></a>
             </li>
             <li class="col-xs-10">
-              <h5>{{user.message}}</h5>
+              <p>{{detail.personalmsg}}</p>
               <a href="#/user-edit">Edit<span class="edit"></span></a>
             </li>
             <li class="col-xs-10">
-              <h5>{{user.privacy}}</h5>
+              <p>{{detail.privacy}}</p>
               <a href="#/user-edit">Edit<span class="edit"></span></a>
             </li>    
         </ul>
         <div class="formFooter">
-          <button ng-click="editInfo()" type="button" class="btn btn-success">Edit All Details</button>
+          <button ng-click="editDetail()" type="button" class="btn btn-success">Edit All Details</button>
         </div>
-      </form>
     </div>
   </div>
   <div class="col-xs-6 col-sm-4 middle">
@@ -54,68 +53,26 @@
     </div>
     <div class="my-health instagram" ng-controller="HealthCtrl">
       <h4>My Health Info</h4>
-      <div class="health-feed">
-        <div class="bar">
-
-    <!-- These two buttons switch the layout varaible,
-       which causes the correct UL to be shown. -->
-
-    <a class="list-icon" ng-class="{active: isLayout('list')}" ng-click="setLayout('list')"></a>
-    <a class="grid-icon" ng-class="{active: isLayout('grid')}" ng-click="setLayout('grid')"></a>
-  </div>
-
-  <!-- We have two layouts. We choose which one to show depending on the "layout" binding -->
-
-  <ul ng-show="isLayout('grid')" class="grid">
-    <!-- A view with big photos and no text -->
-    <li ng-repeat="p in pics">
-      <a href="{{p.link}}" target="_blank"><img ng-src="{{p.images.low_resolution.url}}" /></a>
-    </li>
-  </ul>
-
-  <ul ng-show="isLayout('list')" class="list">
-    <!-- A compact view smaller photos and titles -->
-    <li ng-repeat="p in pics">
-      <a href="{{p.link}}" target="_blank"><img ng-src="{{p.images.thumbnail.url}}" /></a>
-      <p>{{p.caption.text}}</p>
-    </li>
-  </ul>
-</div>
-       <!-- <ul class="my-health choices">
-          <li class="dropdown">
-            <button type="button" data-toggle="dropdown" class="dropdown-toggle">Choose Your Info<b class="caret"></b></button>
-              <ul class="dropdown-menu">
-                <li><a href="#">All Tags</a></li>
-                <li><a href="#">Mind</a></li>
-                <li><a href="#">Body</a></li>
-                <li><a href="#">Spirit</a></li>
-              </ul>
-          </li>
-        </ul>  -->
-    </div>
-    <div class="my-local">
-      <h4>My Local Community</h4>
-      <div class="my-local feed">
-
+      <div class="bar">
+        <a class="list-icon" ng-class="{active: isLayout('list')}" ng-click="setLayout('list')"></a>
+        <a class="grid-icon" ng-class="{active: isLayout('grid')}" ng-click="setLayout('grid')"></a>
       </div>
-        <ul class="my-local choices">
-          <li class="dropdown">
-            <button type="button" data-toggle="dropdown" class="dropdown-toggle">Choose Your Local Activity<b class="caret"></b></button>
-              <ul class="dropdown-menu">
-                <li><a href="#">yoga</a></li>
-                <li><a href="#">music</a></li>
-                <li><a href="#">meditation</a></li>
-                <li><a href="#">arts</a></li>
-                <li><a href="#">strength training</a></li>
-                <li><a href="#">running</a></li>
-                <li><a href="#">sailing</a></li>
-                <li><a href="#">fishing</a></li>
-              </ul>
-          </li>
-        </ul> 
+      <ul ng-show="isLayout('grid')" class="grid">
+      <!-- A view with big photos and no text -->
+        <li ng-repeat="p in pics">
+          <a href="{{p.link}}" target="_blank"><img ng-src="{{p.images.low_resolution.url}}" /></a>
+        </li>
+      </ul>
+      <ul ng-show="isLayout('list')" class="list">
+      <!-- A compact view smaller photos and titles -->
+        <li ng-repeat="p in pics">
+          <a href="{{p.link}}" target="_blank"><img ng-src="{{p.images.thumbnail.url}}" /></a>
+          <p>{{p.caption.text}}</p>
+        </li>
+      </ul>
     </div>
   </div>
-  <div class="col-xs-6 col-sm-4">
+  <div class="col-xs-6 col-sm-4 right">
     <div class="my-journal-wrapper">
       <h4>My Journal</h4>
         <div class="my-journal-content">
@@ -137,6 +94,41 @@
           </div>
         </div>
     </div>
+      <div class="my-twitter" ng-controller="TwitterCtrl">
+      <h4>My Healthy Tweets</h4>
+      <p>Refresh (seconds): <input ng-model="refreshInterval"></p>
+      <ul>
+          <li ng-repeat="item in stories">
+            <a href="{{ item.link.href }}">{{ item.title }}</a>
+          </li>
+      </ul>
+
+      <hr />
+
+      <h3>Choose Your Next Feed</h3>
+
+      <form name="newFeed" no-validate>
+        URL: <input name="url" ng-model="newFeed.url" required>
+        <button ng-disabled="!newFeed.$valid" ng-click="addFeed(newFeed)"> Add Feed </button>
+        <span class="error" ng-show="newFeed.$error.required">Required!</span>
+        <span class="error" ng-show="newFeed.$error.url">Invalid URL Format!</span>
+      </form>
+
+      <hr/>
+
+      <div ng-repeat="feed in feeds">
+        <ul>
+          <li ng-repeat="item in feed.items">
+            <a href="{{ item.link.href }}">{{ item.title }}</a>
+          </li>
+        </ul>
+        URL: <input ng-model="feed.url">
+        <button ng-click="fetchFeed(feed)">Update</button>
+        <button ng-click="deleteFeed(feed)">Delete</button>
+        <hr />
+      </div>
+    </div>
+   </div> 
     <div class="footer">
       <p><button type="button" class="btn btn-success">Save Changes</button></p>
     </div>

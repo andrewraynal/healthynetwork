@@ -1,6 +1,6 @@
 (function (angular) {
   'use strict';
-  angular.module('healthynetworkApp')
+  angular.module('ahealthynetworkApp')
     .run(function ($injector, $location, $rootScope, loginRedirectPath) {
       if ($injector.has('$route')) {
         new RouteSecurityManager($location, $rootScope, $injector.get('$route'), loginRedirectPath);

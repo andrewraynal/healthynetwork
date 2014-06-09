@@ -1,7 +1,7 @@
 'use strict';
 
 // Declare app level module which depends on filters, and services
-angular.module('healthynetworkApp')
+angular.module('ahealthynetworkApp')
 
   // version of this seed app is compatible with angularFire 0.6
   // see tags for other versions: https://github.com/firebase/angularFire-seed/tags
@@ -11,7 +11,7 @@ angular.module('healthynetworkApp')
   .constant('loginRedirectPath', '/login')
 
   // which login service we're using
-  .constant('loginProviders', 'twitter,password')
+  .constant('loginProviders', 'facebook,twitter,password')
 
   // your Firebase URL goes here
-  .constant('FBURL', 'https://healthynetwork.firebaseio.com');
+  .constant('FBURL', 'https://ahealthynetwork.firebaseio.com');

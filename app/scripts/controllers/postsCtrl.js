@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('healthynetworkApp')
+angular.module('ahealthynetworkApp')
   .controller('PostsCtrl', function ($scope) {
     $scope.createPost = function() {
     	$location.path('/newpost');

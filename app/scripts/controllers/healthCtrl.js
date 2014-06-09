@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('healthynetworkApp')
+angular.module('ahealthynetworkApp')
   .controller('HealthCtrl', ['$scope', 'instagram', function ($scope, instagram){
     
     $scope.layout = 'grid';

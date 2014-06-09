@@ -1,6 +1,7 @@
 'use strict';
 
-angular.module('healthynetworkApp', [
+angular
+  .module('ahealthynetworkApp', [
     'ngCookies',
     'ngResource',
     'ngSanitize',
@@ -9,41 +10,42 @@ angular.module('healthynetworkApp', [
     'angularfire.firebase',
     'angularfire.login',
     'simpleLoginTools'
+
   ])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'LoginController'
+        controller: 'DetailCtrl'
       })
       .when('/login', {
         authRequired: false, // if true, must log in before viewing this page
         templateUrl: 'views/login.html',
         controller: 'LoginController'
       })
-      .when('/newuser', {
-        templateUrl: 'views/new-user.html',
-        controller: 'UserCtrl'
+     .when('/newdetails', {
+        templateUrl: 'views/newdetails.html',
+        controller: 'DetailCtrl'
       })
       .when('/userhome', {
-        templateUrl: 'views/user-home.html',
-        controller: 'UserCtrl'
+        templateUrl: 'views/userhome.html',
+        controller: 'DetailCtrl'
       })
        .when('/useredit', {
-        templateUrl: 'views/user-edit.html',
-        controller: 'UsersCtrl'
+        templateUrl: 'views/editdetails.html',
+        controller: 'DetailsCtrl'
       })
        .when('/newpost', {
-        templateUrl: 'views/new-post.html',
+        templateUrl: 'views/newpost.html',
         controller: 'PostCtrl'
       })
       .when('/posts', {
-        templateUrl: 'views/user-home.html',
+        templateUrl: 'views/userhome.html',
         controller: 'PostCtrl'
       })
        .when('/postedit', {
         templateUrl: 'views/post-edit.html',
-        controller: 'PostsCtrl'
+        controller: 'PostCtrl'
       })
       .otherwise({
         redirectTo: '/'
