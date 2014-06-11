@@ -16,11 +16,11 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'DetailCtrl'
+        controller: 'LoginController'
       })
       .when('/login', {
         authRequired: false, // if true, must log in before viewing this page
-        templateUrl: 'views/login.html',
+        templateUrl: 'views/main.html',
         controller: 'LoginController'
       })
      .when('/newdetails', {

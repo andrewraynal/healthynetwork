@@ -1,71 +1,45 @@
 'use strict';
 
 angular.module('ahealthynetworkApp')
-  .controller('LoginController', function($scope, simpleLogin, $location) {
-    $scope.pass = null;
-    $scope.err = null;
-    $scope.email = null;
-    $scope.confirm = null;
-    $scope.createMode = false;
-    $scope.user = null;
+  .controller('LoginController', function($scope, simpleLogin, $firebaseSimpleLogin, FBURL) {
+    $scope.custom = true;
+    $scope.custom1 = true;
 
-    $scope.login = function(service) {
-      simpleLogin.login(service, function(err) {
-        $scope.err = err? err + '' : null;
+    $scope.loginService = $firebaseSimpleLogin(new Firebase(FBURL));
+      $scope.newUser = { email: '', password: '' };
+      $scope.currentUser = null;
+
+      $scope.login = function(email, password) {
+      $scope.loginService.$login('password', {email: email, password: password})
+        .then(function(user) {
+          $scope.currentUser = user;
+          $scope.resetForm();
+        });
+        console.log("i'm logged");
+    };
+      $scope.register = function(email, password) {
+        $scope.loginService.$createUser(email, password)
+        .then(function(user){
+          $scope.currentUser = user;
+          $scope.resetForm();
+        });
+        // authorize user for unique data
+        {
+      Auth.register($scope.user).then(function () {
+      User.create(authUser, $scope.user.username);
+      $location.path('/'); 
+      }, function (error) {$scope.error = toString();
+        $scope.error = error.toString();
       });
-      console.log("You are logged in.");
+  }; 
     };
 
-    $scope.loginPassword = function(cb) {
-      $scope.err = null;
-      if( !$scope.email ) {
-        $scope.err = 'Please enter an email address';
-      }
-      else if( !$scope.pass ) {
-        $scope.err = 'Please enter a password';
-      }
-      else {
-        simpleLogin.loginPassword($scope.email, $scope.pass, function(err, user) {
-          $scope.err = err? err + '' : null;
-          if( !err && cb ) {
-            cb(user);
-          }
-        });
-      }
+    $scope.resetForm = function() {
+      $scope.newUser = { email: '', password: '' };
     };
-
-    $scope.logout = simpleLogin.logout;
-    console.log("You are logged out.");
     
-    $scope.createAccount = function() {
-      function assertValidLoginAttempt() {
-        if( !$scope.email ) {
-          $scope.err = 'Please enter an email address';
-        }
-        else if( !$scope.pass ) {
-          $scope.err = 'Please enter a password';
-        }
-        else if( $scope.pass !== $scope.confirm ) {
-          $scope.err = 'Passwords do not match';
-        }
-        return !$scope.err;
-      }
-
-      $scope.err = null;
-      if( assertValidLoginAttempt() ) {
-        simpleLogin.createAccount($scope.email, $scope.pass, function(err, user) {
-          if( err ) {
-            $scope.err = err? err + '' : null;
-          }
-          else {
-            // must be logged in before I can write to my profile
-            $scope.login(function() {
-              simpleLogin.createProfile(user.uid, user.email);
-              $location.path('/account');
-            });
-          }
-        });
-      }
+    $scope.logout = function() {
+      simpleLogin.logout();
     };
-
-  });
+});
+ 

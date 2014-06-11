@@ -311,16 +311,17 @@ module.exports = function (grunt) {
           ]
         }, {
           expand: true,
-          cwd: '.tmp/images',
+          flatten: true,
+          cwd: '<%= yeoman.app %>',
           dest: '<%= yeoman.dist %>/images',
-          src: ['generated/*']
+          src: ['bower_components/sass-bootstrap/images/*.*']
         }]
       },
       styles: {
         expand: true,
         cwd: '<%= yeoman.app %>/styles',
-        dest: '.tmp/styles/',
-        src: '{,*/}*.css'
+        dest: '<%= yeoman.dist %>/fonts',
+        src: ['bower_components/sass-bootstrap/fonts/*.*']
       }
     },
 
