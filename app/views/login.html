@@ -1,86 +1,18 @@
 <div class="container main">
-    <div class="modal-header">
-        <nav role="navigation" class="navbar navbar-inverse">
-            <div class="navbar-header">
-                <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="https://ahealthynetwork.firebaseapp.com" class="navbar-brand">ahealthynetwork</a>
-            </div> 
-            <div id="navbarCollapse" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="#/userhome">My Profile</a>
-                    </li>
-                    <li class="dropdown">
-                        <a type="button" data-toggle="dropdown" class="dropdown-toggle" href>My Info<span class="caret"></span></a>
-                        <ul role="menu" class="dropdown-menu">
-                            <li><a href>My Details</a></li>
-                            <li><a href>My News</a></li>
-                            <li><a href>My Journal</a></li>
-                        </ul>
-                    </li>
-                </ul>  
-            <form role="search" class="navbar-form navbar-left">
-                <div class="form-group">
-                    <input type="text" placeholder="Search" class="form-control">
-                </div>
-            </form>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <button class="nav-btn btn btn-lg-primary" ng-click="custom1=!custom1">Login</button>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div> <!--header close-->
-    <div class="social-side">
-        <ul class="social-side">
-            <li>
-                <a href="http://twitter.com/" class="twitter" target="_blank">Twitter</a>
-            </li>
-            <li>
-                <a href="https://www.facebook.com/" class="facebook" target="_blank">Facebook</a>
-            </li>
-            <li>
-                <a href="http://instagram.com/" class="instagram" target="_blank">Instagram</a>
-            </li>
-            <li>
-                <a href="http://pinterest.com/" class="pinterest" target="_blank">Pinterest</a>
-            </li>
-            <li>
-                <a href="https://play.spotify.com/" class="spotify" target="_blank">Spotify</a>
-            </li>
-            <li>
-                <a href="/rss" class="rss" target="_blank">RSS</a>
-            </li>
-            <li>
-                <a href="http://relix.com" class="jambands" target="_blank">relix.com</a>
-            </li>
-        </ul>
-    </div> <!--social side end-->
-    <div class="modal-body">        
+    <div class="login-register-wrapper">
+    <div class="wrapper header">
+    </div>
+    <div class="body">        
+        <div class="caption">
         <h1 class="app-title">
-            <span>A Healthy Network</span>
+            <span>Welcome to A Healthy Network!</span>
         </h1>
-        <div class="caption ctr">
-            <div class="title">
-                A healthy life awaits.  
-            </div>
-            <div class="subtitle">
-                Choose a username and password to begin a new, healthy life.  Share your healthy life with others to inspire, understand, and grow. :)
-            </div>
+            <h4 class="subtitle">
+                Create your account to being a new, healthy life.  Share thoughts and advice with others to inspire, understand, and grow.
+            </h4>
         </div>
         <div class="register">
-           
-                <button ng-click="custom=!custom" class="btn btn-lg-primary">Register with Email
-                </button> 
+            <button ng-click="custom=!custom" class="btn btn-lg-primary register"><span class="glyphicon glyphicon-envelope"></span><strong>Register with Email</strong></button> 
             <form ng-submit="register()">
                 <div ng-hide="custom">
                     <input ng-model="user.username" class="form-control userinputs" placeholder="Create Username" />
@@ -91,15 +23,40 @@
                     <div class="custom" ng-show="custom"></div>
             </form>
         </div>
-    <div class="modal-footer login">
-        <form ng-submit="login()">
-            <button ng-click="custom1=!custom1" class="btn btn-xl-default">Already have an account? Sign in.</button>
+        <div class="login">
+            <button ng-click="custom1=!custom1" class="btn btn-xl-default"><span class="glyphicon glyphicon-log-in"></span><strong>Already have an account? Sign in.</strong></button>
+            <form ng-submit="login()">
             <div ng-hide="custom1">
                 <input ng-model="user.email" type="text" class="form-control userinputs" placeholder="Email"/>
                 <input ng-model="user.password" type="password" class="form-control userinputs" placeholder="Password"/>
                 <input type="submit" value="Log In" class="btn btn-primary" />
             </div>
                 <div class="custom1" ng-show="custom1"></div>
-        </form>   
+            </form>   
+        </div>
+         <h3 class="subtitle">
+                A HEALTHY LIFE AND COMMUNITY AWAIT 
+            </h3>
+      </div>
+    </div>  
+      <div class="footer">
+        <nav>
+            <div class="footer-container">
+                <div class="row">
+                    <div class="img-bottom">
+                        <img src="/images/Moi.jpg" alt=""> Andrew Raynal 2014 &copy;All Rights Reserved
+                            </div>
+                            <div class="nav-bottom">
+                                <ul>
+                                    <li>Home |</li>
+                                    <li>About |</li>
+                                    <li>Profile |</li>
+                                    <li>Contact |</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+  
     </div>
 </div>
