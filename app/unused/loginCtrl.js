@@ -23,15 +23,6 @@ angular.module('ahealthynetworkApp')
           $scope.currentUser = user;
           $scope.resetForm();
         });
-        // authorize user for unique data
-        {
-      Auth.register($scope.user).then(function () {
-      User.create(authUser, $scope.user.username);
-      $location.path('/'); 
-      }, function (error) {$scope.error = toString();
-        $scope.error = error.toString();
-      });
-  }; 
     };
 
     $scope.resetForm = function() {

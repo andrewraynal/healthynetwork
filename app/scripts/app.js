@@ -15,39 +15,39 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'LoginController'
+        templateUrl: 'views/login.html',
+        controller: 'AuthCtrl'
+      })
+       .when('/main', {
+        templateUrl: 'views/login.html',
+        controller: 'AuthCtrl'
+      })
+       .when('/register', {
+        templateUrl: 'views/login.html',
+        controller: 'AuthCtrl'
       })
       .when('/login', {
-        authRequired: false, // if true, must log in before viewing this page
-        templateUrl: 'views/main.html',
-        controller: 'LoginController'
-      })
-     .when('/newdetails', {
-        templateUrl: 'views/newdetails.html',
-        controller: 'DetailCtrl'
+        templateUrl: 'views/login.html',
+        controller: 'AuthCtrl'
       })
       .when('/userhome', {
         templateUrl: 'views/userhome.html',
-        controller: 'DetailCtrl'
+        controller: 'AuthCtrl'
       })
-       .when('/useredit', {
+     .when('/newdetails', {
+        templateUrl: 'views/newdetails.html',
+        controller: 'DetailListCtrl'
+      })
+       .when('/editdetails', {
         templateUrl: 'views/editdetails.html',
-        controller: 'DetailsCtrl'
+        controller: 'DetailListCtrl'
       })
-       .when('/newpost', {
-        templateUrl: 'views/newpost.html',
-        controller: 'PostCtrl'
-      })
-      .when('/posts', {
-        templateUrl: 'views/userhome.html',
-        controller: 'PostCtrl'
-      })
-       .when('/postedit', {
-        templateUrl: 'views/post-edit.html',
-        controller: 'PostCtrl'
-      })
+      //  .when('/postedit', {
+      //   templateUrl: 'views/post-edit.html',
+      //   controller: 'PostCtrl'
+      // })
       .otherwise({
         redirectTo: '/'
       });
-  });
+  })
+.constant('FBURL', 'https://ahealthynetwork.firebaseio.com/');

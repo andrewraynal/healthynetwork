@@ -1,6 +1,6 @@
 angular.module('ahealthynetworkApp')
 	.factory('PostsSvc', function ($resource){
-		return $resource('http://ahealthynetworkapp.firebaseio.com', {},
+		return $resource('http://ahealthynetworkapp.firebaseio.com/journal', {},
 		{
 
 				getPosts: {

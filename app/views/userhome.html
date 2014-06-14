@@ -1,90 +1,94 @@
 
-  <div class="row">
     <div class="header">
-    <nav role="navigation" class="navbar navbar-inverse">
-    <div class="navbar-header">
-        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+      <nav role="navigation" class="navbar navbar-inverse">
+        <div class="navbar-header">
+          <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-        </button>
-        <a href="https://ahealthynetwork.firebaseapp.com" class="navbar-brand">A Healthy Network</a>
-    </div>
+          </button>
+            <a href="https://ahealthynetwork.firebaseapp.com" class="navbar-brand"><strong>A Healthy Network</strong></a>
+        </div>
     <!-- Collection of nav links, forms, and other content for toggling -->
-    <div id="navbarCollapse" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#/userhome">My Profile</a></li>
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#/userhome">My Profile</a>
+            </li>
             <li class="dropdown">
-                <a type="button" data-toggle="dropdown" class="dropdown-toggle" href>My Info<span class="caret"></span></a>
+                <a type="button" data-toggle="dropdown" class="dropdown-toggle" href>My Info<span class="caret"></span>
+                </a>
                 <ul role="menu" class="dropdown-menu">
                     <li><a href>My Details</a></li>
                     <li><a href>My News</a></li>
                     <li><a href>My Journal</a></li>
                 </ul>
             </li>
-        </ul>  
-        <form role="search" class="navbar-form navbar-left">
+          </ul>  
+          <form role="search" class="navbar-form navbar-left">
             <div class="form-group">
                 <input type="text" placeholder="Search" class="form-control">
             </div>
-        </form>
-        <ul class="nav navbar-nav navbar-right">
+          </form>
+          <ul class="nav navbar-nav navbar-right">
             <li>
               <span ng-show="auth.user"><button type="submit" ng-click="auth.$logout()">Sign Out</button></span>
              </li>
-        </ul>
+          </ul>
+        </div>
+      </nav>
     </div>
-  </nav>
-</div>
     <div class="col-xs-6 col-sm-4">
       <h3>{{detail.firstname}}</h3>
-      <a href="#/user-edit">Edit<span class="edit"></span></a>
-      <div class="circle-photo">
-        <img src="http://placehold.it/140x100">  
-        <a href="addImage()">Change My Picture</a>
-      </div>   
-    <div class="my-details lft">
-        <h3>My Details</h3>
-         <ul class="form-group has-success" ng-repeat="detail in details">
-            <li class="col-xs-10">
-              <h5>{{detail.location}}</h5>
-              <a href="#/user-edit">Edit<span class="edit"></span></a>
-            </li>
-            <li class="col-xs-10">
-              <h5>{{detail.gender}}</h5>
-              <a href="#/user-edit">Edit<span class="edit"></span></a>
-            </li>
-            <li class="col-xs-10">
-              <p>{{detail.age}}</p>
-              <a href="#/user-edit">Edit<span class="edit"></span></a>
-            </li>
-            <li class="col-xs-10">
-              <p>{{detail.personalmsg}}</p>
-              <a href="#/user-edit">Edit<span class="edit"></span></a>
-            </li>
-            <li class="col-xs-10">
-              <p>{{detail.privacy}}</p>
-              <a href="#/user-edit">Edit<span class="edit"></span></a>
-            </li>    
-        </ul>
-        <div class="formFooter">
-          <button ng-click="editDetail()" type="button" class="btn btn-success">Edit All Details</button>
-        </div>
-    </div>
-  </div>
+        <a href="#/user-edit">Edit<span class="edit"></span></a>
+          <div class="circle-photo">
+            <img src="http://placehold.it/100x100">  
+            <a href="addImage()">Change My Picture</a>
+          </div>   
+          <div class="newDetail">
+            <h3>My Details</h3>
+            <ul class="form-group" ng-repeat="detail in details">
+              <li class="col-xs-10">
+                <p>{{detail.location}}</p>
+                <a href="#/user-edit">Edit<span class="edit"></span></a>
+              </li>
+              <li class="col-xs-10">
+                <p>{{detail.gender}}</p>
+                <a href="#/user-edit">Edit<span class="edit"></span></a>
+              </li>
+              <li class="col-xs-10">
+                <p>{{detail.age}}</p>
+                <a href="#/user-edit">Edit<span class="edit"></span></a>
+              </li>
+              <li class="col-xs-10">
+                <p>{{detail.personalmsg}}</p>
+                <a href="#/user-edit">Edit<span class="edit"></span></a>
+              </li>
+              <li class="col-xs-10">
+                <p>{{detail.privacy}}</p>
+                <a href="#/user-edit">Edit<span class="edit"></span></a>
+              </li>    
+            </ul>
+          </div>
+          <div class="formFooter">
+            <button ng-click="editDetailList()" type="button" class="btn btn-success">Edit All Details</button>
+          </div>
+      </div>
   <div class="col-xs-6 col-sm-4 middle">
     <div class="otheruseractivity">
       <h3>Other User Activity</h3>
-      <ul class="otheruseractivity-list">
-        <li class="otheruseractivity-listitem">
+      <ul class="otheruseract-list">
+        <li class="otheruseract-listdetail">
           <img src="http://placehold.it/100x100">
         </li>
-        <li class="otheruseractivity-listitem">
+        <li class="otheruseract-listdetail">
           <img src="http://placehold.it/100x100">
         </li>
-        <li class="otheruseractivity-listitem">
+        <li class="otheruseract-listdetail">
           <img src="http://placehold.it/100x100">
         </li>
       </ul>
@@ -124,7 +128,7 @@
               <a class="category" href="#">Category</a>
             </div>
             <div class="post-content">
-              <a style="float: right; margin: 0 10px 10px 20px;" href="http://ahealthynetwork.firebaseapp.com/">
+              <a class="post-link" href="http://ahealthynetwork.firebaseapp.com/">
                 <img src="http://fillmurray.com/g/45/45">
               </a>
               <p>Post Content:  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, neque, esse, distinctio consequatur natus quos pariatur maiores dignissimos enim magni laboriosam nisi itaque saepe dolorem nostrum minus sit iure doloribus!</p>
@@ -134,26 +138,8 @@
     </div>
       <div class="my-twitter" ng-controller="TwitterCtrl">
       <h4>My Healthy Feed</h4>
-      <ul>
-          <li ng-repeat="item in stories">
-            <a href="{{ item.link.href }}">{{ item.title }}</a>
-          </li>
-      </ul>
-      <div ng-repeat="feed in feeds">
-        <ul>
-          <li ng-repeat="item in feed.items">
-            <a href="{{ item.link.href }}">{{ item.title }}</a>
-          </li>
-        </ul>
-        URL: <input ng-model="feed.url">
-        <button ng-click="fetchFeed(feed)">Update</button>
-        <button ng-click="deleteFeed(feed)">Delete</button>
-        <hr />
-      </div>
     </div>
    </div> 
     <div class="footer">
       <p><button type="button" class="btn btn-success">Save Changes</button></p>
-    </div>
   </div>
-</div>

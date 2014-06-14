@@ -23,15 +23,62 @@ ul li {
 	display: inline;
 	text-align: left;
 }
-.email-input, .password-input {
-	width: auto;
+.post-link {
+	float: right; 
+	margin: 0 10px 10px 20px;
+}
+
+.social-side .twitter, .social-side .facebook, .social-side .instagram, .social-side .pinterest, .social-side .spotify, .social-side .rss, .social-side .jambands {
+	background: url(/images/social-side.png) no-repeat -39px;
+	display: block;
+	height: 28px;
+	overflow: hidden;
+	text-indent: -9999px;
+	widows: 29px;
+	margin: 0;
+}
+.social-side {
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	right: 0;
+	top: 91px;
+	width: 30px;
+	z-index: 23;
+	vertical-align: baseline;
+	display: block;
+	list-style-type: disc;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 40px;
+	zoom: 1;
+	color: #424242;
+	line-height: 1.1em;
+	-webkit-font-smoothing: antialiased;
+}
+.social-side li {
+	margin: 0 0 1px;
+	overflow: hidden;
+	vertical-align: top;
+	outline: 0;
+	line-height: 20px;
+	padding: 0;
+	border: 0;
+	display: list-item;
+	text-align: -webkit-match-parent;
+	list-style: none outside none;
+}
+.userinputs {
 	margin: 10px;
-	padding: 10px
+	padding: 10px;
 }
 .modal-body, .modal-footer {
 	text-align: center;
 }
-/*HealthPic Layout - Grid/List*/
+/*HealthPics Layout - Grid/List*/
 *{
 	margin:0;
 	padding:0;
@@ -168,4 +215,10 @@ ul.grid li img{
 	border:none;
 }
 
+.show {
+	display: inline-block;
+}
+.custom, .custom1 {
+	display: none;
+}
 
