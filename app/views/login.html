@@ -8,7 +8,7 @@
             <span>Welcome to A Healthy Network!</span>
         </h1>
             <h4 class="subtitle">
-                Create your account to being a new, healthy life.  Share thoughts and advice with others to inspire, understand, and grow.
+                Create your account to access all that is good for mind, body and spirit.  Get relevant, helpful information and share with others to inspire, understand, and grow.
             </h4>
         </div>
         <div class="register">
@@ -18,25 +18,27 @@
                     <input ng-model="user.username" class="form-control userinputs" placeholder="Create Username" />
                     <input ng-model="user.email" type="text" class="form-control userinputs" placeholder="Email"/>
                     <input ng-model="user.password" type="password" class="form-control userinputs" placeholder="Password"/>
-                    <input type="submit" value="Register" class="btn btn-primary" />
+                    <input type="submit" value="Register New Account" class="btn btn-primary" />
                 </div>
                     <div class="custom" ng-show="custom"></div>
             </form>
         </div>
-        <div class="login">
-            <button ng-click="custom1=!custom1" class="btn btn-xl-default"><span class="glyphicon glyphicon-log-in"></span><strong>Already have an account? Sign in.</strong></button>
+         <h3 class="subtitle">
+                A HEALTHY LIFE AND COMMUNITY AWAIT 
+        </h3>
+        <hr>
+         <div class="login">
+            <p> Already have an account?  Sign in below.</p>
+            <button ng-click="custom1=!custom1" class="btn btn-xl-default"><span class="glyphicon glyphicon-log-in"></span><strong>Sign In</strong></button>
             <form ng-submit="login()">
             <div ng-hide="custom1">
                 <input ng-model="user.email" type="text" class="form-control userinputs" placeholder="Email"/>
                 <input ng-model="user.password" type="password" class="form-control userinputs" placeholder="Password"/>
-                <input type="submit" value="Log In" class="btn btn-primary" />
+                <input type="submit" value="Log In" class="btn btn-primary btn-signin" />
             </div>
                 <div class="custom1" ng-show="custom1"></div>
             </form>   
         </div>
-         <h3 class="subtitle">
-                A HEALTHY LIFE AND COMMUNITY AWAIT 
-            </h3>
       </div>
     </div>  
       <div class="footer">

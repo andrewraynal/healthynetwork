@@ -15,3 +15,4 @@ angular.module('ahealthynetworkApp')
 
   // your Firebase URL goes here
   .constant('FBURL', 'https://ahealthynetwork.firebaseio.com');
+  

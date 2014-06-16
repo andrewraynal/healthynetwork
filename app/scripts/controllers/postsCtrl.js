@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('ahealthynetworkApp')
-  .controller('PostsCtrl', function ($scope) {
+  .controller('postsCtrl', function ($scope) {
     $scope.createPost = function() {
     	$location.path('/newpost');
     };
@@ -11,7 +11,7 @@ angular.module('ahealthynetworkApp')
     };
     $scope.posts = PostsSvc.query();
    })
-  .controller('PostCtrl', function ($scope, $location, $routeParams, PostSvc){
+  .controller('postCtrl', function ($scope, $location, $routeParams, PostSvc){
   	$scope.post = PostSvc.showUser({ id: $routeParams.id });
   	$scope.delete = function() {
   		PostSvc.delete({ id: $routeParams.id });

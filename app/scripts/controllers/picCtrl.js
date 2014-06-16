@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('ahealthynetworkApp')
-  .controller('HealthCtrl', ['$scope', 'instagram', function ($scope, instagram){
+  .controller('picCtrl', ['$scope', 'instagram', function ($scope, instagram){
     
     $scope.layout = 'grid';
 
@@ -15,7 +15,7 @@ angular.module('ahealthynetworkApp')
 
     $scope.pics = [];
 
-    instagram.getHealth(function(data){
+    instagram.getPic(function(data){
 
       $scope.pics = data;
     });

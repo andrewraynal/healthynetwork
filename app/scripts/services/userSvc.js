@@ -17,7 +17,7 @@ angular.module('ahealthynetworkApp')
 				setCurrentUser(username);
 			});
 		},
-		getByUsername: function (username) {
+		findByUsername: function (username) {
 			if (username) {
 				return users.$child(username);
 			}
@@ -30,7 +30,7 @@ angular.module('ahealthynetworkApp')
 		}
 	};
 	function setCurrentUser (username) {
-		$rootScope.currentUser = User.getByUsername(username);
+		$rootScope.currentUser = User.findByUsername(username);
 	}
 
 	$rootScope.$on('$firebaseSimpleLogin:login', function (e, authUser) {

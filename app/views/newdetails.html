@@ -18,6 +18,14 @@
             <label class="col-sm-2 control-label" for="textinput">Location</label>
             <div class="col-sm-10">
               <input type="text" ng-model="detail.location" placeholder="City & State or Postcode" class="form-control">
+               <div ng-controller="GeoCtrl">
+                  <button class="btn btn-xs-success" ng-click="useGeoLocate()">Enable Location Services
+                  </button>
+            
+            Location: <pre ng-bind="position|json"/>
+            <button class="btn btn-xs-success" ng-click="position=null">clear</button>
+            
+        </div>
             </div>
           </div>
           <div class="form-group">
@@ -39,7 +47,7 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Privacy Settings</label>
             <div class="col-sm-10">
-              <input type="text" ng-model="detail.privacysettings" placeholder="type 'Private, Semi-private, or Public'" class="form-control">
+              <input type="text" ng-model="detail.privacy" placeholder="type 'Private, Semi-private, or Public'" class="form-control">
             </div>
           </div>
           <div class="form-group">

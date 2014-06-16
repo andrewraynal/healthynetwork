@@ -9,45 +9,40 @@ angular
     'firebase',
     'angularfire.firebase',
     'angularfire.login',
-    'simpleLoginTools'
+    'simpleLoginTools',
+    'ahealthynetworkApp.directives'
 
   ])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/login.html',
-        controller: 'AuthCtrl'
+        controller: 'authCtrl'
       })
        .when('/main', {
         templateUrl: 'views/login.html',
-        controller: 'AuthCtrl'
+        controller: 'authCtrl'
       })
        .when('/register', {
         templateUrl: 'views/login.html',
-        controller: 'AuthCtrl'
+        controller: 'authCtrl'
       })
       .when('/login', {
         templateUrl: 'views/login.html',
-        controller: 'AuthCtrl'
+        controller: 'authCtrl'
       })
       .when('/userhome', {
         templateUrl: 'views/userhome.html',
-        controller: 'AuthCtrl'
+        controller: 'authCtrl'
       })
      .when('/newdetails', {
         templateUrl: 'views/newdetails.html',
-        controller: 'DetailListCtrl'
+        controller: 'detailCtrl'
       })
-       .when('/editdetails', {
-        templateUrl: 'views/editdetails.html',
-        controller: 'DetailListCtrl'
-      })
-      //  .when('/postedit', {
-      //   templateUrl: 'views/post-edit.html',
-      //   controller: 'PostCtrl'
-      // })
       .otherwise({
         redirectTo: '/'
       });
   })
 .constant('FBURL', 'https://ahealthynetwork.firebaseio.com/');
+angular.module('ahealthynetworkApp.directives', []);
+
