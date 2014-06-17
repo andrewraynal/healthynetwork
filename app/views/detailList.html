@@ -1,35 +1,32 @@
 <div class="detailList">
     <h2>My Details</h2>
-      <div class="detailHeader" ng-repeat="(id, detail) in details">
-        <h3 class="name">{{detail.firstname}}{{detail.lastname}}<h3>
+      <div class="detailHeader">
+        <h3 class="name">{{newDetail.firstname}}{{newDetail.lastname}}<h3>
         <a href="#/editdetails">Edit<span class="edit"></span></a>
-          <div class="circle-photo">
-            <img src="http://placehold.it/100x100">  
-            <a class="btn-xs" href="addImage()">Change My Picture</a>
-          </div>
+          <div ng-include="'views/uploadimg.html'"></div>
       </div>   
       <div class="detailBody">
-            <!-- <ul ng-repeat="(id, detail) in details">
+            <ul ng-repeat="(detailId, detail) in details">
               <li class="col-xs-10 location">
-                <p>{{detail.location}}</p>
+                <p>{{newDetail.location}}</p>
               </li>
               <li class="col-xs-10">
-                <p>{{detail.gender}}</p>
+                <p>{{newDetail.gender}}</p>
                 <a href="#/editdetails">Edit<span class="edit"></span></a>
               </li>
               <li class="col-xs-10">
-                <p>{{detail.age}}</p>
+                <p>{{newDetail.age}}</p>
                 <a href="#/editdetails">Edit<span class="edit"></span></a>
               </li>
               <li class="col-xs-10">
-                <p>{{detail.personalmsg}}</p>
+                <p>{{newDetail.personalmsg}}</p>
                 <a href="#/editdetails">Edit<span class="edit"></span></a>
               </li>
               <li class="col-xs-10">
-                <p>{{detail.privacy}}</p>
+                <p>{{newDetail.privacy}}</p>
                 <a href="#/editdetails">Edit<span class="edit"></span></a>
               </li>    
-            </ul> -->
+            </ul>
       </div>
           <div class="detailFooter">
             <button class="btn btn-default btn-lg" ng-href="updateDetails(id)">Update Details</button>

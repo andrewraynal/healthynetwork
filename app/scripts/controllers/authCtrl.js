@@ -3,10 +3,10 @@
 angular.module('ahealthynetworkApp')
 	.controller('authCtrl', function ($scope, $location, Auth, User){
 		if (Auth.signedIn()) {
-			$location.path('/userhome');
+			$location.path('/');
 		}
 	$scope.$on('$firebaseSimpleLogin:login', function () {
-		$location.path('/userhome');
+		$location.path('/');
 	});
 	$scope.login = function () {
 		Auth.login($scope.user).then(function () {
@@ -18,7 +18,7 @@ angular.module('ahealthynetworkApp')
 	$scope.register = function () {
 		Auth.register($scope.user).then(function (authUser) {
 			User.create(authUser, $scope.user.username);
-			$location.path('/newlocation');
+			$location.path('/newdetails');
 		}, function (error) {
 			$scope.error = error.toString();
 		});

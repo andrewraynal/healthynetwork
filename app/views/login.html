@@ -1,20 +1,21 @@
 <div class="container main">
     <div class="login-register-wrapper">
-    <div class="wrapper header">
+    <div class="header">
     </div>
     <div class="body">        
         <div class="caption">
         <h1 class="app-title">
-            <span>Welcome to A Healthy Network!</span>
+          BALANCE.
         </h1>
-            <h4 class="subtitle">
-                Create your account to access all that is good for mind, body and spirit.  Get relevant, helpful information and share with others to inspire, understand, and grow.
-            </h4>
+            <h3 class="subtitle">
+                Create your account.  Share your balanced life with others to inspire, understand, and grow.
+            </h3>
         </div>
         <div class="register">
             <button ng-click="custom=!custom" class="btn btn-lg-primary register"><span class="glyphicon glyphicon-envelope"></span><strong>Register with Email</strong></button> 
             <form ng-submit="register()">
                 <div ng-hide="custom">
+                    <p ng-show="error" class="text-danger">{{ error }}</p>
                     <input ng-model="user.username" class="form-control userinputs" placeholder="Create Username" />
                     <input ng-model="user.email" type="text" class="form-control userinputs" placeholder="Email"/>
                     <input ng-model="user.password" type="password" class="form-control userinputs" placeholder="Password"/>
@@ -23,15 +24,14 @@
                     <div class="custom" ng-show="custom"></div>
             </form>
         </div>
-         <h3 class="subtitle">
-                A HEALTHY LIFE AND COMMUNITY AWAIT 
-        </h3>
+       
         <hr>
          <div class="login">
             <p> Already have an account?  Sign in below.</p>
             <button ng-click="custom1=!custom1" class="btn btn-xl-default"><span class="glyphicon glyphicon-log-in"></span><strong>Sign In</strong></button>
             <form ng-submit="login()">
             <div ng-hide="custom1">
+                <p ng-show="error" class="text-danger">{{ error }}</p>
                 <input ng-model="user.email" type="text" class="form-control userinputs" placeholder="Email"/>
                 <input ng-model="user.password" type="password" class="form-control userinputs" placeholder="Password"/>
                 <input type="submit" value="Log In" class="btn btn-primary btn-signin" />

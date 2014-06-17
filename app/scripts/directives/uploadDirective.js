@@ -1,5 +1,5 @@
 
-      .directive('fileDirective', function(){
+      .directive('uploadDirective', function(){
             return{
               restrict: 'E',
               
@@ -16,8 +16,8 @@
                     $.ajax({
                         type: "POST",
                         beforeSend: function(request){
-                            request.setRequestHeader("X-Parse-Application-Id", 'HRXk2QaYdSg88Iuy8HbEkLY9JxpVOnMVhh53B2GC');
-                            request.setRequestHeader("X-Parse-REST-API-Key", 'uWj9AXCYt6ugHQAXyA7pvmYtSYCJb6f61LeKthv5');
+                            request.setRequestHeader("X-Parse-Application-Id", 'NEED ID');
+                            request.setRequestHeader("X-Parse-REST-API-Key", 'NEED KEY');
                             request.setRequestHeader("Content-Type", file.type);
                           },
                           url: serverUrl,
@@ -27,12 +27,12 @@
                           success: function(data){
                              console.log("File available at:" + data.url);
                             scope.$apply(function() {
-                              scope.newPost.photo = data.url;
+                              scope.newDetail.img = data.url;
                             })
                           },
                           error: function(data){
                             var obj = jQuery.parseJSON(data);
-                            console.log('faaaaaaail!!!!');
+                            console.log('no');
                           }
 
                         })
