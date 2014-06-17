@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('ahealthynetworkApp')
-  .controller('geoCtrl', function ($scope) {
+    .controller('updateCtrl', ['$scope', '$location', function ($scope, $location) {
     
     ahealthynetworkApp.run(function($rootScope) {
         $rootScope.geoLocation = {status: "LOCATING"}
@@ -18,23 +18,4 @@ angular.module('ahealthynetworkApp')
         }); 
     }); 
 });                   
-});
-
-
-
-// 'use strict';
-
-// angular.module('ahealthynetworkApp')
-//   .controller ('geoCtrl', function ($scope, $window) {
-//     $scope.supportsGeo = $window.navigator;
-//     $scope.position = null;
-//     $scope.useGeoLocate = function() {
-//         window.navigator.geolocation.getCurrentPosition(function(position) {
-//             $scope.$apply(function() {
-//                 $scope.position = position;
-//             });
-//         }, function(error) {
-//             alert(error);
-//         });
-//     };
-//   });
+}]);

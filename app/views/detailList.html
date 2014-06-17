@@ -1,59 +1,38 @@
-<div class="detailList" ng-show="signedIn()">
+<div class="detailList">
     <h2>My Details</h2>
-    <div ng-repeat="detail in details" ng-show="signedIn() && detail.owner === currentUser.username">
-      
-        <div class="detailList">
-            <h4>{{ detail.firstname | uppercase}}</h4>
-            <p> {{ detail.location }} </p>
-        </div>
-        <div>
-          &mdash;
-          <span>{{ detail.owner }}</span>
-          <br>
-          <a href="#/detailList/{{ detailId }}">update </a>|
-          <a href="" ng-click="deleteDetail(detailId)">delete</a>
-        </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-<!--       <div class="detailHeader" ng-controller="detailListCtrl">
-        <h3>{{detail.firstname}}</h3>
-        <a href="#/user-edit">Edit<span class="edit"></span></a>
+      <div class="detailHeader" ng-repeat="(id, detail) in details">
+        <h3 class="name">{{detail.firstname}}{{detail.lastname}}<h3>
+        <a href="#/editdetails">Edit<span class="edit"></span></a>
           <div class="circle-photo">
             <img src="http://placehold.it/100x100">  
-            <a href="addImage()">Change My Picture</a>
+            <a class="btn-xs" href="addImage()">Change My Picture</a>
           </div>
       </div>   
       <div class="detailBody">
-            <h3>My Details</h3>
-            <ul ng-repeat="detail in detailList">
+            <!-- <ul ng-repeat="(id, detail) in details">
               <li class="col-xs-10 location">
+                <p>{{detail.location}}</p>
               </li>
               <li class="col-xs-10">
                 <p>{{detail.gender}}</p>
-                <a href="#/user-edit">Edit<span class="edit"></span></a>
+                <a href="#/editdetails">Edit<span class="edit"></span></a>
               </li>
               <li class="col-xs-10">
                 <p>{{detail.age}}</p>
-                <a href="#/user-edit">Edit<span class="edit"></span></a>
+                <a href="#/editdetails">Edit<span class="edit"></span></a>
               </li>
               <li class="col-xs-10">
                 <p>{{detail.personalmsg}}</p>
-                <a href="#/user-edit">Edit<span class="edit"></span></a>
+                <a href="#/editdetails">Edit<span class="edit"></span></a>
               </li>
               <li class="col-xs-10">
                 <p>{{detail.privacy}}</p>
-                <a href="#/user-edit">Edit<span class="edit"></span></a>
+                <a href="#/editdetails">Edit<span class="edit"></span></a>
               </li>    
-            </ul>
+            </ul> -->
       </div>
           <div class="detailFooter">
-            <a type="button" href="#/editdetails" class="btn btn-success">Edit All Details</a>
-          </div> -->
+            <button class="btn btn-default btn-lg" ng-href="updateDetails(id)">Update Details</button>
+          </div>
+      </div>
+</div>

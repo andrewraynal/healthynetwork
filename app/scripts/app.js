@@ -16,27 +16,38 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
+        authRequired: true,
         templateUrl: 'views/login.html',
         controller: 'authCtrl'
       })
-       .when('/main', {
-        templateUrl: 'views/login.html',
-        controller: 'authCtrl'
-      })
-       .when('/register', {
-        templateUrl: 'views/login.html',
-        controller: 'authCtrl'
-      })
-      .when('/login', {
+       .when('/login', {
+        authRequired: true,
         templateUrl: 'views/login.html',
         controller: 'authCtrl'
       })
       .when('/userhome', {
+        authRequired: true,
         templateUrl: 'views/userhome.html',
         controller: 'authCtrl'
       })
+     .when('/newlocation', {
+        authRequired: true,
+        templateUrl: 'views/newlocation.html',
+        controller: 'geoCtrl'
+      })
      .when('/newdetails', {
+        authRequired: true,
         templateUrl: 'views/newdetails.html',
+        controller: 'detailCtrl'
+      })
+     .when('/detailList', {
+        authRequired: true,
+        templateUrl: 'views/detailList.html',
+        controller: 'detailCtrl'
+      })
+     .when('/editdetails', {
+        authRequired: true,
+        templateUrl: 'views/editdetail.html',
         controller: 'detailCtrl'
       })
       .otherwise({

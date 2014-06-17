@@ -18,7 +18,7 @@ angular.module('ahealthynetworkApp')
 	$scope.register = function () {
 		Auth.register($scope.user).then(function (authUser) {
 			User.create(authUser, $scope.user.username);
-			$location.path('/newdetails');
+			$location.path('/newlocation');
 		}, function (error) {
 			$scope.error = error.toString();
 		});
