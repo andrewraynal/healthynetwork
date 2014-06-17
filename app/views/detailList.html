@@ -5,13 +5,27 @@
     <div class="detailBody">
             <div ng-repeat="(detailId, detail) in details">
               <p><img ng-src="{{detail.photo}}"/></p>
-              <li class="col-xs-10 location">
-                {{detail.firstname}}
-              </li>
+              <ul class="detail-list">
+                <li class="col-xs-10">
+                    {{detail.firstname | uppercase}} {{detail.lastname | uppercase}}
+                </li>
+                <li class="col-xs-10">
+                    {{detail.location}}
+                </li>
+                <li class="col-xs-10">
+                    {{detail.gender}}
+                </li>
+                <li class="col-xs-10">
+                    {{detail.age}}
+                </li>
+                <li class="col-xs-10">
+                    {{detail.personalmsg}}
+                </li>
+              </ul>
             </div>
       </div>
           <div class="detailFooter">
-            <button class="btn btn-default btn-lg" ng-href="updateDetails(id)">Update Details</button>
+            <button class="btn btn-default btn-lg" ng-href="#/new">Update Details</button>
           </div>
       </div>
 </div>
