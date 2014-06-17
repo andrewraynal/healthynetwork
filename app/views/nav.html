@@ -21,21 +21,17 @@
                 <a type="button" data-toggle="dropdown" class="dropdown-toggle" href>My Info<span class="caret"></span>
                 </a>
                 <ul role="menu" class="dropdown-menu">
-                    <li><a href>My Details</a></li>
-                    <li><a href>My News</a></li>
-                    <li><a href>My Journal</a></li>
+                    <li><a href="#/newdetails">My Details</a></li>
+                    <li><a href="#/editdetails">My News</a></li>
+                    <li><a href="#/editjournal">My Journal</a></li>
                 </ul>
             </li>
           </ul>  
-          <form role="search" class="navbar-form navbar-left">
-            <div class="form-group">
-                <input type="text" placeholder="Search" class="form-control">
-            </div>
-          </form>
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <span ng-show="auth.user"><button type="submit" ng-click="auth.$logout()">Sign Out</button></span>
-             </li>
+          <ul class="nav navbar-nav">
+            <li ng-cloak ng-show-auth="login" ng-controller="authCtrl"><a ng-href="#" ng-click="logout()">Log Out</a>
+            </li>
+            <li ng-cloak ng-show-auth="['logout','error']"><a ng-href="#/login">Log In</a>
+            </li>
           </ul>
         </div>
       </nav>
