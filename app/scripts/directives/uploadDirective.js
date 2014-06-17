@@ -1,5 +1,6 @@
-
-      .directive('uploadDirective', function(){
+'use strict';
+angular.module('ahealthynetworkApp.directives', []);
+    app.directive('uploadDirective', function () {
             return{
               restrict: 'E',
               
@@ -16,8 +17,8 @@
                     $.ajax({
                         type: "POST",
                         beforeSend: function(request){
-                            request.setRequestHeader("X-Parse-Application-Id", 'NEED ID');
-                            request.setRequestHeader("X-Parse-REST-API-Key", 'NEED KEY');
+                            request.setRequestHeader("X-Parse-Application-Id", '61HGwMOsvzChZbwYDUi6E2gPPHDE68BeJN6da6JB');
+                            request.setRequestHeader("X-Parse-REST-API-Key", 'FEallSjPGkeTGsxsbXYpfj33jXrOtL93J2mlrIsa');
                             request.setRequestHeader("Content-Type", file.type);
                           },
                           url: serverUrl,
@@ -27,14 +28,13 @@
                           success: function(data){
                              console.log("File available at:" + data.url);
                             scope.$apply(function() {
-                              scope.newDetail.img = data.url;
+                              scope.newImage.photo = data.url;
                             })
                           },
                           error: function(data){
                             var obj = jQuery.parseJSON(data);
                             console.log('no');
                           }
-
                         })
                     })
                   }

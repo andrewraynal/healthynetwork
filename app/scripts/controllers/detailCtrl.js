@@ -8,7 +8,7 @@ var app = angular.module('ahealthynetworkApp');
 		
 
 		$scope.submitDetail = function () {
-		  	Detail.create($scope.newDetail).then(function (detailId) {
+		  	Detail.create($scope.newDetail).then(function () {
 		  		$scope.newDetail = {firstname: '', lastname: '', location: '', gender: '', age: '', personalmsg: ''};
 		  	});
 		  };

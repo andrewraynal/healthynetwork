@@ -1,31 +1,19 @@
-<div class="detailList">
+
     <h2>My Details</h2>
-      <div class="detailHeader">
-        <h3 class="name">{{newDetail.firstname}}{{newDetail.lastname}}<h3>
-        <a href="#/editdetails">Edit<span class="edit"></span></a>
-          <div ng-include="'views/uploadimg.html'"></div>
-      </div>   
+    <div class="header" ng-controller="uploadCtrl">
+      <div class="image-upload" >
+          <upload-directive></upload-directive>
+      </div>  
+      <div ng-repeat="(index, image) in images">
+        <img ng-src="{{image.photo}}"/>
+      </div>
+    </div> 
+    <div class="detailList">
       <div class="detailBody">
             <ul ng-repeat="(detailId, detail) in details">
               <li class="col-xs-10 location">
-                <p>{{newDetail.location}}</p>
+                <p>{{detail.detail}}</p>
               </li>
-              <li class="col-xs-10">
-                <p>{{newDetail.gender}}</p>
-                <a href="#/editdetails">Edit<span class="edit"></span></a>
-              </li>
-              <li class="col-xs-10">
-                <p>{{newDetail.age}}</p>
-                <a href="#/editdetails">Edit<span class="edit"></span></a>
-              </li>
-              <li class="col-xs-10">
-                <p>{{newDetail.personalmsg}}</p>
-                <a href="#/editdetails">Edit<span class="edit"></span></a>
-              </li>
-              <li class="col-xs-10">
-                <p>{{newDetail.privacy}}</p>
-                <a href="#/editdetails">Edit<span class="edit"></span></a>
-              </li>    
             </ul>
       </div>
           <div class="detailFooter">

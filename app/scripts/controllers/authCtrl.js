@@ -3,7 +3,7 @@
 angular.module('ahealthynetworkApp')
 	.controller('authCtrl', function ($scope, $location, Auth, User){
 		if (Auth.signedIn()) {
-			$location.path('/');
+			$location.path('/userhome');
 		}
 	$scope.$on('$firebaseSimpleLogin:login', function () {
 		$location.path('/');
