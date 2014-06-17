@@ -1,20 +1,14 @@
-
-    <h2>My Details</h2>
-    <div class="header" ng-controller="uploadCtrl">
-      <div class="image-upload" >
-          <upload-directive></upload-directive>
-      </div>  
-      <div ng-repeat="(index, image) in images">
-        <img ng-src="{{image.photo}}"/>
-      </div>
-    </div> 
-    <div class="detailList">
-      <div class="detailBody">
-            <ul ng-repeat="(detailId, detail) in details">
+<div class="detailList">
+    <div class="header">
+        <h2>My Details</h2>
+    </div>
+    <div class="detailBody">
+            <div ng-repeat="(detailId, detail) in details">
+              <p><img ng-src="{{detail.photo}}"/></p>
               <li class="col-xs-10 location">
-                <p>{{detail.detail}}</p>
+                {{detail.firstname}}
               </li>
-            </ul>
+            </div>
       </div>
           <div class="detailFooter">
             <button class="btn btn-default btn-lg" ng-href="updateDetails(id)">Update Details</button>

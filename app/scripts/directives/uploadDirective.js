@@ -28,7 +28,7 @@ angular.module('ahealthynetworkApp.directives', []);
                           success: function(data){
                              console.log("File available at:" + data.url);
                             scope.$apply(function() {
-                              scope.newImage.photo = data.url;
+                              scope.newDetail.photo = data.url;
                             })
                           },
                           error: function(data){

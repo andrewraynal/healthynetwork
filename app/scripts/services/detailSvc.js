@@ -14,6 +14,7 @@ var app = angular.module('ahealthynetworkApp');
       
         detail.owner = user.username;
         detail.date = Date.now();
+        detail.photo = detail.photo;
         detail.firstname = detail.firstname;
         detail.lastname = detail.lastname;
         detail.location = detail.location;
