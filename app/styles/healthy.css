@@ -5,6 +5,15 @@
 .main {
 	background: url(/images/green-background.jpg) no-repeat;
 }
+.userhome {
+	background-position: center;
+	background-size: auto;
+	background: url(/images/user-background.jpeg) no-repeat;
+}
+.profileimg {
+	width: 200px;
+	height: 200px;
+}
 .login-register-wrapper {
 	margin: 0 auto;
 	width: 675px;
@@ -29,8 +38,10 @@ ul li {
 }
 .navbar{
 	margin-top: 20px;
+	font-size: 24px;
 }
 .navbar a {
+	font-size: 24px;
 	color: #FFF;
 }
 .header 	{
@@ -40,10 +51,6 @@ ul li {
 }
 .subtitle {
 	margin-bottom: 10px;
-}
-.otheruseractivity ul li{
-	display: inline;
-	text-align: left;
 }
 .post-link {
 	float: right; 
@@ -65,10 +72,15 @@ ul li {
 .left, .right {
 	text-align: left;
 }
-.health {
-	font-weight: bolder;
-	margin-top: 50px;
-	margin-bottom: 0;
+div .healthfinder-results {
+	width: auto;
+	height: auto;
+	background: url(/images/login.png) no-repeat;
+	border-radius: 15px;
+	border: solid 2px;
+	margin-top: 75px;
+	margin-bottom: 25px;
+	text-align: center;
 }
 /*Pics Layout - Grid/List*/
 *{
@@ -230,10 +242,7 @@ ul.grid li img{
 	display:block;
 	border:none;
 }
-.chat-box {
-	width: 300px;
-	height: 300px;
-}
+
 .show {
 	display: inline-block;
 }

@@ -1,13 +1,21 @@
-<div class="healthfinder-news">
-    <h3 class="healthfinder-title">Advice for Healthy Living</h3>
-  <div class="col-md-4 events healthfinder" ng-controller="healthfinderCtrl">
-          <ul>
-            <li ng-repeat="r in results"> 
-              <a href="{{r.topics.accessibleVersion}}" target="_blank"><img ng-src="{{r.topics.imageUrl}}"/></a>
-              <p>{{r.topics.sections.section.title}}</p>
-              <p>{{r.topics.sections.section.description}}</p>
+<div class="healthfinder-results" ng-controller="healthfinderCtrl">
+    <h3 class="healthfinder-title">
+    	Advice for Healthy Living
+    </h3>
+  	<div class="col-md-4 healthfinder">
+        <ul class="list">
+            <li ng-repeat="result in results">
+              	<a href="{{result.AccessibleVersion}}" target="_blank"><img ng-src="{{result.ImageUrl}}" />
+              	</a>
+              	<ul>
+              		<li>
+     					<h4>{{ result.Title }}</h4>
+     					<h5>{{ result.LastUpdate }}</h5>
+     					<p>{{ result.Sections }}</p>
+              		</li>	
+              	</ul>
 			</li>
-          </ul>
-  </div>
+         </ul>
+  	</div>
 </div>
  

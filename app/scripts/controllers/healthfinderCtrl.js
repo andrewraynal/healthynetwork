@@ -4,8 +4,10 @@ angular.module('ahealthynetworkApp')
   .controller('healthfinderCtrl', ['$scope', 'healthfinder', function ($scope, healthfinder){
   
     healthfinder.async().then(function(data){
-      $scope.news = data.data;
-        console.log($scope.news)
 
+      		$scope.results = data.data.Result.Topics;
+        		console.log($scope.results);
+       		// $scope.result = $scope.news.Result.Topics;
+       		// 	console.log($scope.result);
   });
 }]);

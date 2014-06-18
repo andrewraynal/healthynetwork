@@ -4,7 +4,7 @@
     </div>
     <div class="detailBody">
             <div ng-repeat="(detailId, detail) in details">
-              <p><img ng-src="{{detail.photo}}"/></p>
+              <p><img class="profileimg" ng-src="{{detail.photo}}"/></p>
               <ul class="detail-list">
                 <li class="col-xs-10">
                     {{detail.firstname | uppercase}} {{detail.lastname | uppercase}}
