@@ -40,6 +40,10 @@ angular
         templateUrl: 'views/editdetail.html',
         controller: 'detailCtrl'
       })
+     .when('/journal', {
+        templateUrl: 'views/journal.html',
+        controller: 'journalCtrl'
+     })
       .otherwise({
         redirectTo: '/'
       });

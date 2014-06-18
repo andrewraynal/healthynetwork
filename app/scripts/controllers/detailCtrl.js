@@ -13,6 +13,7 @@ var app = angular.module('ahealthynetworkApp');
 		  	});
 		  };
 		  
+		  
 		$scope.deleteDetail = function (detailId) {
 			Detail.delete(detailId);
 		};

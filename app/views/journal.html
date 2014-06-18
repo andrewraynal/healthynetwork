@@ -1,8 +1,39 @@
-<div class="my-journal-wrapper">
-      <h4>My Journal</h4>
+<div class="message-box row">
+  <div>
+    <div class="message-input">
+        <input id="name" type="text" value=
+        "{{currentUser.username}}"class="ng-pristine ng-valid">
+    </div>
+    <div ng-controller="journalCtrl" id="messages" auto-scroll="messages" class="ng-scope">
+      <p ng-repeat="(messageId, message) in messages" class="ng-scope ng-binding">{{message.content}}
+        <em class="ng-binding"></em>blub
+      </p>
+    </div>
+  <form ng-submit="submitMessage(newMessage)" class="ng-valid ng-dirty">
+    <input id="message" type="text" ng-model="newMessage.content" placeholder="Message..." class="ng-valid ng-dirty"/>
+    <input class="btn btn-lg-primary" id="send" type="submit" value="Send">
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="my-journal-wrapper">
+      <h3>My Journal</h3>
         <div class="my-journal-content">
           <div class="post">
-            <h3><a href="#">Post Title</a></h3>
+            <h4><a href="#">Post Title</a></h4>
             <div class="post-authordatetime">
               <strong>Author</strong>
               <span class="sep">|</span>
@@ -18,4 +49,4 @@
             </div>        
           </div>
         </div>
-  </div>
+  </div> -->
