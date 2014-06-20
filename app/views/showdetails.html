@@ -1,0 +1,33 @@
+<div class="showdetails">
+      <form class="details" role="submit" ng-submit="submitDetail()">
+        <fieldset>
+          <legend>{{currentUser.username}}<span>{{photo}}</span></legend>
+
+          <upload-directive></upload-directive>
+          <ol>
+            <li>
+              <input class="firstname" ng-model="detail.firstname" type=text placeholder="First Name" required autofocus>
+            </li>
+            <li>
+              <input class="lastname" ng-model="detail.lastname" type=text placeholder="Last Name" required autofocus>
+            </li>
+            <li>
+              <input class="location" ng-model="detail.location" type=text placeholder="Location" required autofocus>
+            </li>
+            <li>
+              <input class="gender" ng-model="detail.gender" type=text placeholder="Gender" required autofocus>
+            </li>
+            <li>
+              <input class="age" ng-model="detail.age" type=text placeholder="Age" required autofocus>
+            </li>
+            <li>
+              <input class="personalmsg" ng-model="detail.personalmsg" type=text placeholder="Personal Message" required autofocus>
+            </li>
+            <li>
+              <input type="submit" value="Update Info" class="btn btn-primary"/>
+            </li>
+         </ol>
+        </fieldset>
+      </form>
+
+</div>

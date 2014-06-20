@@ -4,7 +4,6 @@ angular.module('ahealthynetworkApp')
   .controller('authCtrl',
     function ($scope, $location, Auth, User) {
       if (Auth.signedIn()) {
-        console.log($scope.user);
         $location.path('/');
       }
 
@@ -14,8 +13,7 @@ angular.module('ahealthynetworkApp')
 
       $scope.login = function () {
         Auth.login($scope.user).then(function () {
-          console.log($scope.user);
-          $location.path('/');
+          $location.path('/profilepage');
         }, function (error) {
           $scope.error = error.toString();
         });
@@ -23,10 +21,8 @@ angular.module('ahealthynetworkApp')
 
       $scope.register = function () {
         Auth.register($scope.user).then(function (authUser) {
-          console.log($scope.user);
           User.create(authUser, $scope.user.username);
-          $location.path('/details/:userId');
-
+          $location.path('/');
         }, function (error) {
           $scope.error = error.toString();
         });

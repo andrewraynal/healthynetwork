@@ -24,7 +24,7 @@ angular
         templateUrl: 'views/showdetails.html',
         controller: 'detailCtrl'
       })
-      .when('/profilepage/:userId', {
+      .when('/users/:username', {
         templateUrl: 'views/profilepage.html',
         controller: 'authCtrl'
       })

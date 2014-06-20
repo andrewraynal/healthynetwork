@@ -27,7 +27,19 @@
     <link rel="stylesheet" type="text/css" href="styles/healthy.css">
     <script type="text/javascript">
           WebFontConfig = {
-            google: { families: [ 'Josefin+Slab::latin' ] }
+            google: { families: [ 'Josefin+Slab:400,700,700italic:latin' ] }
+          };
+          (function() {
+            var wf = document.createElement('script');
+            wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+              '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+          })(); 
+          WebFontConfig = {
+            google: { families: [ 'Pacifico::latin' ] }
           };
           (function() {
             var wf = document.createElement('script');
@@ -77,9 +89,8 @@
     <script src="scripts/controllers/picCtrl.js"></script>
     <script src="scripts/controllers/healthfinderCtrl.js"></script>
     <script src="scripts/controllers/journalCtrl.js"></script>
+    <script src="scripts/controllers/navCtrl.js"></script>
     <script src="scripts/services/loginSvc.js"></script>
-    <script src="scripts/services/postSvc.js"></script>
-    <script src="scripts/services/postsSvc.js"></script>
     <script src="scripts/services/picSvc.js"></script>
     <script src="scripts/services/authSvc.js"></script>
     <script src="scripts/services/userSvc.js"></script>
@@ -87,7 +98,6 @@
     <script src="scripts/services/healthfinderSvc.js"></script>
     <script src="scripts/services/journalSvc.js"></script>
     <script src="scripts/directives/uploadDirective.js"></script>
-    <script src="scripts/directives/autoscrollDirective.js"></script>
 
       <!-- endbuild -->
 </body>
