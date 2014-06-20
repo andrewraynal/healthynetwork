@@ -27,10 +27,17 @@ body  {
 	box-shadow: 0 -5px 8px;
 }
 
-.userinputs {
+.registerinputs, .logininputs {
 	margin: 0 auto 2px;
+	width: 400px;
 	padding: 4px;
-	background-height: 100%
+	background-height: 600px;
+	background: url(/images/active.jpeg) no-repeat;
+	border-radius: 25px;
+	border-color: inherit;
+	margin-top: 75px;
+	margin-bottom: 75px;
+	box-shadow: 0 -5px 8px;
 }
 .app-title {
 	text-align: center;
@@ -288,7 +295,6 @@ ul.grid li img{
 	font-style: bold;
 	font-size: 18px;
 	max-height: 75%;
-	background-color: #000642;
 	width: 100%;
 	border: none;
 	opacity: .6;

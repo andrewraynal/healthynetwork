@@ -9,13 +9,13 @@ angular.module('ahealthynetworkApp')
       }
 
       $scope.$on('$firebaseSimpleLogin:login', function () {
-        $location.path('/');
+        $location.path('/profilepage');
       });
 
       $scope.login = function () {
         Auth.login($scope.user).then(function () {
           console.log($scope.user);
-          $location.path('/');
+          $location.path('/profilepage');
         }, function (error) {
           $scope.error = error.toString();
         });
@@ -25,7 +25,7 @@ angular.module('ahealthynetworkApp')
         Auth.register($scope.user).then(function (authUser) {
           console.log($scope.user);
           User.create(authUser, $scope.user.username);
-          $location.path('/details/:userId');
+          $location.path('/showdetails');
 
         }, function (error) {
           $scope.error = error.toString();

@@ -28,12 +28,10 @@
                                     <p ng-show="form.username.$error.taken" class="text-danger"> Username is already taken.</p>
                                     <p ng-show="form.username.$error.invalid" class="text-danger">Username contains invalid characters.</p>
                                 </div>
-                                <div class="userinputs">
-                                    <input type="email" ng-model="user.email" placeholder="Email" class="form-control">
-                                    <input type="text" ng-model="user.username" placeholder="Username" name="username" check-username class="form-control">
-                                    <input type="password" ng-model="user.password" placeholder="Password" class="form-control">
-                                    <input type="submit" value="Register" class="btn btn-primary" />
-                                </div> <!-- end userinputs -->   
+                                    <input type="email" ng-model="user.email" placeholder="Email" class="form-control registerinputs">
+                                    <input type="text" ng-model="user.username" placeholder="Username" name="username" check-username class="form-control registerinputs">
+                                    <input type="password" ng-model="user.password" placeholder="Password" class="form-control registerinputs">
+                                    <input type="submit" value="Register" class="btn btn-primary" /> 
                             </form>
                         </div> <!-- end div 'custom' -->
                 </div><!-- end register -->
@@ -41,12 +39,11 @@
                     <div ng-hide="custom1">
                         <form ng-submit="login()">
                             <p ng-show="error" class="text-danger">{{ error }}</p>
-                            <input type="email" ng-model="user.email" placeholder="Email" class="form-control">
-                            <input type="password" ng-model="user.password" placeholder="Password" class="form-control">
-                            <input type="submit" value="Log in" class="btn btn-primary" />
+                                <input type="email" ng-model="user.email" placeholder="Email" class="logininputs form-control">
+                                <input type="password" ng-model="user.password" placeholder="Password" class="logininputs form-control">
+                                <input type="submit" value="Log in" class="btn btn-primary" />
                         </form>
                     </div><!-- end div 'custom1' -->  
-                         <div class="custom1" ng-show="custom1"></div>
                 </div><!-- end login -->
             </div><!-- end body -->
         </div> <!-- end login wrapper -->

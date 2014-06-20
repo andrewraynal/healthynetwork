@@ -20,20 +20,16 @@ angular
         templateUrl: 'views/login.html',
         controller: 'authCtrl'
       })
-       .when('/details/:detailId', {
+       .when('/showdetails', {
         templateUrl: 'views/showdetails.html',
         controller: 'detailCtrl'
       })
-      .when('/profilepage/:userId', {
+      .when('/profilepage', {
         templateUrl: 'views/profilepage.html',
         controller: 'authCtrl'
       })
      .when('/detailList', {
         templateUrl: 'views/detailList.html',
-        controller: 'detailCtrl'
-      })
-     .when('/editdetails', {
-        templateUrl: 'views/editdetail.html',
         controller: 'detailCtrl'
       })
      .when('/journal', {

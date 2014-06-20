@@ -16,6 +16,7 @@ angular.module('ahealthynetworkApp')
       },
         login: function (user) {
           return auth.$login('password', user);
+          console.log(user);
       },
         logout: function () {
           auth.$logout();

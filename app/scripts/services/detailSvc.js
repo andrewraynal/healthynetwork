@@ -14,7 +14,7 @@ angular.module('ahealthynetworkApp')
             var user = User.getCurrent();
 
             detail.owner = user.username;
-
+                console.log(user.username);
             return details.$add(detail).then(function (ref) {
               var detailId = ref.name();
 
