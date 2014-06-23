@@ -3,12 +3,12 @@
     	Advice for Healthy Living
     </h3>
   	<div class="healthfinder">
-        <ul class="list">
+        <ul class="grid">
             <li ng-repeat="result in results">
               	<a href="{{result.AccessibleVersion}}" target="_blank"><img ng-src="{{result.ImageUrl}}" />
               	</a>
-     			<p>{{ result.Title }}</p>
-     			<p>{{ result.LastUpdate }}</p>
+     			<!-- <p>{{ result.Title }}</p> -->
+     		<!-- 	<p>{{ result.LastUpdate }}</p> -->
 			</li>
          </ul>
   	</div>

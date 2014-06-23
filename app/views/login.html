@@ -1,4 +1,4 @@
-<div class="container login-container">
+<div class="container login-container" ng-controller="authCtrl">
     <div class="login-register-wrapper">
         <div class="header">
         </div><!--header end -->
@@ -12,29 +12,16 @@
                     </h3>
 
                 </div><!--caption end -->
-                <div class="register">
-                    <div class="btn-group"> 
-                    <p>
-                        <button ng-click="custom=!custom" class="btn btn-lg-primary register"><span class="glyphicon glyphicon-envelope"></span><strong>Sign up!</strong>
-                        </button> 
-                        <button ng-click="custom1=!custom1" class="btn btn-lg-primary register"><strong><span class="glyphicon glyphicon-log-in"></span>Login</strong>
-                        </button> 
-                    </p>
+                    <div class="btn-group">
+                        <p class="buttons"> 
+                            <button class="btn btn-lg-primary register"><span class="glyphicon glyphicon-envelope"></span><strong>Sign up!</strong>
+                            </button> 
+                            <button class="btn btn-lg-primary login"><strong><span class="glyphicon glyphicon-log-in"></span>Login</strong>
+                            </button>
+                        </p>
                     </div> <!-- end btn-group -->
-                        <div ng-hide="custom">
-                            <form ng-submit="register()" name="form">
-                                <div ng-show="error || form.username.$error">
-                                    <p ng-show="error" class="text-danger">{{ error }}</p>
-                                    <p ng-show="form.username.$error.taken" class="text-danger"> Username is already taken.</p>
-                                    <p ng-show="form.username.$error.invalid" class="text-danger">Username contains invalid characters.</p>
-                                </div>
-                                    <input type="email" ng-model="user.email" placeholder="Email" class="form-control registerinputs">
-                                    <input type="text" ng-model="user.username" placeholder="Username" name="username" check-username class="form-control registerinputs">
-                                    <input type="password" ng-model="user.password" placeholder="Password" class="form-control registerinputs">
-                                    <input type="submit" value="Register" class="btn btn-primary" /> 
-                            </form>
-                        </div> <!-- end div 'custom' -->
-                </div><!-- end register -->
+                    <div ng-include="'views/modal-register.html'"></div>
+                   <modal-directive></modal-directive>
                 <div class="login">
                     <div ng-hide="custom1">
                         <form ng-submit="login()">
@@ -42,12 +29,14 @@
                                 <input type="email" ng-model="user.email" placeholder="Email" class="logininputs form-control">
                                 <input type="password" ng-model="user.password" placeholder="Password" class="logininputs form-control">
                                 <input type="submit" value="Log in" class="btn btn-primary" />
-                        </form>
+                            </form>
+                         
+                        
                     </div><!-- end div 'custom1' -->  
                 </div><!-- end login -->
             </div><!-- end body -->
         </div> <!-- end login wrapper -->
-    <div class="footer">    
+    <footer class="site-footer">    
         <nav>
             <div class="footer-container">
                 <div class="row">
@@ -65,5 +54,5 @@
                 </div>
             </div>
         </nav>
-    </div>
+    </footer>
 </div> <!-- end container -->
