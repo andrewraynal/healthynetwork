@@ -1,7 +1,6 @@
 'use strict';
 
-angular.module('ahealthynetworkApp')
-	.factory('Auth',
+app.factory('Auth',
   function ($firebaseSimpleLogin, FBURL, $rootScope) {
       var ref = new Firebase(FBURL);
 

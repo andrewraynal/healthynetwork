@@ -1,6 +1,6 @@
 'use strict';
 angular.module('ahealthynetworkApp.directives', [])
-  .directive('modalDirective', function() {
+  .directive('modalDirectivel', function() {
   return {
     restrict: 'E',
     scope: {

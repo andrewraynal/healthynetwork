@@ -1,0 +1,9 @@
+<div class="container login-form">
+    <form class="login auth-forms" ng-submit='login()'>
+    	<label>User your email and password to login to your account!</label>
+    	<p ng-show="error" class="text-danger">{{ error }}</p>
+        <input type="email" ng-model="user.email" placeholder="Email" class="form-control registerinputs">
+        <input type="password" ng-model="user.password" placeholder="Password" class="form-control registerinputs">
+        <input type="submit" value="Login" class="btn btn-primary login">
+    </form>
+</div>

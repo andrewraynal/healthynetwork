@@ -1,32 +1,16 @@
-'use strict';
+  'use strict';
 
-angular.module('ahealthynetworkApp')
-  .controller('navCtrl', 
+  app.controller('navCtrl', function ($scope, $location, Post, Auth) {
+  $scope.post = {url: 'http://', 'title': ''};
 
-  function ($scope, $location, Journal, Auth) {
-    $scope.journal = {owner: 'journal.owner'};
+  $scope.submitPost = function () {
+    Post.create($scope.post).then(function (postId) {
+      $location.path('/journal/' + postId);
+      $scope.post = {url: 'http://', 'title': ''};
+    });
+  };
 
-    $scope.submitJournal = function () {
-        Journal.create($scope.journal).then(function (journalId) {
-        $location.path('/journals/' + journalId);
-        $scope.journal = {owner: 'journal.owner'};
-      });
-      };
-    }
-    )
-  .controller('nav1Ctrl', 
-  function ($scope, $location, Detail, Auth) {
-    $scope.detail = {photo: '', firstname: '', lastname: '', location: '', gender: '', age: '', personalmsg: ''};
-
-     $scope.submitDetail = function () {
-        Detail.create($scope.detail).then(function (detailId) {
-        $location.path('/details/' + detailId);
-        $scope.detail = {photo: '', firstname: '', lastname: '', location: '', gender: '', age: '', personalmsg: ''};
-      });
-    };
-
-    $scope.logout = function () {
-      Auth.logout();
-    };
-
-  });
+  $scope.logout = function () {
+  	Auth.logout();
+  };
+ });

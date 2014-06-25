@@ -1,21 +1,18 @@
-'use strict';
+  'use strict';
 
-angular.module('ahealthynetworkApp')
-  .controller('journalCtrl', function ($scope, $location, Journal) {
-  if ($location.path() === '/') {
-    $scope.journals = Journal.all;
-  }
+  app.controller('journalCtrl', function ($scope, $location, Post) {
+	 $scope.journal = Post.all;
+  
+  $scope.post = {url: 'http://', title: ''};
 
-  $scope.journal = {owner: 'journal.owner'};
-
-  $scope.submitJournal = function () {
-    Journal.create($scope.journal).then(function () {
-      $scope.journal = {owner: 'journal.owner'};
+ $scope.submitPost = function () {
+    Post.create($scope.post).then(function () {
+      $scope.post = {url: 'http://', 'title': ''};
     });
   };
 
-  $scope.deleteJournal = function (journalId) {
-    Journal.delete(journalId);
+  $scope.deletePost = function (postId) {
+    Post.delete(postId);
   };
 
 });

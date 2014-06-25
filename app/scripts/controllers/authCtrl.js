@@ -1,21 +1,19 @@
 'use strict';
 
-angular.module('ahealthynetworkApp')
-  .controller('authCtrl',
+app.controller('authCtrl',
     function ($scope, $location, Auth, User) {
       if (Auth.signedIn()) {
-        console.log($scope.user);
-        $location.path('/');
+        $location.path('/profile');
       }
 
       $scope.$on('$firebaseSimpleLogin:login', function () {
-        $location.path('/profilepage');
+        $location.path('/profile');
       });
 
       $scope.login = function () {
         Auth.login($scope.user).then(function () {
           console.log($scope.user);
-          $location.path('/profilepage');
+          $location.path('/profile');
         }, function (error) {
           $scope.error = error.toString();
         });
@@ -23,14 +21,10 @@ angular.module('ahealthynetworkApp')
 
       $scope.register = function () {
         Auth.register($scope.user).then(function (authUser) {
-          console.log($scope.user);
           User.create(authUser, $scope.user.username);
-          $location.path('/showdetails');
-
+          $location.path('/profile');
         }, function (error) {
           $scope.error = error.toString();
         });
       };
-      $scope.custom = true;
-      $scope.custom1 = true;
     });

@@ -1,6 +1,7 @@
 'use strict';
+/* global app: true */
 
-angular
+var app = angular
   .module('ahealthynetworkApp', [
     'ngCookies',
     'ngResource',
@@ -11,31 +12,44 @@ angular
     'angularfire.login',
     'simpleLoginTools',
     'ui.bootstrap',
+    'ui.bootstrap.tpls',
     'ahealthynetworkApp.directives'
-
-  ])
-  .config(function ($routeProvider) {
+]);
+app.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/login.html',
+        templateUrl: 'views/main-login.html',
         controller: 'authCtrl'
       })
-       .when('/showdetails', {
-        templateUrl: 'views/showdetails.html',
-        controller: 'detailCtrl'
-      })
-      .when('/profilepage', {
-        templateUrl: 'views/profilepage.html',
-        controller: 'authCtrl'
-      })
-     .when('/detailList', {
-        templateUrl: 'views/detailList.html',
-        controller: 'detailCtrl'
-      })
-     .when('/journal', {
+      .when('/journal', {
         templateUrl: 'views/journal.html',
-        controller: 'navCtrl'
+        controller: 'journalCtrl'
+      })
+      .when('/register', {
+        templateUrl: 'views/register-form.html',
+        controller: 'authCtrl'
+      })
+      .when('/login', {
+        templateUrl: 'views/login-form.html',
+        controller: 'authCtrl'
+      })
+       .when('/show-details', {
+        templateUrl: 'views/show-details.html',
+        controller: 'detailCtrl'
+      })
+      .when('/profile', {
+        templateUrl: 'views/profile.html',
+        controller: 'authCtrl'
+      })
+     .when('/detail-list', {
+        templateUrl: 'views/detail-list.html',
+        controller: 'detailCtrl'
+      })
+     .when('/journal/:postId', {
+        templateUrl: 'views/show-posts.html',
+        controller: 'postviewCtrl'
      })
+
       .otherwise({
         redirectTo: '/'
       });

@@ -1,52 +1,32 @@
-<div class="message-box row">
-  <div>
-    <div class="message-input">
-        <input id="name" type="text" value=
-        "{{currentUser.username}}"class="ng-pristine ng-valid">
+<div class="container journal">
+
+  <div class="post row" ng-repeat="(postId, post) in journal">
+    <div class="col-xs-1">
+      <div class="vote up"><span ng-hide="downVoted(post)" ng-click="upVotePost(postId, upVoted(post))">&#x25B2;</span></div>
+
+      <div class="vote down"><span ng-hide="upVoted(post)" ng-click="downVotePost(postId, downVoted(post))">&#x25BC;</span></div>
     </div>
-    <div ng-controller="journalCtrl" id="messages" auto-scroll="messages" class="ng-scope">
-      <p ng-repeat="(messageId, message) in messages" class="ng-scope ng-binding">{{message.content}}
-        <em class="ng-binding"></em>blub
-      </p>
+    <div class="col-md-9 col-xs-11">
+
+      <div class="info">
+        <a href="{{ post.url }}">
+          {{ post.title }}
+          <span class="url">({{ post.url | hostnameFromUrl }})</span>
+        </a>
+      </div>
+      <div>
+        <span>{{ post.score || 0 }} votes</span>
+        &mdash;
+        <span>submitted by <a href="#/users/{{ post.owner }}">{{ post.owner }}</a></span>
+        &mdash;
+        <a href="#/journal/{{ postId }}">comments</a>
+        <a ng-click="deletePost(postId)" ng-show="signedIn() && post.owner === currentUser.username">delete</a>
+      </div>
     </div>
-  <form ng-submit="submitMessage(newMessage)" class="ng-valid ng-dirty">
-    <input id="message" type="text" ng-model="newMessage.content" placeholder="Message..." class="ng-valid ng-dirty"/>
-    <input class="btn btn-lg-primary" id="send" type="submit" value="Send">
-  </form>
+    <div class="col-md-2">
+      
+    </div>
+
+  </div>
+
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div class="my-journal-wrapper">
-      <h3>My Journal</h3>
-        <div class="my-journal-content">
-          <div class="post">
-            <h4><a href="#">Post Title</a></h4>
-            <div class="post-authordatetime">
-              <strong>Author</strong>
-              <span class="sep">|</span>
-              <span>Date</span>
-              <span class="sep">|</span>
-              <a class="category" href="#">Category</a>
-            </div>
-            <div class="post-content">
-              <a class="post-link" href="http://ahealthynetwork.firebaseapp.com/">
-                <img src="http://fillmurray.com/g/45/45">
-              </a>
-              <p>Post Content:  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, neque, esse, distinctio consequatur natus quos pariatur maiores dignissimos enim magni laboriosam nisi itaque saepe dolorem nostrum minus sit iure doloribus!</p>
-            </div>        
-          </div>
-        </div>
-  </div> -->
