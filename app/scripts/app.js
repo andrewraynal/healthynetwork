@@ -21,9 +21,9 @@ app.config(function ($routeProvider) {
         templateUrl: 'views/main-login.html',
         controller: 'authCtrl'
       })
-      .when('/journal', {
-        templateUrl: 'views/journal.html',
-        controller: 'journalCtrl'
+      .when('/posts', {
+        templateUrl: 'views/posts.html',
+        controller: 'postsCtrl'
       })
       .when('/register', {
         templateUrl: 'views/register-form.html',
@@ -37,15 +37,15 @@ app.config(function ($routeProvider) {
         templateUrl: 'views/show-details.html',
         controller: 'detailCtrl'
       })
-      .when('/profile', {
+      .when('/users/:username', {
         templateUrl: 'views/profile.html',
-        controller: 'authCtrl'
+        controller: 'profileCtrl'
       })
      .when('/detail-list', {
         templateUrl: 'views/detail-list.html',
         controller: 'detailCtrl'
       })
-     .when('/journal/:postId', {
+     .when('/posts/:postId', {
         templateUrl: 'views/show-posts.html',
         controller: 'postviewCtrl'
      })

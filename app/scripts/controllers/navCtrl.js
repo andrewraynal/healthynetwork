@@ -5,7 +5,7 @@
 
   $scope.submitPost = function () {
     Post.create($scope.post).then(function (postId) {
-      $location.path('/journal/' + postId);
+      $location.path('/posts/' + postId);
       $scope.post = {url: 'http://', 'title': ''};
     });
   };

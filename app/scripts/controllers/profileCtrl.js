@@ -1,7 +1,6 @@
 'use strict';
 
-angular.module('ahealthynetworkApp')
-  .controller('profileCtrl',
+app.controller('profileCtrl',
     function ($scope, $routeParams, Post, User) {
     $scope.user = User.findByUsername($routeParams.username);
 
@@ -18,7 +17,7 @@ angular.module('ahealthynetworkApp')
       angular.forEach($scope.user.posts, function(postId) {
         $scope.posts[postId] = Post.find(postId);
       });
-    }
+    };
 
     function populateComments () {
       $scope.comments = {};

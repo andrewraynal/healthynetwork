@@ -12,7 +12,7 @@
 
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div ng-controller="navCtrl" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <!-- <form class="navbar-form navbar-left" role="search" ng-submit="submitPost()" ng-show="signedIn()">
+    <form class="navbar-form navbar-left" role="search" ng-submit="submitPost()" ng-show="signedIn()">
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Title" ng-model="post.title">
       </div>
@@ -20,15 +20,15 @@
       <input type="text" class="form-control" placeholder="Link" ng-model="post.url">
       </div>
       <input type="submit" class="form-control" value="Submit"/>
-    </form> -->
+    </form>
     <ul class="nav navbar-nav navbar-right" ng-show="signedIn()">
-      <li>
+      <li class="navbar-li">
         <a href="#/users/{{ currentUser.username }}">
         <img ng-src="http://www.gravatar.com/avatar/{{ currentUser.md5_hash }}" class="nav-pic" />
         {{ currentUser.username }}
         </a>
       </li>
-      <li>
+      <li class="navbar-li">
         <a href="#" ng-click="logout()">Logout</a>
       </li>
     </ul>

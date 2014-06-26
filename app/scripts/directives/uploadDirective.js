@@ -1,6 +1,5 @@
 'use strict';
 
-angular.module('ahealthynetworkApp.directives', []);
     app.directive('uploadDirective', function () {
             return{
               restrict: 'E',
