@@ -21,10 +21,6 @@ app.config(function ($routeProvider) {
         templateUrl: 'views/main-login.html',
         controller: 'authCtrl'
       })
-      .when('/posts', {
-        templateUrl: 'views/posts.html',
-        controller: 'postsCtrl'
-      })
       .when('/register', {
         templateUrl: 'views/register-form.html',
         controller: 'authCtrl'
@@ -33,20 +29,28 @@ app.config(function ($routeProvider) {
         templateUrl: 'views/login-form.html',
         controller: 'authCtrl'
       })
-       .when('/show-details', {
-        templateUrl: 'views/show-details.html',
-        controller: 'detailCtrl'
-      })
       .when('/users/:username', {
-        templateUrl: 'views/profile.html',
+        templateUrl: 'views/profile-page.html',
         controller: 'profileCtrl'
       })
-     .when('/detail-list', {
-        templateUrl: 'views/detail-list.html',
-        controller: 'detailCtrl'
+     .when('/details', {
+        templateUrl: 'views/details.html',
+        controller: 'detailsCtrl'
+      })
+     .when('/create-details', {
+        templateUrl: 'views/create-details.html',
+        controller: 'detailsCtrl'
+      })
+     .when('/details/:detailId', {
+        templateUrl: 'views/profile-page.html',
+        controller: 'detailviewCtrl'
+      })
+     .when('/posts', {
+        templateUrl: 'views/posts.html',
+        controller: 'postsCtrl'
       })
      .when('/posts/:postId', {
-        templateUrl: 'views/show-posts.html',
+        templateUrl: 'views/profile-page.html',
         controller: 'postviewCtrl'
      })
 

@@ -1,7 +1,6 @@
 'use strict';
 
-angular.module('ahealthynetworkApp') 
-  .factory('Detail',
+app.factory('Detail',
     function ($firebase, User, FBURL) {
       var ref = new Firebase(FBURL + 'details');
 
@@ -14,14 +13,14 @@ angular.module('ahealthynetworkApp')
             var user = User.getCurrent();
 
             detail.owner = user.username;
-                console.log(user.username);
+    
             return details.$add(detail).then(function (ref) {
               var detailId = ref.name();
 
               user.$child('details').$child(detailId).$set(detailId);
 
               return detailId;
-            });
+            })
           }
         },
         find: function (detailId) {
@@ -36,8 +35,8 @@ angular.module('ahealthynetworkApp')
 
               details.$remove(detailId).then(function () {
                 user.$child('details').$remove(detailId);
-              });
-            });
+              })
+            })
           }
         }
       };

@@ -10,15 +10,17 @@
         {{ user.username }}
       </span>
     </div>
+    <div class="col-xs-6 col-sm-4 right">
+  <div ng-include="'views/posts.html'" ng-class="tab-pane" id="submissions"></div>
 
+  </div><!-- end col -->
   </div><!-- end row -->
-
 
   <div class="row">
 
-  <div ng-include="'views/posts.html'" ng-class="tab-pane" id="submissions" ng-controller="postsCtrl"></div>
-
-
+    <div class="col-xs-6 col-sm-4 left">
+  <div ng-include="'views/details.html'" ng-class="tab-pane" id="details"></div>
+  </div> <!-- end left col -->
 
   </div><!-- end row -->
 

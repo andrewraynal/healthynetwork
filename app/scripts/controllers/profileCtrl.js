@@ -1,7 +1,7 @@
 'use strict';
 
 app.controller('profileCtrl',
-    function ($scope, $routeParams, Post, User) {
+    function ($scope, $routeParams, Post, User, Detail) {
     $scope.user = User.findByUsername($routeParams.username);
 
     $scope.commentedPosts = {};
@@ -9,8 +9,16 @@ app.controller('profileCtrl',
     $scope.user.$on('loaded', function () {
       populatePosts();
       populateComments();
+      populateDetails();
     });
 
+    function populateDetails () {
+      $scope.details = {};
+
+      angular.forEach($scope.user.details, function(detailId) {
+        $scope.details[detailId] = Detail.find(detailId);
+      });
+    };
     function populatePosts () {
       $scope.posts = {};
 

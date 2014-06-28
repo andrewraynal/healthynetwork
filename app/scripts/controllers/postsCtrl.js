@@ -1,8 +1,8 @@
   'use strict';
 
   app.controller('postsCtrl', 
-    function ($scope, $location, Post) {
-    	if ($location.path() === '/') {
+    function ($scope, $location, Post, Auth) {
+    	if ($location.path() === '/posts/:postId') {
         $scope.posts = Post.all;
       }
 

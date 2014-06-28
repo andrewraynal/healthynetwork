@@ -93,9 +93,6 @@ div .healthfinder-results {
 	margin:0;
 	padding:0;
 }
-.showdetails {
-	text-align: none;
-}
 .upload {
 	margin: auto 0;
 }
@@ -252,7 +249,7 @@ ul.grid li img{
 	font-size: 18px;
 	border: none;
 	word-spacing: 5px;
-	color: #fff;
+	color: #f8f8f8;
 	padding: 15px;
 	margin-top: 30px;
 }
@@ -293,9 +290,8 @@ ul.grid li img{
 }
 .showdetails {
 	margin: 0 auto;
-	width: 675px;
-	height: 425px;
-	background: url(/images/active.jpeg) no-repeat;
+	min-width: 600px;
+	min-height: 425px;
 	border-radius: 25px;
 	border-color: inherit;
 	margin-top: 75px;
