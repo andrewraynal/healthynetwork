@@ -10,22 +10,28 @@
                     {{detail.firstname | uppercase}} {{detail.lastname | uppercase}}
                 </li>
                 <li class="col-xs-10">
+                  <label>Location:</label>
                     {{detail.location}}
-                </li>
+                </li>                
                 <li class="col-xs-10">
+                    <label>Gender:</label>
                     {{detail.gender}}
                 </li>
                 <li class="col-xs-10">
+                    <label>Age:</label>
                     {{detail.age}}
                 </li>
                 <li class="col-xs-10">
+                    <label>Personal Message:</label>
                     {{detail.personalmsg}}
                 </li>
               </ul>
+              <button class="btn btn-xs" ng-click="deleteDetail(detailId)">Delete Details</button>
+            <a class="btn btn-xs" href="#/details/{{ detailId }}">Edit Details</a>
             </div>
       </div>
           <div class="detail-footer">
-            <button class="btn btn-primary" ng-href="#/detail-list">Submit Detials</button>
+
           </div>
       </div>
 </div>

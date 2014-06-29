@@ -1,4 +1,7 @@
-<div class="container posts-page">
+<div class="container posts">
+  <div class="header">
+    <h2 class="post-header">My Posts</h2>
+  </div> <!-- end header -->
     <div class="col-md-9 col-xs-11">
 
       <div class="info">
@@ -6,34 +9,33 @@
           {{ post.title }}
           <span class="url">({{ post.url | hostnameFromUrl }})</span>
         </a>
-      </div>
-      <div>
+      </div> <!-- end info -->
+      <div class="submit-by">
         <span>submitted by: <a href="#/users/{{ post.owner }}">{{ post.owner }}</a></span>
-      </div>
-    </div>
+      </div> <!-- end submit -->
     <div class="col-md-2">
       
-    </div>
+    </div> <!-- end col md 2 -->
 
-  </div>
+  </div> <!-- end col-md-9 -->
 
  <div ng-repeat="(commentId, comment) in post.comments" class="row cmt">
     <div class="col-md-12">
       <p>{{ comment.text }}</p>
       <p class="author">posted by <a href="#/users/{{ comment.username }}">{{ comment.username }}</a> <a ng-click="removeComment(comment, commentId)" ng-show="signedIn() && comment.username === currentUser.username">(DELETE)</a></p>
-    </div>
-  </div>
+    </div> <!-- end comment repeat -->
+  </div> <!-- end col md 12 -->
 
 
   <div class="cmt-form">
     <div ng-hide="signedIn()">
       <p><a href="#/login">Sign in</a> to post a comment</p>
-    </div>
+    </div> <!-- end hide -->
 
-    <form ng-show="signedIn()">
+    <form ng-submit="addComment(commentId)" ng-show="signedIn()">
       <textarea ng-model="comment.text" placeholder="Post a Comment" class="form-control"></textarea><br />
-      <input type="submit" ng-click="addComment()" value="Post Comment" class="btn btn-primary" />
+      <input type="submit" value="Post Comment" class="btn btn-primary" />
     </form>
-  </div>
+  </div> <!-- end cmt-form -->
 
-</div>
+</div> <!-- end container -->

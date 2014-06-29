@@ -42,7 +42,7 @@ app.config(function ($routeProvider) {
         controller: 'detailsCtrl'
       })
      .when('/details/:detailId', {
-        templateUrl: 'views/profile-page.html',
+        templateUrl: 'views/show-details.html',
         controller: 'detailviewCtrl'
       })
      .when('/posts', {
@@ -50,7 +50,7 @@ app.config(function ($routeProvider) {
         controller: 'postsCtrl'
       })
      .when('/posts/:postId', {
-        templateUrl: 'views/profile-page.html',
+        templateUrl: 'views/show-posts.html',
         controller: 'postviewCtrl'
      })
 

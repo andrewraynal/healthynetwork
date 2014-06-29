@@ -14,12 +14,6 @@ if ($location.path() === '/details') {
       $scope.detail = {photo: '', firstname: '', lastname: '', location: '', gender: '', age: '', personalmsg: ''};
     });
   };
-    $scope.updateDetail = function () {
-    Detail.add($scope.detail).then(function (detailId) {
-      $location.path('/users/:username');
-      $scope.detail = {photo: '', firstname: '', lastname: '', location: '', gender: '', age: '', personalmsg: ''};
-    });
-  };
   $scope.deleteDetail = function (detailId) {
     console.log($scope.user);
     Detail.delete(detailId);

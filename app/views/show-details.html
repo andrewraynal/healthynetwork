@@ -1,35 +1,41 @@
 <div class="showdetails">
       <form class="details" role="submit" ng-submit="submitDetail()">
         <fieldset>
-          <legend>{{currentUser.username}}<span>{{photo}}</span></legend>
+          <legend>{{currentUser.username | uppercase}}<span>{{photo}}</span></legend>
 
           <upload-directive></upload-directive>
-          <ol>
+          <ul>
             <li>
               <a href="#"><img class="profileimg" ng-src="{{detail.photo}}"/></a>
             </li>
+            <label>First Name:</label>
             <li>
-              <input class="firstname" ng-model="detail.firstname" type=text placeholder="First Name" required autofocus>
+              {{detail.firstname}}
+            </li>
+            <label>Last Name:</label>
+            <li>
+             {{detail.lastname}}
+            </li>
+            <label>Location:</label>
+            <li>
+              {{detail.location}}
+            </li>
+            <label>Gender:</label>
+            <li>
+              {{detail.gender}}
+            </li>
+              <label>Age:</label>
+            <li>
+              {{detail.age}}
+            </li>
+             <label>Personal Message:</label> 
+            <li>
+              {{detail.personalmsg}}
             </li>
             <li>
-              <input class="lastname" ng-model="detail.lastname" type=text placeholder="Last Name" required autofocus>
+              <button ng-click="deleteDetail(detail, detailId)" ng-show="signedIn() && detail.username === currentUser.username">DELETE</button>
             </li>
-            <li>
-              <input class="location" ng-model="detail.location" type=text placeholder="Location" required autofocus>
-            </li>
-            <li>
-              <input class="gender" ng-model="detail.gender" type=text placeholder="Gender" required autofocus>
-            </li>
-            <li>
-              <input class="age" ng-model="detail.age" type=text placeholder="Age" required autofocus>
-            </li>
-            <li>
-              <input class="personalmsg" ng-model="detail.personalmsg" type=text placeholder="Personal Message" required autofocus>
-            </li>
-            <li>
-              <input type="submit" value="Update Info" class="btn btn-primary"/>
-            </li>
-         </ol>
+         </ul>
         </fieldset>
       </form>
 

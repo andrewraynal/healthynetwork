@@ -2,7 +2,7 @@
 
   app.controller('postsCtrl', 
     function ($scope, $location, Post, Auth) {
-    	if ($location.path() === '/posts/:postId') {
+    	if ($location.path() === '/') {
         $scope.posts = Post.all;
       }
 
@@ -10,6 +10,7 @@
 
       $scope.submitPost = function () {
         Post.create($scope.post).then(function () {
+          $location.path('/posts/' + postId);
           $scope.post = {url: 'http://', 'title': ''};
         });
       };
