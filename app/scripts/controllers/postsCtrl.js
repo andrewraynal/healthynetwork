@@ -6,16 +6,17 @@
         $scope.posts = Post.all;
       }
 
-      $scope.post = {url: 'http://', 'title': ''};
+      $scope.post = {content: ''};
 
       $scope.submitPost = function () {
-        Post.create($scope.post).then(function () {
+        Post.create($scope.post).then(function (postId) {
           $location.path('/posts/' + postId);
-          $scope.post = {url: 'http://', 'title': ''};
+          $scope.post = {content: ''};
         });
       };
 
       $scope.deletePost = function (postId) {
+
         Post.delete(postId);
       };
 

@@ -1,0 +1,89 @@
+
+.posts {
+	max-width: auto;
+	letter-spacing: 3px;
+}
+.content-title {
+	margin-top: 10px;
+}
+.post, .addpost {
+	width: auto;
+	border: solid #9f9f9f;
+	background-size: auto;
+	background-color: #eee;
+}
+.post-view, .post-header {
+	letter-spacing: 3px;
+}
+span.for-posts {
+	width: 80px;
+}
+.post-owner {
+	text-transform: capitalize;
+}
+.author {
+	font-size: 14px;
+}
+.addpost .form-control {
+	margin: 5px;
+	padding: 5px;
+	width: 80%;
+}
+.show-posts {
+	margin: 25px auto;
+}
+.post-content { 
+	font-size: 16px;
+}
+.post-title h3 {
+	font-size: 20px;
+	text-transform: capitalize;
+}
+.post-title span {
+	font-size: 75%;
+}
+.post-row {
+	margin: 10px;
+	padding: 10px;
+}
+.post-header {
+	margin: 0 auto;
+}
+.post-view {
+	max-width: 600px;
+	background-size: auto;
+	background-color: #fcf8ef;
+	border-style: solid;
+	border-color: #eee;
+	border-width:3px;
+	border-radius: 3px;
+	}
+.cmt-form {
+	margin: 10px;
+}
+.cmt-text {
+	width: 100%;
+	height: 100%;
+	margin-left: 0;
+	margin-top: 50px;
+}
+.cmt {
+	max-width: 600px;
+	background-color: #fcf8ef;
+	margin: 0 auto;
+	padding-top:10px;
+	border-top:1px solid #ccc;
+	border-radius: 3px;
+	box-shadow: 0 -5px 8px;
+}
+.cmt .author {
+  font-size:14px;
+  color:#bbb;
+}
+.cmt-btn {
+	background-color: #c2c91a;
+	color: #fff;
+	font-size: 18px;
+	border-color: none;
+	box-shadow: 0 -5px 8px;
+}

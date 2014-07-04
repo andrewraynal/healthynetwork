@@ -1,0 +1,10 @@
+<div class="chat wrapper">
+<ul ng-repeat="message in messages" ng-controller="chatCtrl">
+      <li class="chat-msg">{{message.from}}: {{message.content}}</li>
+</ul>
+    <form ng-submit="addMessage()">
+      <input type="text" ng-model="message"/>
+      <input type="submit" value="Send Message"/>
+    </form>
+
+</div>    

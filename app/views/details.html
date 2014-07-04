@@ -1,37 +1,35 @@
 <div class="details">
-    <div class="header">
-        <h2>My Details</h2>
-    </div>
     <div class="detail-body">
-            <div ng-repeat="(detailId, detail) in details">
-              <p><img class="profileimg" ng-src="{{detail.photo}}"/></p>
-              <ul class="detail-list">
-                <li class="col-xs-10">
-                    {{detail.firstname | uppercase}} {{detail.lastname | uppercase}}
-                </li>
-                <li class="col-xs-10">
-                  <label>Location:</label>
-                    {{detail.location}}
-                </li>                
-                <li class="col-xs-10">
-                    <label>Gender:</label>
-                    {{detail.gender}}
-                </li>
-                <li class="col-xs-10">
-                    <label>Age:</label>
-                    {{detail.age}}
-                </li>
-                <li class="col-xs-10">
-                    <label>Personal Message:</label>
-                    {{detail.personalmsg}}
-                </li>
-              </ul>
-              <button class="btn btn-xs" ng-click="deleteDetail(detailId)">Delete Details</button>
-            <a class="btn btn-xs" href="#/details/{{ detailId }}">Edit Details</a>
-            </div>
-      </div>
-          <div class="detail-footer">
-
-          </div>
-      </div>
-</div>
+      <div ng-repeat="(detailId, detail) in details | filter:{visible: true} | limitTo: 1 ">
+        <div class="profileimg"><img class="profileimg" ng-src="{{detail.photo}}"/></div>
+        <ul class="detail-list">
+          <li class=" detail-name">
+              <label>{{detail.firstname | uppercase}} {{detail.lastname | uppercase}}</label>
+          </li>
+          <li class="">
+            <label>Location:</label>
+              {{detail.location}}
+          </li>                
+          <li class="">
+              <label>Gender:</label>
+              {{detail.gender}}
+          </li>
+          <li class="">
+              <label>Age:</label>
+              {{detail.age}}
+          </li>
+          <li class="">
+              <label>Personal<br> 
+                Message:</label>
+              "{{detail.personalmsg}}"          
+          </li>
+          <li>
+            <a class="btn btn-xs detail-btn" ng-click="deleteDetail(detailId)" ng-show="signedIn() &amp;&amp; detail.owner === currentUser.username" class=""><span class="glyphicon glyphicon-trash"></span>Delete Details</a>
+            <a class="btn btn-xs detail-btn" href="#/details/{{detailId}}" ng-show="signedIn() &amp;&amp; detail.owner === currentUser.username"><span class="glyphicon glyphicon-pencil"></span>Edit Info</a>
+          </li>
+       </ul>
+      </div> <!-- end ng repeat -->
+    </div> <!-- end detail body -->
+    <div class="detail-footer">
+    </div> <!-- end footer -->
+</div> <!-- end container -->

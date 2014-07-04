@@ -3,7 +3,7 @@
 app.controller('authCtrl',
     function ($scope, $location, Auth, User) {
       if (Auth.signedIn()) {
-        $location.path('/');
+        $location.path('/users/:username');
       }
 
       $scope.$on('$firebaseSimpleLogin:login', function () {

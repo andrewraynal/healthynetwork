@@ -1,7 +1,6 @@
 'use strict';
 
-angular.module('ahealthynetworkApp')
-  .controller('healthfinderCtrl', ['$scope', 'healthfinder', function ($scope, healthfinder){
+app.controller('healthfinderCtrl', ['$scope', 'healthfinder', function ($scope, healthfinder){
   
     healthfinder.async().then(function(data){
 
@@ -9,5 +8,15 @@ angular.module('ahealthynetworkApp')
         		console.log($scope.results);
        		// $scope.result = $scope.news.Result.Topics;
        		// 	console.log($scope.result);
+       		$scope.quantity = 8;
   });
+     $scope.layout = 'grid';
+
+    $scope.setLayout = function(layout){
+      $scope.layout = layout;
+    };
+
+    $scope.isLayout = function(layout){
+      return $scope.layout == layout;
+    };
 }]);

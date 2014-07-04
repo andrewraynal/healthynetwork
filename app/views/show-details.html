@@ -1,42 +1,30 @@
-<div class="showdetails">
-      <form class="details" role="submit" ng-submit="submitDetail()">
-        <fieldset>
-          <legend>{{currentUser.username | uppercase}}<span>{{photo}}</span></legend>
+<div class="create-details">
+    <div class="create-form">
+      <div class="header">
+        <h2 class="form-header">{{currentUser.username | uppercase }}'S Details</h2>
+      </div>
+    <div class="profileimg"><img class="profileimg" ng-src="{{detail.photo}}"/></div>
 
-          <upload-directive></upload-directive>
-          <ul>
-            <li>
-              <a href="#"><img class="profileimg" ng-src="{{detail.photo}}"/></a>
-            </li>
-            <label>First Name:</label>
-            <li>
-              {{detail.firstname}}
-            </li>
-            <label>Last Name:</label>
-            <li>
-             {{detail.lastname}}
-            </li>
-            <label>Location:</label>
-            <li>
-              {{detail.location}}
-            </li>
-            <label>Gender:</label>
-            <li>
-              {{detail.gender}}
-            </li>
-              <label>Age:</label>
-            <li>
-              {{detail.age}}
-            </li>
-             <label>Personal Message:</label> 
-            <li>
-              {{detail.personalmsg}}
-            </li>
-            <li>
-              <button ng-click="deleteDetail(detail, detailId)" ng-show="signedIn() && detail.username === currentUser.username">DELETE</button>
-            </li>
-         </ul>
-        </fieldset>
-      </form>
+    <form class="contactform" ng-submit="updateDetail()">  
+      <p class="contact"><label for="firstname">First Name</label></p>
+      <input class="firstname" name="firstname" value="{{detail.firstname}}">
+      
+      <p class="contact"><label for="lastname">Last Name</label></p>
+      <input class="lastname" name="lastname" value="{{detail.lastname}}">      
 
+      <p class="contact"><label for="location">Location</label></p>
+      <input class="location" name="location" value="{{detail.location}}">
+
+      <p class="contact"><label for="age">Age</label></p>
+      <input class="age" type="number" value="{{detail.age}}">
+     
+     <p class="contact"><label for="gender">Gender</label></p>
+      <input class="gender" value="{{detail.gender}}">
+
+      <p class="contact"><label for="personalmsg">Personal Message</label></p>
+      <input class="personalmsg" name="personalmsg" value="{{detail.personalmsg}}"> <br>
+      <input class="btn btn-primary" name="submit" id="submit" tabindex="5" value="Update Details" type="submit">   
+  </form>
+      <a href="#/users/{{currentUser.username}}">Confirm</a>
+  
 </div>

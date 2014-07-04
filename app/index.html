@@ -24,7 +24,10 @@
     <!-- endbuild -->
     <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" type="text/css" href="styles/healthy.css">
+    <link rel="stylesheet" type="text/css" href="styles/main-styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/details.css">
+    <link rel="stylesheet" type="text/css" href="styles/posts.css">
+    <link rel="stylesheet" href="firechat/dist/0.1.5/firechat-default.min.css" />
     <script type="text/javascript">
           WebFontConfig = {
             google: { families: [ 'Josefin+Slab:400,700,700italic:latin' ] }
@@ -38,28 +41,17 @@
             var s = document.getElementsByTagName('script')[0];
             s.parentNode.insertBefore(wf, s);
           })(); 
-          WebFontConfig = {
-            google: { families: [ 'Pacifico::latin' ] }
-          };
-          (function() {
-            var wf = document.createElement('script');
-            wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-              '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-            wf.type = 'text/javascript';
-            wf.async = 'true';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(wf, s);
-          })(); 
+         
     </script>
     <!-- endbuild -->
 </head>
 <body ng-app="ahealthynetworkApp">
-<!--app content below -->
-     <div ng-include="'views/nav.html'">
-
-    </div>    
+<!--app content below -->   
+    <div class="nav-view" ng-include="'views/nav.html'">
+    </div> 
     <div class="container" ng-view="">
     </div>
+        
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -81,10 +73,12 @@
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
+    <script src="firechat/dist/0.1.5/firechat-default.js"></script>
     <script src="scripts/angularfire/config.js"></script>
     <script src="scripts/services/firebase.js"></script>
     <script src="scripts/angularfire/simpleLoginTools.js"></script>
     <script src="scripts/angularfire/routesecurity.js"></script>
+    <script src="scripts/controllers/mainCtrl.js"></script>
     <script src="scripts/controllers/authCtrl.js"></script>
     <script src="scripts/controllers/detailsCtrl.js"></script>
     <script src="scripts/controllers/picCtrl.js"></script>
@@ -93,7 +87,8 @@
     <script src="scripts/controllers/navCtrl.js"></script>
     <script src="scripts/controllers/postviewCtrl.js"></script>
     <script src="scripts/controllers/profileCtrl.js"></script>
-     <script src="scripts/controllers/detailviewCtrl.js"></script>
+    <script src="scripts/controllers/detailviewCtrl.js"></script>
+    <script src="scripts/controllers/chatCtrl.js"></script>
     <script src="scripts/services/loginSvc.js"></script>
     <script src="scripts/services/picSvc.js"></script>
     <script src="scripts/services/authSvc.js"></script>
@@ -101,9 +96,8 @@
     <script src="scripts/services/detailSvc.js"></script>
     <script src="scripts/services/healthfinderSvc.js"></script>
     <script src="scripts/services/postSvc.js"></script>
+    <script src="scripts/services/chatSvc.js"></script>
     <script src="scripts/directives/uploadDirective.js"></script>
-    <script src="scripts/filters/url.js"></script>
-
 
       <!-- endbuild -->
 </body>

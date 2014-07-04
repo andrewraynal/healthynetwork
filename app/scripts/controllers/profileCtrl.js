@@ -25,8 +25,9 @@ app.controller('profileCtrl',
 
       angular.forEach($scope.user.posts, function (postId) {
         $scope.posts[postId] = Post.find(postId);
-        
+      
       });
+
     };
 
     function populateComments () {

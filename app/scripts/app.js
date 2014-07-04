@@ -19,7 +19,7 @@ app.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main-login.html',
-        controller: 'authCtrl'
+        controller: 'mainCtrl'
       })
       .when('/register', {
         templateUrl: 'views/register-form.html',
@@ -32,10 +32,6 @@ app.config(function ($routeProvider) {
       .when('/users/:username', {
         templateUrl: 'views/profile-page.html',
         controller: 'profileCtrl'
-      })
-     .when('/details', {
-        templateUrl: 'views/details.html',
-        controller: 'detailsCtrl'
       })
      .when('/create-details', {
         templateUrl: 'views/create-details.html',
@@ -52,6 +48,10 @@ app.config(function ($routeProvider) {
      .when('/posts/:postId', {
         templateUrl: 'views/show-posts.html',
         controller: 'postviewCtrl'
+     })
+     .when('/chat', {
+        templateUrl: 'views/chat.html',
+        controller: 'chatCtrl'
      })
 
       .otherwise({

@@ -62,4 +62,5 @@ app.factory('Post',
 		}
 	};
 		return Post;
+		return postId;
 	});

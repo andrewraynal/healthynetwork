@@ -1,4 +1,4 @@
-  'use strict';
+'use strict';
 
   app.controller('navCtrl', 
   function ($scope, $location, Post, Auth) {

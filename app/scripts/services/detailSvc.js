@@ -41,4 +41,5 @@ app.factory('Detail',
         }
       };
           return Detail;
+          return detailId;
       });

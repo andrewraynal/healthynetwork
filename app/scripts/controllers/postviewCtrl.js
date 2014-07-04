@@ -1,7 +1,14 @@
 'use strict';
 
 app.controller('postviewCtrl', 
-	function ($scope, $routeParams, Post) {
+	function ($scope, $location, $routeParams, Post, Auth) {
+      $scope.posts = Post.all;
+      $scope.post = {content: ''};
+
+      $scope.deletePost = function (postId) {
+
+        Post.delete(postId);
+      };
 
     $scope.post = Post.find($routeParams.postId);
 

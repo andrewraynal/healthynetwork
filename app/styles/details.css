@@ -1,0 +1,163 @@
+.post-content {
+	margin: 0 auto;
+	max-width: 400px;
+}
+
+fieldset {
+	margin: 0 auto;
+	text-align: center;
+}
+.details {
+	letter-spacing: 3px;
+	text-align: left;
+	max-width: auto;
+}
+.detail-list {
+	border: solid #9f9f9f;
+	background-size: auto;
+	background-color: #eee;
+}
+.details p, .detail-name, .details-header {
+	text-align: center;
+}
+div.profileimg {
+	margin: 0 auto;
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+img.profileimg {
+	border: 8px solid #5d7946;
+}
+.detail-btn {
+	background-color: #c2c91a;
+	color: #fff;
+	text-decoration: none;
+}
+.add-details {
+	display: inline-block;
+}
+
+.showdetails {
+	width: 500px;
+	height: auto;
+	border-radius: 15px;
+	box-shadow: 0 -5px 8px;
+	margin: 0 auto;
+	color: #fff;
+	font-size: 150%;
+}
+.showdetails input {
+	width: 275px;
+	height: 40px;
+	margin: 5px;
+	color: #707070;
+}
+.showdetails label {
+	float: left;
+}
+.showdetails li {
+	margin-left: 20px;
+}
+.showdetails .age {
+	margin-left: 40px;
+	margin-right: 0;
+}
+	
+/* CREATE DETAILS FORM */
+.create-form{
+	background:#f1f1f1; 
+	width:470px; 
+	margin:0 auto; 
+	padding-left:50px; 
+	padding-top:20px;
+	border-radius: 5px;
+	border: 5px solid #5d7946;
+}
+.form-header {
+	text-align: center;
+	margin-right: 50px;
+}
+.create-form p.contact { 
+	font-size: 12px; 
+	margin:0px 0px 10px 0;
+	line-height: 14px; 
+	font-family:Arial, Helvetica;
+};
+.create-form input.age{
+	width:120px;
+}
+.create-form label { 
+	color: #000; 
+	font-weight:bold;
+}
+
+.create-form input, textarea { 
+	background-color: rgba(255, 255, 255, 0.4); 
+	border: 1px solid rgba(122, 192, 0, 0.15); 
+	padding: 7px; 
+	font-size: 14px; 
+	-webkit-border-radius: 5px; 
+	margin-bottom: 15px; 
+	margin-top: -10px; 
+}
+.create-form input:focus, textarea:focus { 
+	border: 1px solid #ff5400; 
+	background-color: rgba(255, 255, 255, 1); 
+}
+.create-form .select-style {
+  -webkit-appearance: button;
+  -webkit-border-radius: 2px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-padding-end: 20px;
+  -webkit-padding-start: 2px;
+  -webkit-user-select: none;
+  width: 300px;
+  background-image: url(/images/select-arrow.png), 
+    -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+  background-position: center right;
+  background-repeat: no-repeat;
+  border: 0px solid #FFF;
+  color: #555;
+  font-size: inherit;
+  margin: 0;
+  overflow: hidden;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.create-form input.personalmsg {
+  width:300px;
+ }
+.create-form input.btn{ 
+	background: #c2c91a; 
+	display: inline-block; 
+	padding: 5px 10px 6px; 
+	color: #fff; 
+	text-decoration: none; 
+	font-weight: bold; 
+	line-height: 1; 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+	border-radius: 5px; 
+	-moz-box-shadow: 0 1px 3px #999; 
+	-webkit-box-shadow: 0 1px 3px #999; 
+	box-shadow: 0 1px 3px #999; 
+	text-shadow: 3px #222; 
+	border: none; 
+	position: relative; 
+	cursor: pointer; 
+}
+.create-form input.btn:hover{ 
+	background-color: #2a78f6; 
+}
+.create-form-header {
+	margin-left: 75px;
+}
+#fileupload {
+	width: 200px;
+}
+#submit {
+	margin: 15px;
+}
+

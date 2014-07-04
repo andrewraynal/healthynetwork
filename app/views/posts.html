@@ -1,27 +1,38 @@
 <div class="posts">
-  <div class="header">
-    <h2>My Posts</h2>
+  <div class="bar for-posts">
+    <span class="for-posts"></span><span class="health-header"><h2>Journal</h2></span>
+  </div><!-- end bar -->
+  <div class="addpost">
+    <form ng-submit="submitPost()" ng-show="signedIn()">
+      <label class="post-label">Write a journal entry:</label>
+        <ul>
+          <li> 
+            <input type="text" class="title form-control" placeholder="Entry Title" ng-model="post.title"/>
+          </li>
+          <li>
+            <input type="date" class="date form-control" placeholder="Date" ng-model="post.date" />
+          </li>
+          <li>
+            <textarea class="post-content form-control" placeholder="Content" ng-model="post.content"></textarea>
+          </li>
+          <li>
+            <input type="submit" class="btn btn-xs cmt-btn" value="Submit"/>
+          </li>
+        </ul>
+    </form>
   </div>
-
-  <div class="post row" ng-repeat="(postId, post) in posts">
-    <div class="col-md-9 col-xs-11">
-      <div class="info">
-        <a href="{{ post.url }}">
-          {{ post.title }}
-          <span class="url">({{ post.url | hostnameFromUrl }})</span>
-        </a>
-      </div>
-      <div class="author">
-        <span>submitted by <a href="#/users/{{ post.owner }}">{{ post.owner }}</a></span>
-        &mdash;
-        <a href="#/posts/{{ postId }}">comments</a>
-        <a ng-click="deletePost(postId)" ng-show="signedIn() && post.owner === currentUser.username">delete</a>
-      </div>
-    </div>
-    <div class="col-md-2">
-      
-    </div>
-
+  <div class="post row post-row" ng-repeat="(postId, post) in posts">
+    <div class="info">
+      <h3 class="content-title">{{ post.title }}</h3>
+    </div> <!-- end info -->
+    <div class="author">
+      <span>Submitted by: 
+        <a class="post-owner" href="#/users/{{ post.owner }}">{{ post.owner }}</a>
+      </span>
+        &mdash;<a href="#/posts/{{ postId }}">
+      <span class="glyphicon glyphicon-zoom-in"></span>View Post</a>
+        <a ng-click="deletePost(postId)" ng-show="signedIn() && post.owner === currentUser.username">
+      <span class="glyphicon glyphicon-trash">Delete</span></a>
+    </div> <!-- end author -->
   </div>
-
 </div>
