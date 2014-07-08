@@ -7,15 +7,53 @@ ol li, ul li {
 	list-style-type: none;
 	margin: 5px;
 }
-body {
+html, body {
 	height: 100%;
 	width: 100%;
+	overflow: scroll;
 	background: url(/images/green-background.jpg) no-repeat;
-	background-size: 100% 100% 100% 100%;
+	background-size: cover;
 	font-family: 'Josefin Slab', serif;
+}
+.navbar {
+	background-color: rgba(80,80,80,0.8);
+	border: 1px solid #505050;
+	margin: 3px;
+}
+.navbar-default .navbar-brand {
+	color: #F6F6F6;
+	letter-spacing: 1px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	font-size: 20px;
+	margin: 3px;
+	margin-top: 5px;
+
+}
+.navbar-default .navbar-nav li a {
+	font-family: 'Open Sans', sans-serif;
+	color: #F6F6F6;
+	letter-spacing: 0px;
+	font-weight: normal;
+	margin: 3px;
+}
+.navbar-list {
+	text-align: center;
+	float: right;
+	margin: 20px -5px 0px 150px;
+	line-height: 15px;
+}
+.navbar-list a {
+	margin: 5px;
+	padding: 5px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	color: #F6F6F6;
+	letter-spacing: 0px;
 }
 .container, .login-container, .profilepage, .health {
 	min-width: 100%;
+	border: none;
 }
 .balance {
 	letter-spacing: 10px;
@@ -25,37 +63,30 @@ body {
 	height: 150px;
 	border-radius: 50px;
 }
-.login-register-wrapper {
-	margin: 0 auto;
+.caption {
+	color: #fff;
 	text-align: center;
-	width: 675px;
-	height: 425px;
-	background: url(/images/active.jpeg) no-repeat;
-	border-radius: 25px;
-	border-color: inherit;
-	margin-top: 75px;
-	margin-bottom: 75px;
-	box-shadow: 0 -5px 8px;
+	margin: 10px;
+	margin-left: 350px;
+	margin-right: 350px;
+	padding: 10px;
+	background-color:rgba(72,72,72,0.5);
+	max-width: 600px;
 }
-
 .app-title {
 	margin: 0 auto;
-	color: #707070;
-	text-shadow: 2px 2px 0px #eee, 3px 3px 0px #707070;
+	text-shadow: 2px 2px 0px #000, 3px 3px 0px #000;
 	margin-top: 5px;
 	line-height: 200%;
-	font-size: 48px;
+	font-size: 56px;
 	font-weight: 700;
-	font-style: bolder;
-}
-.caption {
-	margin: 10px;
-	padding: 10px;
 }
 
+
 .subtitle {
-	margin-bottom: 10px;
-	color: #707070;
+	color: #fff;
+	font-size: 28px;
+	margin-bottom: 20px;
 	word-spacing: 3px;
 	text-shadow: 1px 1px 3px;
 }
@@ -63,7 +94,7 @@ body {
 .btn-primary {
 	background-color: #c2c91a;
 	color: #fff;
-	font-size: 24px;
+	font-size: 20px;
 	border-color: none;
 	box-shadow: 0 -5px 8px;
 	max-width: 200px;
@@ -73,19 +104,12 @@ body {
 	letter-spacing: 3px;
 	text-shadow: 3px;
 }
-.login-register p {
-	font-size: 18px;
-	color: #707070;
-}
 .profilepage {
-	background-size: 90% 90%;
+	background-size: cover;
 	background-color: #f8f8f8;
 	width: auto;
 	height: 100%;
-	border-radius: 15px;
 	box-shadow: 0 -5px 8px;
-	margin-top: 25px;
-	margin-bottom: 15px;
 	font-size: 150%;
 }
 /*Pics Layout - Grid/List*/
@@ -97,6 +121,7 @@ body {
 	margin: 0 auto;
 }
 .picLayout {
+	overflow: hidden;
 	color: #5e5b64;
 	text-align:center;
 }
@@ -114,25 +139,25 @@ section, footer, header, aside {
 	background-image:-moz-linear-gradient(top,: #5d7946, #bfbe06);
 	background-image:linear-gradient(top,: #5d7946, #bfbe06);
 
-	box-shadow: 0 1px 1px #ccc;
+	box-shadow: 0 1px 1px #505050;
 	border-radius: 5px;
-	border-color: none;
+	border: #505050 solid 1px;
 	color: #eee;
 	display: inline-flex;
 	padding: 10px;
-	margin: 10px auto 25px;
-	text-align:left;
+	margin: 10px auto 5px;
+	text-align: left;
 }
 
 .bar a{
 	background: #bfbe06 center center no-repeat;
-	width:32px;
-	height:32px;
-	display:inline-block;
-	text-decoration:none !important;
-	margin-right:5px;
-	border-radius:2px;
-	cursor:pointer;
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+	text-decoration: none !important;
+	margin-right: 5px;
+	border-radius: 2px;
+	cursor: pointer;
 }
 
 .bar a.active{
@@ -140,11 +165,11 @@ section, footer, header, aside {
 }
 
 .bar a.list-icon{
-	background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkYzNkFCQ0ZBMTBCRTExRTM5NDk4RDFEM0E5RkQ1NEZCIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkYzNkFCQ0ZCMTBCRTExRTM5NDk4RDFEM0E5RkQ1NEZCIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjM2QUJDRjgxMEJFMTFFMzk0OThEMUQzQTlGRDU0RkIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjM2QUJDRjkxMEJFMTFFMzk0OThEMUQzQTlGRDU0RkIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7h1bLqAAAAWUlEQVR42mL8////BwYGBn4GCACxBRlIAIxAA/4jaXoPEkMyjJ+A/g9MDJQBRhYg8RFqMwg8RJIUINYLFDmBUi+ADQAF1n8ofk9yIAy6WPg4GgtDMRYAAgwAdLYwLAoIwPgAAAAASUVORK5CYII=);
+	background-image:url(../images/list.png);
 }
 
 .bar a.grid-icon{
-	background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjBEQkMyQzE0MTBCRjExRTNBMDlGRTYyOTlBNDdCN0I4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjBEQkMyQzE1MTBCRjExRTNBMDlGRTYyOTlBNDdCN0I4Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MERCQzJDMTIxMEJGMTFFM0EwOUZFNjI5OUE0N0I3QjgiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MERCQzJDMTMxMEJGMTFFM0EwOUZFNjI5OUE0N0I3QjgiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4MjPshAAAAXklEQVR42mL4////h/8I8B6IGaCYKHFGEMnAwCDIAAHvgZgRyiZKnImBQsACxB+hNoDAQyQ5osQZIT4gH1DsBZABH6AB8x/JaQzEig++WPiII7Rxio/GwmCIBYAAAwAwVIzMp1R0aQAAAABJRU5ErkJggg==);
+	background-image:url(../images/grid.png);
 }
 @media (max-width: 300px) {
   .bar {
@@ -179,6 +204,7 @@ ul.list{
 }
 
 ul.list li{
+	font-weight: 700;
 	border-bottom: 1px solid #ddd;
 	padding: 10px;
 	overflow: hidden;
@@ -193,10 +219,10 @@ ul.list li img {
 }
 
 ul.list li p{
-	color: #05364B;
+	color: #ffffff;
 }
 span.result-title {
-	color: white; 
+	color: #ffffff; 
 	font-size: 12px;
 	font-weight: 700; 
 	letter-spacing: 1px;  
@@ -286,9 +312,6 @@ ul.grid li img{
 	letter-spacing: 5px;
 	font-weight: 700;
 }
-.form-control {
-	font-family: 'Josefin Slab', serif;
-}
 .navbar-li {
 	margin: 0;
 }
@@ -313,38 +336,3 @@ ul.grid li img{
 .nav-tabs {
   margin-top:30px;
 }
-
-.auth-forms {
-	font-size: 24px;
-	max-width: 400px;
-	margin: 0 auto;
-	background: #fff;
-	padding:1px 25px 25px 25px;
-	-moz-box-shadow: 0 0 5px rgba(0,0,0,0.2);
-	-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.2);
-	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-}
-.registerinputs {
-	margin: 10px;
-	padding: 10px;
-}
-#firechat-wrapper, .chat {
-	font-family: 'Josefin Slab', serif;
-	font-weight: 700;
-      max-height: 400px;
-      max-width: 325px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      background-color: #fff;
-      margin: 50px auto;
-      text-align: center;
-      -webkit-border-radius: 4px;
-      -moz-border-radius: 4px;
-      border-radius: 4px;
-      -webkit-box-shadow: 0 5px 25px #666;
-      -moz-box-shadow: 0 5px 25px #666;
-      box-shadow: 0 5px 25px #666;
-    }

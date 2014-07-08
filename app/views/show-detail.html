@@ -1,0 +1,33 @@
+ <div class="form-main-details">
+  <div class="form-div-details">
+      <img class="profileimg" ng-src="{{detail.photo}}"/>
+    <form class="form" id="form1" ng-submit="updateDetail(detailId)">
+      
+      <p class="name">
+        <input name="name" type="text" class="detail-input" value="{{detail.firstname}}" id="name" />
+      </p>
+       <p class="name">
+        <input name="name" type="text" class="detail-input" value="{{detail.lastname}}" id="name" />
+      </p>
+      <p class="location">
+        <input name="location" type="text" class="detail-input" id="location" value="{{detail.location}}" />
+      </p>
+      <p class="name">
+        <input name="age" type="text" class="detail-input" id="age" value="{{detail.age}}" />
+      </p>
+       <p class="name">
+        <input name="gender" type="text" class="detail-input" id="gender" value="{{detail.gender}}" />
+      </p>
+      <p class="text">
+        <textarea name="personalmsg" class="detail-input" id="comment">"{{detail.personalmsg}}"</textarea>
+      </p>
+  
+      <div class="submit">
+        <a class="submit" href="#/users/:{{currentUser.username}}">
+          <input type="submit" value="Save Details" id="details-button"/>
+        </a>
+        <div class="details-button-ease"></div>
+      </div>
+    </form>
+  </div>
+  </div>

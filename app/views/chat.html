@@ -1,10 +1,17 @@
-<div class="chat wrapper">
-<ul ng-repeat="message in messages" ng-controller="chatCtrl">
-      <li class="chat-msg">{{message.from}}: {{message.content}}</li>
-</ul>
-    <form ng-submit="addMessage()">
-      <input type="text" ng-model="message"/>
-      <input type="submit" value="Send Message"/>
+<div class="form-main-chat">
+	<div class="form-div-chat">
+		<div class="chat-header">Welcome to CommuniChat!</div>
+      	<ul class="message-repeat" ng-repeat="message in messages">
+      		<li>{{currentUser.username}}: {{message.content}}</li>
+      	</ul>
+	  <form ng-submit="addMessage()">
+	  	<p class="text">
+        	<textarea ng-model="message.content" id="message" name="personalmsg" class="detail-input-main"></textarea>
+      	</p>
+      <div class="submit">
+        <input type="submit" value="Send Message" id="chat-button"/>
+        <div class="chat-button-ease"></div>
+      </div>
     </form>
-
+	</div>
 </div>    

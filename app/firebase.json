@@ -1,0 +1,9 @@
+{
+  "firebase": "ahealthynetwork",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    ".*",
+    "**/node_modules/**"
+  ]
+}

@@ -1,0 +1,39 @@
+<nav class="navbar navbar-default" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href='#'>Balanced > a social network for holistic living</a>
+
+    <div class="navbar-list">
+      <span ng-show="signedIn()"><a class="" href="#/chat">Community Chat</a><a class="" href="#/posts">|  Share & Learn </a><a class="" href="#/details">|  Profile Info</a></span>
+    </div>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div ng-controller="navCtrl" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right" ng-show="signedIn()">
+      <li class="navbar-li">
+        <a href="#/users/{{ currentUser.username }}">
+        <img ng-src="http://www.gravatar.com/avatar/{{ currentUser.md5_hash }}" class="nav-pic" />
+        {{ currentUser.username | uppercase }}
+        </a>
+      </li>
+      <li class="navbar-li">
+        <a href="#" ng-click="logout()">Logout</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right" ng-hide="signedIn()">
+      <li>
+        <a class="navbar-li" href="#/main-login">Register</a>
+      </li>
+      <li>
+        <a class="navbar-li" href="#/main-login">Login</a>
+      </li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>

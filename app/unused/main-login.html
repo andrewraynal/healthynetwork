@@ -1,0 +1,67 @@
+<div class="login-container">   
+                <div class="caption">
+                    <p class="app-title balance">
+                    Balanced
+                    </p>
+                    <h3 class="subtitle">
+                        A healthy network for holistic living.   
+                    </h3>
+                </div><!--caption end -->
+             <div class="login-register-body">   
+                <div class="form-main-login">
+                <div class="form-div-login">
+                    <h3>If you're already a member, log in with your email and password!</h3>
+                        <form class="form" id="form1" ng-submit='login()'>
+                            <p class="email">
+                                <input type="email" ng-model="user.email" placeholder="Email" class="login-input" id="email"/>
+                            </p>
+                            <p>    
+                            <input type="password" ng-model="user.password" placeholder="Password" class="login-input" id="password"/>
+                            </p>
+                             <div class="submit">
+                                <input type="submit" id="login-button" value="Log In"/>
+                                <div class="login-button-ease"></div>
+                            </div>
+                        </form>
+
+                </div> <!-- end form div -->
+            </div><!-- end form main login -->
+            <div class="form-main-register">
+                <div class="form-div-register">
+                    <h3>New to the place?  Provide a username, email, and password.</h3>
+                        <form class="form" id="form1" ng-submit='register()'>
+                           <div ng-show="error || form.username.$error">
+                                <p ng-show="error" class="text-danger">{{ error }}</p>
+                                <p ng-show="form.username.$error.taken" class="text-danger">Username is already taken.</p>
+                                <p ng-show="form.username.$error.invalid" class="text-danger">Username contains invalid characters.</p>
+                            </div>
+                            <p class="username">
+                                <input type="text" ng-model="user.email" placeholder="Username" class="register-input" id="username"/>
+                            </p>
+                            <p class="email">
+                                <input type="email" ng-model="user.email" placeholder="Email" class="register-input" id="email"/>
+                            </p>
+                            <p>    
+                            <input type="password" ng-model="user.password" placeholder="Password" class="register-input" id="password"/>
+                            </p>
+                             <div class="submit">
+                                <input type="submit" id="login-button" value="Register"/>
+                                <div class="login-button-ease"></div>
+                            </div>
+                        </form>
+
+                </div> <!-- end form div -->
+            </div><!-- end form main login -->
+        </div><!-- end login-register-body -->
+    <footer class="site-footer">    
+        <nav>
+            <div class="footer-container">
+                <div class="row">
+                    <div class="img-bottom">
+                        <img src="/images/Moi.jpg" alt=""> Andrew Raynal 2014 &copy;All Rights Reserved
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </footer>
+</div> <!-- end container -->

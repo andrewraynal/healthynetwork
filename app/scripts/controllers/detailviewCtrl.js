@@ -1,12 +1,13 @@
 'use strict';
 
 app.controller('detailviewCtrl', 
-	function ($scope, $routeParams, User, Detail) {
+	function ($scope, $routeParams, Detail) {
 
     $scope.detail = Detail.find($routeParams.detailId);
 
-     $scope.updateDetail = function (detailId) {
-        Detail.update(detailId);
-      };
+    $scope.updateDetail = function () {
+      Post.updateDetail($routeParams.detailId, $scope.detail);
+      $scope.detail = {};
+    };
 
   });

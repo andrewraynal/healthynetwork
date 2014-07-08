@@ -5,7 +5,7 @@ app.factory('Post',
 		var ref = new Firebase(FBURL + 'posts');
 
 		var posts = $firebase(ref);
-	       
+
 			var Post = {
 				all: posts,
 				create: function (post) {
@@ -62,5 +62,4 @@ app.factory('Post',
 		}
 	};
 		return Post;
-		return postId;
 	});

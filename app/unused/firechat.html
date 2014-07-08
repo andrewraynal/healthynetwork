@@ -1,0 +1,34 @@
+<div id="firechat-wrapper">
+
+</div>
+<script>
+    var chatRef = new Firebase('https://ahealthynetwork.fireaseio.com/chat'),
+        target = document.getElementById("firechat-wrapper"),
+        chat = new FirechatUI(chatRef, target);
+
+    var auth = new FirebaseSimpleLogin(chatRef, function (error, user) {
+      if (user) {
+        var userId = user.id,
+            username = user.displayName;
+
+        chat.setUser(user.id, username);
+        $('#user-name').text(username);
+        $('#user-info').show();
+        setTimeout(function() {
+          chat._chat.enterRoom('')
+        }, 500);
+      } else {
+        $('#user-info').hide();
+        chat._chat.enterRoom('-Iy1N3xs4kN8iALHV0QA')
+      }
+    });
+
+    function login(provider) {
+      auth.login(provider);
+    }
+
+    function logout() {
+      auth.logout();
+      location.reload();
+    }
+  </script>

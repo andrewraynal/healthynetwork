@@ -1,15 +1,9 @@
 'use strict';
 
   app.controller('navCtrl', 
-  function ($scope, $location, Post, Auth) {
-  $scope.post = {url: 'http://', 'title': ''};
+  function ($scope, $location, Auth, User) {
+  $scope.user = User.getCurrent();
 
-  $scope.submitPost = function () {
-    Post.create($scope.post).then(function (postId) {
-      $location.path('/posts/' + postId);
-      $scope.post = {url: 'http://', 'title': ''};
-    });
-  };
   $scope.logout = function () {
   	Auth.logout();
   };

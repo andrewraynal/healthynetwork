@@ -17,28 +17,24 @@ var app = angular
 ]);
 app.config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
+       .when('/', {
         templateUrl: 'views/main-login.html',
-        controller: 'mainCtrl'
-      })
-      .when('/register', {
-        templateUrl: 'views/register-form.html',
-        controller: 'authCtrl'
-      })
-      .when('/login', {
-        templateUrl: 'views/login-form.html',
         controller: 'authCtrl'
       })
       .when('/users/:username', {
-        templateUrl: 'views/profile-page.html',
+        templateUrl: 'views/main-user-page.html',
         controller: 'profileCtrl'
+      })
+     .when('/details', {
+        templateUrl: 'views/details.html',
+        controller: 'detailsCtrl'
       })
      .when('/create-details', {
         templateUrl: 'views/create-details.html',
         controller: 'detailsCtrl'
       })
      .when('/details/:detailId', {
-        templateUrl: 'views/show-details.html',
+        templateUrl: 'views/show-detail.html',
         controller: 'detailviewCtrl'
       })
      .when('/posts', {
@@ -49,10 +45,11 @@ app.config(function ($routeProvider) {
         templateUrl: 'views/show-posts.html',
         controller: 'postviewCtrl'
      })
-     .when('/chat', {
+      .when('/chat', {
         templateUrl: 'views/chat.html',
         controller: 'chatCtrl'
-     })
+      })
+
 
       .otherwise({
         redirectTo: '/'
