@@ -16,40 +16,43 @@ html, body {
 	font-family: 'Josefin Slab', serif;
 }
 .navbar {
+	width: 100%;
 	background-color: rgba(80,80,80,0.8);
 	border: 1px solid #505050;
-	margin: 3px;
 }
-.navbar-default .navbar-brand {
-	color: #F6F6F6;
-	letter-spacing: 1px;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 700;
-	font-size: 20px;
-	margin: 3px;
-	margin-top: 5px;
-
-}
-.navbar-default .navbar-nav li a {
-	font-family: 'Open Sans', sans-serif;
-	color: #F6F6F6;
-	letter-spacing: 0px;
-	font-weight: normal;
-	margin: 3px;
-}
-.navbar-list {
-	text-align: center;
-	float: right;
-	margin: 20px -5px 0px 150px;
-	line-height: 15px;
-}
-.navbar-list a {
-	margin: 5px;
-	padding: 5px;
-	font-family: 'Open Sans', sans-serif;
+.navbar-default .navbar-brand li a {
+	width: 100%;
+	color: #fff;
 	font-weight: 600;
+	text-shadow: 2px 2px 0px #000, 3px 3px 0px #000; 
+}
+
+.navbar, .navbar-default .navbar-nav li a {
+	padding: 10px 10px;
+	font-family: 'Open Sans', sans-serif;
 	color: #F6F6F6;
-	letter-spacing: 0px;
+	letter-spacing: 3px;
+	font-weight: normal;
+	text-decoration: none;
+}
+.navbar, .navbar-default .navbar-nav {
+	margin-top: 3px;
+}
+.nav-pic {
+	max-height: 25px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+}
+.prof-img{
+  width:100%;
+  max-width:100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+}
+.nav-tabs {
+  margin-top:30px;
 }
 .container, .login-container, .profilepage, .health {
 	min-width: 100%;
@@ -81,16 +84,14 @@ html, body {
 	font-size: 56px;
 	font-weight: 700;
 }
-
-
 .subtitle {
 	color: #fff;
 	font-size: 28px;
+	margin-top: 0;
 	margin-bottom: 20px;
 	word-spacing: 3px;
 	text-shadow: 1px 1px 3px;
 }
-
 .btn-primary {
 	background-color: #c2c91a;
 	color: #fff;
@@ -148,7 +149,6 @@ section, footer, header, aside {
 	margin: 10px auto 5px;
 	text-align: left;
 }
-
 .bar a{
 	background: #bfbe06 center center no-repeat;
 	width: 32px;
@@ -195,21 +195,18 @@ section, footer, header, aside {
 /*-------------------------
 	List layout
 --------------------------*/
-
 ul.list{
 	list-style: none;
 	width: auto;
 	margin: 0;
 	text-align: left;
 }
-
 ul.list li{
 	font-weight: 700;
 	border-bottom: 1px solid #ddd;
 	padding: 10px;
 	overflow: hidden;
 }
-
 ul.list li img {
 	margin-right: 5px;
 	width:120px;
@@ -217,7 +214,6 @@ ul.list li img {
 	float:left;
 	border: 3px solid #bfbe06;
 }
-
 ul.list li p{
 	color: #ffffff;
 }
@@ -230,7 +226,6 @@ span.result-title {
 	background: rgba(0, 0, 0, 0.4);
 	padding: 9px; 
 }
-
 /*-------------------------
 	Grid layout
 --------------------------*/
@@ -240,9 +235,7 @@ ul.grid{
 	width: 450px;
 	margin-left: 50px;
 	text-align: left;
-
 }
-
 ul.grid li{
 	padding: 2px;
 	float:left;
@@ -287,7 +280,6 @@ ul.grid li img{
   padding: 0;
   width: 25%;
   text-shadow: 3px;
-
 }
 .img-bottom {
   float:left;
@@ -304,35 +296,4 @@ ul.grid li img{
 	margin-top: 50px;
   	float:left;
   	width: 45%;
-}
-
-.navbar-brand, .navbar-li {
-	font-family: 'Josefin Slab', serif;
-	font-size: 18px;
-	letter-spacing: 5px;
-	font-weight: 700;
-}
-.navbar-li {
-	margin: 0;
-}
-.nav-pic {
-  margin: -2px 5px 0 0;
-  max-height: 20px;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  border-radius: 100px;
-}
-
-
-/* PROFILE PAGE */
-.prof-img{
-  width:100%;
-  max-width:100px;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  border-radius: 100px;
-}
-
-.nav-tabs {
-  margin-top:30px;
 }

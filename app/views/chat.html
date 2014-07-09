@@ -1,6 +1,12 @@
+    <div class="chat-bar">
+    <img class="user-icon" src="../images/user.png" />
+      <span class="posts-header">
+        <h2> Health Chat </h2>
+      </span>
+  </div><!-- end bar -->
+
 <div class="form-main-chat">
 	<div class="form-div-chat">
-		<div class="chat-header">Welcome to CommuniChat!</div>
       	<ul class="message-repeat" ng-repeat="message in messages">
       		<li>{{message.owner}}: {{message.content}}</li>
       	</ul>
