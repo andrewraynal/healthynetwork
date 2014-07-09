@@ -259,6 +259,13 @@ input#fileupload  {
 	background-position: 11px 8px;
 	background-repeat: no-repeat;
 }
+#message-owner {
+	background-image: url(../images/user.png);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+	max-width: 200px;
+}
 #post-comment {
 	background-image: url(../images/comment.png);	
 	background-size: 20px 20px;

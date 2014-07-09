@@ -2,10 +2,11 @@
 	<div class="form-div-chat">
 		<div class="chat-header">Welcome to CommuniChat!</div>
       	<ul class="message-repeat" ng-repeat="message in messages">
-      		<li>{{currentUser.username}}: {{message.content}}</li>
+      		<li>{{message.owner}}: {{message.content}}</li>
       	</ul>
 	  <form ng-submit="addMessage()">
 	  	<p class="text">
+          <!-- <input ng-model="message.owner" id="message-owner" class="detail-input-main"/> -->
         	<textarea ng-model="message.content" id="message" name="personalmsg" class="detail-input-main"></textarea>
       	</p>
       <div class="submit">

@@ -23,7 +23,7 @@ app.config(function ($routeProvider) {
       })
       .when('/users/:username', {
         templateUrl: 'views/main-user-page.html',
-        controller: 'profileCtrl'
+        controller: 'chatCtrl'
       })
      .when('/details', {
         templateUrl: 'views/details.html',

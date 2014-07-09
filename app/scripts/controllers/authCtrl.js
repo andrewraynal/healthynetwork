@@ -12,7 +12,6 @@ app.controller('authCtrl',
 
       $scope.login = function () {
         Auth.login($scope.user).then(function () {
-          console.log($rootScope.currentUser);
           $location.path('/users/:username');
         }, function (error) {
           $scope.error = error.toString();

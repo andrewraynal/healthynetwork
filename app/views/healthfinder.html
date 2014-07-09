@@ -1,0 +1,27 @@
+<div class="health" ng-controller="healthfinderCtrl">
+    <div class="bar">
+        <a class="list-icon" ng-class="{active: isLayout('list')}" ng-click="setLayout('list')"></a>
+        <a class="grid-icon" ng-class="{active: isLayout('grid')}" ng-click="setLayout('grid')"></a>
+        <span class="health-header"><h2>Healthy Advice</h2></span>
+    </div><!-- end bar -->
+  	<div class="health-body">
+      <ul ng-show="isLayout('grid')" class="grid">
+        <!-- add filter to ngRepeat to limit # of results <| limitTo:quantity> -->
+        <li ng-repeat="result in results | limitTo:quantity">           
+          <a href="{{result.AccessibleVersion}}" target="_blank"><img ng-src="{{result.ImageUrl}}" />
+     			<p><span class="result-title">{{ result.Title }}<span class="spacer"></span><br /><span class="spacer"></span></span></p></a>
+     		<!-- 	<p>{{ result.LastUpdate }}</p> -->
+			 </li>
+      </ul>
+      <ul ng-show="isLayout('list')" class="list">
+      <!-- A compact view smaller photos and titles -->
+       <li ng-repeat="result in results | limitTo:quantity">
+          <a href="{{result.AccessibleVersion}}" target="_blank"><img ng-src="{{result.ImageUrl}}" />
+          <p><span class="list-result-title">{{ result.Title }}<span class="spacer"></span><br /><span class="spacer"></span></span></p></a>
+        <!--  <p>{{ result.LastUpdate }}</p> -->
+        </li>
+      </ul>
+  	</div> <!-- end health body -->
+</div>
+</div>
+ 
