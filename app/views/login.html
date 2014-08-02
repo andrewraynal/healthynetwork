@@ -10,14 +10,6 @@
                 <div class="form-main-login">
                 <div class="form-div-login">
                     <h4>If you're already a member, log in with your email and password!</h4><h4>New to the place?  Register<a class="show" href="#">here!</a></h4>
-                    <script>
-                    $('.show').click(function() {
-                        event.preventDefault();
-                        $('.form-div-login').hide();
-                        $('.form-div-register').removeClass('hide');
-
-                    })
-                    </script>
                         <form class="form" id="form1" ng-submit='login()'>
                             <p class="email">
                                 <input type="email" ng-model="user.email" placeholder="Email" class="login-input" id="email"/>
@@ -31,6 +23,13 @@
                         </form>
 
                 </div> <!-- end form div -->
+                <script>
+                    $('.show').click(function() {
+                    event.preventDefault();
+                    $('.form-div-login').hide();
+                    $('.form-div-register').removeClass('hide');
+                    });
+                </script>
                 <div class="form-div-register hide">
                     <h4>Register now!  Provide a username, email, and password.</h4>
                         <form class="form" id="form2" ng-submit='register()'>
@@ -61,3 +60,10 @@
         </div><!-- end login-register-body -->
                 </div><!--caption end -->
 </div>
+<footer class="site-footer">    
+        <nav>
+            <div class="img-bottom">
+                <img src="/images/Moi.jpg" alt=""> Andrew Raynal 2014 &copy;All Rights Reserved
+            </div>
+        </nav>
+    </footer>

@@ -5,6 +5,6 @@ $(document).ready(function(){
         $('.form-div-login').hide();
         $('.form-div-register').removeClass('hide');
 
-    })
+    });
 
-}):
+});
