@@ -12,7 +12,7 @@
     this._location = $location;
     this._rootScope = $rootScope;
     this._loginPath = path;
-    this._redirectTo = null;
+    this._redirectTo = 'users/:username';
     this._authenticated = !!($rootScope.auth && $rootScope.auth.user);
     this._init();
   }
@@ -44,11 +44,11 @@
       this._authenticated = true;
       if (this._redirectTo) {
         this._redirect(this._redirectTo);
-        this._redirectTo = null;
+        this._redirectTo = 'users/:username';
       }
       else if (this._location.path() === this._loginPath) {
         this._location.replace();
-        this._location.path('/');
+        this._location.path('/users/:username');
       }
     },
 
@@ -69,12 +69,12 @@
         if (route.pathTo === undefined) {
           this._redirectTo = this._location.path();
         } else {
-          this._redirectTo = route.pathTo === path ? '/' : route.pathTo;
+          this._redirectTo = route.pathTo === path ? '/users/:username' : route.pathTo;
         }
         this._redirect(path);
       }
       else if (this._authenticated && this._location.path() === this._loginPath) {
-        this._redirect('/');
+        this._redirect('/users/:username');
       }
     }
   };

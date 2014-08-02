@@ -1,8 +1,8 @@
  <div class="form-main-main" ng-repeat="(detailId, detail) in details">
-  <div class="form-div-main">
+  <div class="form-div-main" ng-show="signedIn() && detail.owner === currentUser.username">
       <img class="profileimg" ng-src="{{detail.photo}}"/>
     <form class="form" id="form1">
-      
+      <div class="currentuser">{{currentUser.username}}</div>
       <p class="name">
         <input name="name" type="text" class="detail-input-main" value="{{detail.firstname}}" id="name" />
       </p>
@@ -22,9 +22,9 @@
         <textarea name="personalmsg" class="detail-input-main" id="comment">"{{detail.personalmsg}}"</textarea>
       </p>
   
-      <div class="submit">
-        <input type="submit" value="Save Details" id="button-blue"/>
-        <div class="ease"></div>
+      <!-- <div class="submit">
+        <a id="details-button" href="#/users/{{currentUser.username}}"/>Back Home"</a>
+        <div class="details-ease"></div> -->
       </div>
     </form>
   </div>

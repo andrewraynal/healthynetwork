@@ -8,20 +8,16 @@
       <ul ng-show="isLayout('grid')" class="grid">
         <!-- add filter to ngRepeat to limit # of results <| limitTo:quantity> -->
         <li ng-repeat="result in results | limitTo:quantity">           
-          <a href="{{result.AccessibleVersion}}" target="_blank"><img ng-src="{{result.ImageUrl}}" />
-     			<p><span class="result-title">{{ result.Title }}<span class="spacer"></span><br /><span class="spacer"></span></span></p></a>
-     		<!-- 	<p>{{ result.LastUpdate }}</p> -->
+          <a href="{{result.AccessibleVersion}}" target="_blank"><img ng-src="{{result.ImageUrl}}" /><p><span class="result-title">{{ result.Title }}<span class="spacer"></span><br /><span class="spacer"></span></span></p></a>
 			 </li>
       </ul>
       <ul ng-show="isLayout('list')" class="list">
-      <!-- A compact view smaller photos and titles -->
        <li ng-repeat="result in results | limitTo:quantity">
           <a href="{{result.AccessibleVersion}}" target="_blank"><img ng-src="{{result.ImageUrl}}" />
           <p><span class="list-result-title">{{ result.Title }}<span class="spacer"></span><br /><span class="spacer"></span></span></p></a>
-        <!--  <p>{{ result.LastUpdate }}</p> -->
         </li>
       </ul>
   	</div> <!-- end health body -->
 </div>
-</div>
+
  

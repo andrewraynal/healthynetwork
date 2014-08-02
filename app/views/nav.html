@@ -18,13 +18,11 @@
   <div ng-controller="navCtrl" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav navbar-right" ng-show="signedIn()">
       <li class="navbar-li">
-        <a href="#/users/{{ currentUser.username }}">
-        <img ng-src="http://www.gravatar.com/avatar/{{ currentUser.md5_hash }}" class="nav-pic" />
-        {{ currentUser.username | uppercase }}'s Home  |
+        <a href="#/users/{{currentUser.username}}"> Hey {{currentUser.username}}, you are Home  |
         </a>
       </li>
       <li class="navbar-li">
-        <a href="#/details/detailId">Profile Info  |</a>
+        <a href="#/details">Profile Info  |</a>
       </li>
       <li class="navbar-li">
         <a href="#" ng-click="logout()">Logout</a>
@@ -32,10 +30,10 @@
     </ul>
     <ul class="nav navbar-nav navbar-right" ng-hide="signedIn()">
       <li>
-        <a class="navbar-li" href="#/main-login">Register</a>
+        <a class="navbar-li show" href="#/register">Register</a>
       </li>
       <li>
-        <a class="navbar-li" href="#/main-login">Login</a>
+        <a class="navbar-li" href="#/login">Login</a>
       </li>
     </ul>
   </div><!-- /.navbar-collapse -->

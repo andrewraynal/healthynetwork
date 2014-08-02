@@ -2,7 +2,7 @@
 
 app.controller('detailsCtrl', 
   function ($scope, $location, Detail, Auth, User) {
-if ($location.path() === '/details') {
+if ($location.path() === '/create-details' || '/detail/:detailId') {
     $scope.details = Detail.all;
   }
 
@@ -10,21 +10,17 @@ if ($location.path() === '/details') {
 
   $scope.submitDetail = function () {
     Detail.create($scope.detail).then(function (detailId) {
-      $location.path('/details/' + detailId);
+      $location.path('/users/:username');
       $scope.detail = {photo: '', firstname: '', lastname: '', location: '', gender: '', age: '', personalmsg: ''};
     });
   };
     $scope.updateDetail = function () {
     Detail.add($scope.detail).then(function (detailId) {
-      $location.path('/users/:username');
+      // $location.path('/users/:username');
       $scope.detail = {photo: '', firstname: '', lastname: '', location: '', gender: '', age: '', personalmsg: ''};
     });
   };
   $scope.deleteDetail = function (detailId) {
-    console.log($scope.user);
     Detail.delete(detailId);
-  };
-  $scope.logout = function () {
-    Auth.logout();
   };
 });

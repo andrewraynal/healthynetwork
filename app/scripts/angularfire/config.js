@@ -8,7 +8,7 @@ angular.module('ahealthynetworkApp')
   .constant('angularFireVersion', '0.6')
 
   // where to redirect users if they need to authenticate (see module.routeSecurity)
-  .constant('loginRedirectPath', '/login')
+  .constant('loginRedirectPath', '/users/:username')
 
   // which login service we're using
   .constant('loginProviders', 'facebook,twitter,password')
