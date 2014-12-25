@@ -4,10 +4,12 @@ h1, h2, h3, h4 {
 	margin: 5px;
 	padding: 5px;
 	letter-spacing: 3px;
+	font-family: 'Open Sans', serif;
 }
 ol li, ul li {
 	list-style-type: none;
 	margin: 5px;
+	font-family: 'Open Sans', serif;
 }
 html, body {
 	height: 100%;
@@ -15,7 +17,9 @@ html, body {
 	overflow: scroll;
 	background: url(/images/green-background.jpg) no-repeat;
 	background-size: cover;
-	font-family: 'Josefin Slab', serif;
+}
+a {
+	text-decoration: none;
 }
 .glyphicon {
 	cursor: pointer;
@@ -26,13 +30,14 @@ html, body {
 .show {
 	display: block;
 	color: #fff;
-	font-size: 125%;
+	font-size: 100%;
 	text-decoration: underline;
 }
 
 .navbar {
 	width: 100%;
-	background-color: rgba(255, 255, 255, 0.7);
+	height: 50%;
+	background-color: rgba(72,72,72,0.3);
 }
 nav, .navbar, .navbar-default, .navbar-brand {
 	border: none;
@@ -50,8 +55,8 @@ nav, .navbar, .navbar-default, .navbar-brand {
 .navbar, .navbar-default .navbar-nav li a {
 	padding: 10px 10px;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 20px;
-	color: #000;
+	font-size: 15px;
+	color: #eee;
 	letter-spacing: 2px;
 	text-decoration: none;
 	text-shadow: 2px rgba(0, 0, 0, 0.8), 3px rgba(0, 0, 0, 0.8);
@@ -66,7 +71,6 @@ nav, .navbar, .navbar-default, .navbar-brand {
 .navbar, .navbar-nav {
 	margin-top: 3px;
 }
-
 .nav-pic {
 	max-height: 35px;
 	-webkit-border-radius: 100px;
@@ -79,9 +83,6 @@ nav, .navbar, .navbar-default, .navbar-brand {
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
   border-radius: 100px;
-}
-#bs-example-navbar-collapse-1 ul li a {
-	line-height: 28px;
 }
 .nav-tabs {
   margin-top:30px;
@@ -128,11 +129,11 @@ nav, .navbar, .navbar-default, .navbar-brand {
 	margin: 50px auto;
 	border-radius: 3px;
 	box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.3);
-	background-color: rgba(255, 255, 255, 0.3);
+	background-color:rgba(72,72,72,0.3);
 }
 .caption h2 {
 	font-size: 70px;
-	font-size: 7em;
+	font-size: 4em;
 	text-shadow: 2px 2px 0px #000, 3px 3px 0px #000;
 }
 .subtitle {
@@ -142,11 +143,12 @@ nav, .navbar, .navbar-default, .navbar-brand {
 }
 .caption h3 {
 	font-size: 30px;
-	font-size: 3em;
+	font-size: 1.5em;
 	text-shadow: 2px 2px 0px #000, 3px 3px 0px #000; 
 }
 .caption a {
 	text-align: center;
+	text-decoration: none;
 }
 .btn-primary {
 	background-color: #c2c91a;
@@ -168,6 +170,9 @@ nav, .navbar, .navbar-default, .navbar-brand {
 *{
 	margin:0;
 	padding:0;
+	.form-div-login {
+		margin: 0 auto;
+	}
 }
 .upload {
 	margin: 0 auto;
@@ -246,7 +251,6 @@ ul.list{
 	overflow: auto;
 	width: 95%;
 	max-height: 700px;
-	margin-top: 25px;
 	text-align: left;
 	border: rgba(186, 231, 215, 1) solid 2px;
 	border-radius: 2px;

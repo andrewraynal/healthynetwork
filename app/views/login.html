@@ -9,7 +9,6 @@
                     <div class="login-register-body">   
                 <div class="form-main-login">
                 <div class="form-div-login">
-                    <h4>If you're already a member, log in with your email and password!</h4><h4>New to the place?  Register<a class="show" href="#">here!</a></h4>
                         <form class="form" id="form1" ng-submit='login()'>
                             <p class="email">
                                 <input type="email" ng-model="user.email" placeholder="Email" class="login-input" id="email"/>
@@ -21,7 +20,7 @@
                                 <input type="submit" id="login-button" value="Log In"/>
                             </div>
                         </form>
-
+                    <h4><a class="show" href="#">Sign up</a></h4>
                 </div> <!-- end form div -->
                 <script>
                     $('.show').click(function() {
@@ -31,7 +30,7 @@
                     });
                 </script>
                 <div class="form-div-register hide">
-                    <h4>Register now!  Provide a username, email, and password.</h4>
+                    <h4>Sign up here.  Fill out each field.</h4>
                         <form class="form" id="form2" ng-submit='register()'>
                            <div ng-show="error || form.username.$error">
                                 <p ng-show="error" class="text-danger">{{ error }}</p>

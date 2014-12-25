@@ -72,9 +72,6 @@ img.user-icon {
 .form-main-login, .form-main-register {
 	margin: 0 auto;
 }
-.login-register-body {
-	display: inline-flex;
-}
 .form-main-main {
 	max-width: auto;
 }
@@ -100,7 +97,7 @@ img.user-icon {
 	position: absolute;
   	margin-top:30px;
 	margin-left: -260px;
-	box-shadow: 2px 2px 2px;
+	box-shadow: 2px 2px 2px 2px;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
 }
@@ -113,9 +110,8 @@ img.user-icon {
 .form-div-login, .form-div-register {
 	width: 600px;
 	height: auto;
-	background-color: rgba(255, 255, 255, 0.7);
 	padding: 5px 20px 25px 20px;
-  	margin: 20px;
+  	margin: 20px auto;
   	-moz-border-radius: 7px;
   	-webkit-border-radius: 7px;
 }
@@ -169,7 +165,7 @@ img.user-icon {
   	margin-top: 25px;
 	font-size: 16px;
 	background: rgba(186, 231, 215, .8) scroll;
-	max-width: 75;
+	max-width: 75px;
 	max-height: 700px;
 	overflow: auto;
 	border: #eee solid 2px;
@@ -189,7 +185,6 @@ img.user-icon {
 }
 .form-div-login, .form-div-register {
 	color: #fff;
-	background-color:rgba(72,72,72,0.3);
 	text-align: center;
 }
 .form-div-details {
@@ -227,7 +222,7 @@ img.user-icon {
   	padding: 13px 13px 13px 54px;
 }
 .login-input, .register-input {
-	max-width: 300px;
+	max-width: 350px;
 }
 .focused{
 	color:#30aed6;
@@ -259,9 +254,9 @@ img.user-icon {
 }
 #email, #password, #username {
 	background-image: url(../images/email.png);
-	background-size: 30px 30px;
-	background-position: 11px 8px;
+	background-position: 11px 13px;
 	background-repeat: no-repeat;
+	margin: 5px auto;
 }
 #password {
 	background-image: url(../images/edit.png);
@@ -338,9 +333,10 @@ textarea {
     resize:vertical;
 }
 
-input:hover, textarea:hover,
+input, input:hover, textarea:hover,
 input:focus, textarea:focus {
 	background-color: #fff;
+	font-family: 'Open Sans', serif;
 }
 #button-blue, #login-button {
 	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -357,11 +353,11 @@ input:focus, textarea:focus {
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
-  	margin-top: -4px;
   	font-weight: 700;
 } 
 #login-button {
 	float: none;
+	margin-top: 25px;
 }
 #chat-button {
 	width: 200px;
