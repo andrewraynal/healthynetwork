@@ -15,7 +15,7 @@ app.controller('chatCtrl',
       };
 
       $scope.deleteMessage = function (messageId) {
-        Chat.delete(messageId);
+        Post.delete(messageId);
       };
 
   });

@@ -1,15 +1,33 @@
-<div class="form-main-details">
+ <div class="form-main-details">
   <div class="form-div-details">
-    <img class="profileimg" ng-src="{{detail.photo}}"/>
-        <div class="name" id="name">{{detail.firstname}}</div>
-        <div class="name" id="name">{{detail.lastname}}</div>
-        <div class="location" id="location">{{detail.location}}</div>
-        <div class="age" id="age">{{detail.age}}</div>
-        <div class="gender" id="gender">{{detail.gender}}</div>
-        <div class="personalmsg">"{{detail.personalmsg}}"</div>
-          <div class="submit">
-            
-            <div class="details-button-ease"><a id="details-button" href="#/create-details">Change Info</a></div>
-          </div>
+      <img class="profileimg" ng-src="{{detail.photo}}"/>
+    <form class="form" id="form1" ng-submit="updateDetail(detailId)">
+      
+      <p class="name">
+        <input name="name" type="text" class="detail-input" value="{{detail.firstname}}" id="name" />
+      </p>
+       <p class="name">
+        <input name="name" type="text" class="detail-input" value="{{detail.lastname}}" id="name" />
+      </p>
+      <p class="location">
+        <input name="location" type="text" class="detail-input" id="location" value="{{detail.location}}" />
+      </p>
+      <p class="name">
+        <input name="age" type="text" class="detail-input" id="age" value="{{detail.age}}" />
+      </p>
+       <p class="name">
+        <input name="gender" type="text" class="detail-input" id="gender" value="{{detail.gender}}" />
+      </p>
+      <p class="text">
+        <textarea name="personalmsg" class="detail-input" id="comment">"{{detail.personalmsg}}"</textarea>
+      </p>
+  
+      <div class="submit">
+        <a class="submit" href="#/users/:{{currentUser.username}}">
+          <input type="submit" value="Save Details" id="details-button"/>
+        </a>
+        <div class="details-button-ease"></div>
+      </div>
+    </form>
   </div>
-</div>
+  </div>

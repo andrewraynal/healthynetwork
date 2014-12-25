@@ -12,7 +12,7 @@
     this._location = $location;
     this._rootScope = $rootScope;
     this._loginPath = path;
-    this._redirectTo = 'users/:username';
+    this._redirectTo = null;
     this._authenticated = !!($rootScope.auth && $rootScope.auth.user);
     this._init();
   }
@@ -44,11 +44,11 @@
       this._authenticated = true;
       if (this._redirectTo) {
         this._redirect(this._redirectTo);
-        this._redirectTo = 'users/:username';
+        this._redirectTo = null;
       }
       else if (this._location.path() === this._loginPath) {
         this._location.replace();
-        this._location.path('/users/:username');
+        this._location.path('/');
       }
     },
 

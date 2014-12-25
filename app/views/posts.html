@@ -1,16 +1,24 @@
+<<<<<<< HEAD
 <div class="posts-container">
   <div class="form-div-posts">
     <div class="posts-bar">
     <img class="journal-icon" src="images/journal.png" />
+=======
+<div class="form-posts">
+  <div class="posts-bar">
+    <img class="journal-icon" src="../images/journal-white.png" />
+>>>>>>> parent of e8a2ef6... eh
     <span class="posts-header">
-      <h2>New Entry</h2>
+      <h2> Journal </h2>
     </span>
   </div><!-- end bar -->
+  <div class="form-div-posts">
     <form class="form" id="form1"  ng-submit="submitPost()" ng-show="signedIn()">
-          <p class="input-title">
+      <label class="post-label">Write a journal entry:</label>
+          <p class="title">
             <input type="text" class="post-input" placeholder="Entry Title" id="title" ng-model="post.title"/>
           </p>
-          <p class="input-date">
+          <p class="date">
             <input type="date" class="post-input" id="date" ng-model="post.date" />
           </p>
           <p class="text">
@@ -22,29 +30,20 @@
           </div>
     </form>
   </div> <!-- end form div post -->
-  <div class="post-repeat-container">
-    <div class="title">
-    <h2> All Journal Entries </h2>
-  </div>
-  <ul class="post-repeat" ng-repeat="(postId, post) in posts">
-    <li> <h3 class="content-title">{{ post.title }}</h3>
+</div><!-- end form post -->
+  <div class="post row post-row" ng-repeat="(postId, post) in posts">
+    <div class="info">
+      <h3 class="content-title">{{ post.title }}</h3>
+    </div> <!-- end info -->
     <div class="author">
       <span>Submitted by: 
         <a class="post-owner" href="#/users/{{ post.owner }}">{{ post.owner }}</a> on <a href="#">{{ post.date | date }} </a>
       </span>
         &mdash;<a href="#/posts/{{ postId }}">
-     <!--  <span class="glyphicon glyphicon-zoom-in"></span>View Comments</a> -->
+      <span class="glyphicon glyphicon-zoom-in"></span>View Comments</a>
         <a ng-click="deletePost(postId)" ng-show="signedIn() && post.owner === currentUser.username">
       <span class="glyphicon glyphicon-trash">Delete</span></a>
     </div> <!-- end author -->
-    </li>
-  </ul>
+  </div>
 </div>
-</div>
-<footer class="site-footer">    
-        <nav>
-            <div class="img-bottom">
-                <img src="/images/Moi.jpg" alt=""> Andrew Raynal 2014 &copy;All Rights Reserved
-            </div>
-        </nav>
-    </footer>
+

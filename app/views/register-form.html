@@ -1,0 +1,14 @@
+<div class="register-form">
+    <form class="register auth-forms" ng-submit='register()'>
+    	<label>Create a username and password.  Register your account!</label>
+    	<div ng-show="error || form.username.$error">
+    		<p ng-show="error" class="text-danger">{{ error }}</p>
+    		<p ng-show="form.username.$error.taken" class="text-danger">Username is already taken.</p>
+    		<p ng-show="form.username.$error.invalid" class="text-danger">Username contains invalid characters.</p>
+    	</div>
+        <input type="email" ng-model="user.email" placeholder="Email" class="form-control registerinputs">
+        <input type="text" ng-model="user.username" placeholder="Username" name="username" check-username class="form-control registerinputs">
+        <input type="password" ng-model="user.password" placeholder="Password" class="form-control registerinputs">
+        <input type="submit" value="Register" class="btn btn-primary register">
+    </form>
+</div>

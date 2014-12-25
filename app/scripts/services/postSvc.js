@@ -35,8 +35,8 @@ app.factory('Post',
 
 					posts.$remove(postId).then(function () {
 						user.$child('posts').$remove(postId);
-					});
-				});
+					})
+				})
 			}
 		},
 		addComment: function (postId, comment) {

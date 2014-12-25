@@ -2,7 +2,7 @@
 
   app.controller('postsCtrl', 
     function ($scope, $location, Post, User, Auth) {
-    	if ($location.path() === '/posts' || '/users/:username') {
+    	if ($location.path() === '/posts/:postId' || '/posts' || 'users/:username') {
         $scope.posts = Post.all;
       }
       $scope.post = {content: ''};

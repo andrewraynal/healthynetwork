@@ -1,6 +1,6 @@
 'use strict';
 
-app.factory('Chat', function ($firebase, User, FBURL) {
+app.factory('Chat', function ($firebase, User, Auth, FBURL) {
      var ref = new Firebase(FBURL + 'chat');
 
       var messages = $firebase(ref);
@@ -33,8 +33,8 @@ app.factory('Chat', function ($firebase, User, FBURL) {
 
 					messages.$remove(messageId).then(function () {
 						user.$child('messages').$remove(messageId);
-				 });
-            });
+				 })
+            })
           }
         }
       };
