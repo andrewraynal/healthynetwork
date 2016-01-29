@@ -1,7 +1,4 @@
-.post-content {
-	margin: 0 auto;
-	max-width: 400px;
-}
+
 .details {
 	letter-spacing: 3px;
 	text-align: left;
@@ -19,9 +16,7 @@
 img.profileimg {
 	border: 2px solid #86c8d4;
 	margin-bottom: 10px;
-	margin-left: 110px;
-	margin-right: 100px;
-	box-shadow: 1px 1px 1px;
+	box-shadow: 3px 3px 3px;
 }
 #fileupload {
 	width: 200px;
@@ -31,39 +26,38 @@ img.profileimg {
 input#fileupload  {
 	color: #3c3c3c;
 }
-.message-repeat {
-	font-size: 16px;
-	font-family: Helvetica, Arial, sans-serif;
-	background-color: #bae7d7;
-	background-size: cover;
-	max-width: 75%;
-	max-height: auto;
-	overflow: hidden;
-	border: #505050 solid 1px;
-	border-radius: 2px;
-}
-.chat-header {
-	margin: 10px;
-	padding: 10px;
-	text-align: center;
-	letter-spacing: 3px;
-	font-size: 22px;
-	font-weight: 700;
-	color: #eee;
-}
 .chat-bar {
 	min-width: 440px;
-	max-height: 65px;
-	background-color: #5d7946;
-	box-shadow: 0 1px 1px #505050;
-	border-radius: 5px;
-	border: #505050 solid 1px;
-	color: #eee;
+	max-height: 74px;
+	background-color:rgba(188,195,1,0.6);
+	box-shadow: 0 1px 1px;
+	border: solid 3px;
+	border-radius: 3px;
+	color: #fff;
 	letter-spacing: 3px;
 	display: inline-flex;
-	padding: 10px;
-	margin: 10px auto 5px;
+	padding: 8px 10px 10px 10px;
+	margin: 25px 400px;
 	text-align: left;
+}
+.show-chat-bar {
+	min-width: 440px;
+	max-height: 74px;
+	background-color:rgba(188,195,1,0.6);
+	box-shadow: 0 1px 1px;
+	border: solid 3px;
+	border-radius: 3px;
+	color: #fff;
+	letter-spacing: 3px;
+	display: inline-flex;
+	padding: 8px 10px 10px 10px;
+	margin: 10px auto;
+	text-align: left;
+}
+img.user-icon {
+	width: 60px;
+	height: 58px;
+	border-radius: 100%;
 }
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
@@ -76,30 +70,28 @@ input#fileupload  {
 	height: auto;
 }
 .form-main-login, .form-main-register {
-	margin-left: 100px;
-	margin-right: 100px;
+	margin: 0 auto;
 }
 .form-main-main {
-	max-width: 440px;
+	max-width: auto;
 }
 .form-main-details {
 	max-width: 440px;
 }
+.currentuser {
+	font-size: 32px;
+	font-weight: 700;
+	margin: -80px 0 50px 130px;
+	text-transform: uppercase;
+}
 .form-div {
-<<<<<<< HEAD
 	background-color:rgba(0, 0, 0, 0.1);
-=======
-	max-height: 600px;
-	overflow: hidden;
-	background-color:rgba(72,72,72,0.4);
->>>>>>> parent of e8a2ef6... eh
 	padding-left:35px;
 	padding-right:35px;
 	padding-top:25px;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
 }
-<<<<<<< HEAD
 .form-div h3, .form-div h4 {
 	font-family: 'Open Sans', sans-serif;
 }
@@ -111,21 +103,28 @@ input#fileupload  {
 	height: auto;
 	padding: 5px 20px 25px 20px;
   	margin: 20px auto;
-=======
-.form-div-chat, .form-div-posts, .form-div-main, .form-div-login, .form-div-register {
-	max-width: 440px;
-	background-color:rgba(72,72,72,0.4);
-	padding-left:20px;
-	padding-right:20px;
-	padding-top: 5px;
-	padding-bottom:15px;
-  	margin-top: 20px;
->>>>>>> parent of e8a2ef6... eh
   	-moz-border-radius: 7px;
   	-webkit-border-radius: 7px;
 }
+.form-div-register h4, .form-div-login h4 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+}
+.form-div-main {
+	width: 500px;
+	margin: 0 auto;
+	height: auto; 
+	background-color: rgba(255, 255, 255, 0.7);
+	padding: 20px;
+	-moz-border-radius: 7px;
+  	-webkit-border-radius: 7px;
+
+}
+.chat-form-contain {
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+}
 .form-div-chat {
-<<<<<<< HEAD
 	padding: 15px 20px 15px 20px;
   	margin: -250px 25px 0 700px;
 	font-size: 18px;
@@ -174,17 +173,13 @@ input#fileupload  {
 	background-size: 200px 200px;
 	padding: 25px 0px 25px 25px;
 	border-radius: 3px;
-=======
-	max-height: 900px;
-	margin-top: 10px;
->>>>>>> parent of e8a2ef6... eh
 }
 .form-div-login, .form-div-register {
 	color: #fff;
 	text-align: center;
 }
 .form-div-details {
-	background-color:rgba(72,72,72,0.4);
+	background-color:rgba(250, 250, 250, 0.3);
 	padding-left:15px;
 	padding-right:15px;
 	padding-top:5px;
@@ -193,9 +188,8 @@ input#fileupload  {
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
 }
-.detail-input, .post-input, .detail-input-main, .login-input, .register-input {
+.detail-input, .detail-input-main, .login-input, .register-input {
 	color:#3c3c3c;
-	font-family: Helvetica, Arial, sans-serif;
   	font-weight:500;
 	font-size: 18px;
 	border-radius: 2px;
@@ -210,19 +204,13 @@ input#fileupload  {
 	box-sizing: border-box;
   	border: 3px solid rgba(0,0,0,0);
 }
-.post-input {
-	padding: 5px 5px 5px 25px;
-}
-.detail-input:focus, .post-input:focus {
+.detail-input:focus {
 	background: #fff;
 	box-shadow: 0;
 	border: 3px solid #3498db;
 	color: #3498db;
 	outline: none;
   	padding: 13px 13px 13px 54px;
-}
-.post-input:focus {
-	padding: 5px 5px 5px 25px;
 }
 .login-input, .register-input {
 	max-width: 350px;
@@ -235,14 +223,6 @@ input#fileupload  {
 	width: 180px;
 	margin: 2px;
 	padding: 2px;
-}
-.title, .date {
-	width: 190px;
-}
-.date {
-	float: right;
-	margin-top: -59px;
-	height: 54px;
 }
 .chat-input {
 	max-height: 150px;
@@ -322,6 +302,7 @@ input#fileupload  {
 	background-size: 30px 30px;
 	background-position: 11px 8px;
 	background-repeat: no-repeat;
+	width: 350px;
 }
 #message-owner {
 	background-image: url(../images/user.png);
@@ -348,49 +329,91 @@ input:focus, textarea:focus {
 	background-color: #fff;
 	font-family: 'Open Sans', serif;
 }
-#button-blue, #post-button, #details-button, #chat-button, #login-button {
+#button-blue, #login-button {
 	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-	float:left;
-	width: 100%;
+	float: left;
+	width: 60%;
 	max-height: 70px;
 	border: #fbfbfb solid 4px;
-	cursor:pointer;
+	cursor: pointer;
 	background-color: #86c8d4;
 	color: #ffffff;
-	font-size:22px;
-	padding-top:15px;
-	padding-bottom:15px;
+	font-size: 22px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
-<<<<<<< HEAD
   	font-weight: 700;
-=======
-  	margin-top:-4px;
-  	font-weight:700;
->>>>>>> parent of e8a2ef6... eh
 } 
-#post-button, #chat-button {
-	width: 60%;
-}
 #login-button {
 	float: none;
 	margin-top: 25px;
 }
-#details-button {
-	width: 300px;
+#chat-button {
+	width: 200px;
+	margin: 0;
+	float: left;
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	max-height: 70px;
+	border: #fbfbfb solid 4px;
+	cursor: pointer;
+	background-color: #86c8d4;
+	color: #ffffff;
+	font-size: 22px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+  	font-weight: 700;
 }
-#button-blue:hover, #post-button:hover, #details-button:hover, #chat-button:hover, #login-button:hover {
-	background-color: rgba(0,0,0,0);
+
+#details-button {
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	font-weight: 700;
+	float: right;
+	border: #fbfbfb solid 4px;
+	cursor: pointer;
+	background-color: #86c8d4;
+	color: #fff;
+	font-size: 22px;
+	padding: 10px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+#button-blue:hover, #details-button:hover, #login-button:hover {
+	background-color: rgba(250, 250, 250, 0.4);
 	color: #0493bd;
 }	
 .submit:hover {
-	color: #3498db;
+	color: #86c8d4;
 }	
-.ease, .post-button-ease, .chat-button-ease {
+.ease {
 	width: 0px;
 	height: 70px;
-	background-color: #bfbe06;
+	background-color: #86c8d4;
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	-ms-transition: .3s ease;
+	transition: .3s ease;
+}
+.details-ease {
+	width: 0px;
+	height: 70px;
+	background-color: #86c8d4;
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	-ms-transition: .3s ease;
+	transition: .3s ease;
+}
+.chat-button-ease {
+	width: 200px;
+	height: 70px;
+	background-color: #eee;
 	-webkit-transition: .3s ease;
 	-moz-transition: .3s ease;
 	-o-transition: .3s ease;
@@ -401,21 +424,7 @@ input:focus, textarea:focus {
   width:100%;
   background-color: #fff;
 }
-.submit:hover .post-button-ease {
-	width: 60%;
-	background-color: #fff;
-}
 .submit:hover .chat-button-ease {
-	width: 60%;
+	width: 200px;
 	background-color: #fff;
-}
-@media only screen and (max-width: 580px) {
-	.form-div, .form-div-details, .form-div-main, .form-div-posts, .form-div-chat, .form-div-login {
-		left: 3%;
-		margin-right: 3%;
-		width: 88%;
-		margin-left: 0;
-		padding-left: 3%;
-		padding-right: 3%;
-	}
 }

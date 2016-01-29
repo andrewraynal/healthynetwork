@@ -17,40 +17,38 @@ var app = angular
 ]);
 app.config(function ($routeProvider) {
     $routeProvider
-       .when('/', {
-        templateUrl: 'views/main-login.html',
+      //  .when('/', {
+      //   templateUrl: 'views/main-login.html',
+      //   controller: 'mainCtrl'
+      // })
+        .when('/', {
+        templateUrl: 'views/login.html',
         controller: 'authCtrl'
       })
+      //    .when('/register', {
+      //   templateUrl: 'views/register.html',
+      //   controller: 'authCtrl'
+      // })
       .when('/users/:username', {
         templateUrl: 'views/main-user-page.html',
-        controller: 'chatCtrl'
-      })
-     .when('/details', {
-        templateUrl: 'views/details.html',
-        controller: 'detailsCtrl'
+        controller: 'profileCtrl'
       })
      .when('/create-details', {
         templateUrl: 'views/create-details.html',
         controller: 'detailsCtrl'
       })
-     .when('/details/:detailId', {
-        templateUrl: 'views/show-detail.html',
-        controller: 'detailviewCtrl'
+     .when('/details', {
+        templateUrl: 'views/details.html',
+        controller: 'detailsCtrl'
       })
      .when('/posts', {
         templateUrl: 'views/posts.html',
         controller: 'postsCtrl'
       })
-     .when('/posts/:postId', {
-        templateUrl: 'views/show-posts.html',
-        controller: 'postviewCtrl'
+     .when('/chat', {
+      templateUrl: 'views/chat.html',
+      controller: 'chatCtrl'
      })
-      .when('/chat', {
-        templateUrl: 'views/chat.html',
-        controller: 'chatCtrl'
-      })
-
-
       .otherwise({
         redirectTo: '/'
       });

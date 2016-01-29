@@ -1,0 +1,15 @@
+  <div class="chat">
+    <div class="show-chat-bar">
+    <img class="user-icon" ng-src="http://www.gravatar.com/avatar/{{ currentUser.md5_hash }}" />
+      <span><h2>Health Chat</h2></span>
+  </div><!-- end bar -->
+</div>
+<div class="form-main-chat">
+	<div class="form-div-show-chat">
+    <h3>My Chat Messages</h3><a href="#/chat"><span class="glyphicon glyphicon-user"></span>Visit Chat Room</a>
+      	<ul class="message-repeat" ng-repeat="message in messages">
+      		<li class="message-owner">{{  message.owner}}:</li>
+          <li>{{ message.content}}</li>
+      	</ul>
+	</div>
+</div>    

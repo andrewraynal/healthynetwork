@@ -1,24 +1,31 @@
+<div class="chat">
     <div class="chat-bar">
-    <img class="user-icon" src="../images/user.png" />
-      <span class="posts-header">
+    <img class="user-icon" ng-src="http://www.gravatar.com/avatar/{{ currentUser.md5_hash }}" />
+      <span class="chat-header">
         <h2> Health Chat </h2>
       </span>
   </div><!-- end bar -->
-
-<div class="form-main-chat">
-	<div class="form-div-chat">
-      	<ul class="message-repeat" ng-repeat="message in messages">
-      		<li>{{message.owner}}: {{message.content}}</li>
-      	</ul>
-	  <form ng-submit="addMessage()">
-	  	<p class="text">
+<div class="chat-form-contain">
+  <div class="chat-form">
+    <form ng-submit="addMessage()">
+      <p class="text">
           <!-- <input ng-model="message.owner" id="message-owner" class="detail-input-main"/> -->
-        	<textarea ng-model="message.content" id="message" name="personalmsg" class="detail-input-main"></textarea>
-      	</p>
+          <textarea ng-model="message.content" placeholder="feed me chat messages..." id="message" name="personalmsg" class="detail-input-main"></textarea>
+        </p>
       <div class="submit">
         <input type="submit" value="Send Message" id="chat-button"/>
         <div class="chat-button-ease"></div>
       </div>
     </form>
+  </div>
+<div class="form-main-chat">
+	<div class="form-div-chat">
+    <h2> CHAT ROOM </h2>
+      	<ul class="message-repeat" ng-repeat="message in messages">
+      		<li class="message-owner">{{message.owner}}: </li>
+          <li>{{message.content}}<!-- <a ng-click="deleteMessage(messageId)" ng-show="signedIn() && message.owner === currentUser.username">
+      <span class="glyphicon glyphicon-trash">Delete</span></a> --></li>
+      	</ul>
 	</div>
+</div>
 </div>    

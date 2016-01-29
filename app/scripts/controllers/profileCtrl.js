@@ -1,17 +1,26 @@
 'use strict';
 
 app.controller('profileCtrl',
-    function ($scope, $routeParams, Post, User, Detail, Chat) {
+    function ($scope, $routeParams, Post, Auth, User, Detail, Chat) {
+
     $scope.user = User.findByUsername($routeParams.username);
 
     $scope.commentedPosts = {};
 
     $scope.user.$on('loaded', function () {
       populatePosts();
-      populateComments();
       populateDetails();
+      populateComments();
+      populateMessages();
     });
 
+    function populateMessages () {
+      $scope.messages = {};
+
+      angular.forEach($scope.user.messages, function(messageId) {
+        $scope.messages[messageId] = Chat.find(messageId);
+      });
+    };
     function populateDetails () {
       $scope.details = {};
 
