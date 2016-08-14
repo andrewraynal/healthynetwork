@@ -1,0 +1,24 @@
+<div class="container profile">
+
+    <div class="col-sm-1">
+      <img ng-src="http://www.gravatar.com/avatar/{{ user.md5_hash }}" class="prof-img" />
+    </div>
+
+    <div class="col-sm-10">
+      <span class="name">
+        {{ user.username }}
+      </span>
+    </div>
+    <div class="col-xs-6 col-sm-4 right">
+  <div ng-include="'views/posts.html'" id="submissions"></div>
+
+  </div><!-- end right col -->
+    <div class="col-xs-6 col-sm-4 middle">
+  <div ng-include="'views/healthfinder.html'" id="health"></div>
+  </div> <!-- end left col -->
+
+    <div class="col-xs-6 col-sm-4 left">
+  <div ng-include="'views/details.html'" id="details"></div>
+  </div> <!-- end left col -->
+
+</div><!-- end container -->
